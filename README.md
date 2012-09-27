@@ -1,13 +1,13 @@
-## Ordnance Survey iOS SDK, an alternative to Mapkit enabling access to Ordnance Survey data ##
-
 ### Description ###
 
-The ordnancesurvey-ios-sdk enables access to Ordnance Survey data for iOS based devices. It provides mapping layers and gazetteer lookups from the OS OpenSpace service and has a largely similar API to Apple's Mapkit. See Converting***
+The ordnancesurvey-ios-sdk enables access to [Ordnance Survey](http://www.ordnancesurvey.co.uk/) data for iOS based devices. It provides mapping layers and gazetteer lookups from the OS OpenSpace service and has a largely similar API to Apple's Mapkit. See [Converting](#Features)
 
 Developers who wish to use on-line service will need to register and obtain an API Key for either the Ordnance Survey [OpenSpace](http://www.ordnancesurvey.co.uk/oswebsite/web-services/os-openspace/api/) or [OpenSpace Pro](http://www.ordnancesurvey.co.uk/oswebsite/web-services/os-openspace/pro/) services.
 
-#### Features ####
+Features
+-------
 
+Here is a list of o
 TODO
 
 
