@@ -12,7 +12,7 @@ This SDK is available as a static framework, please see the [Getting started](#g
 Here are some of the features available
 
 - Native iOS framework incorporating OS mapping
-- OS OpenSpace Pro and free services - [layers available](#product-list)
+- OS OpenSpace Pro and free services - [layers available](#product-code-list)
 - Zoom and pan controls - incorporated gesture recogonisers to provide tap and pinch zoom control
 - Annotations - create and customise annotations
 - Overlays - create and style polylines and polygons
