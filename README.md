@@ -102,9 +102,6 @@ Many applications can be converted by simply changing the "MK" prefix to "OS" or
 #define MKMapPoint OSMapPoint
 </pre>
 
-#### Product list
-
-A list of the mapProductCodes used here TODO
 
 #### Displaying a map
 
@@ -124,8 +121,87 @@ mapView.tileSources = [NSArray arrayWithObject:webSource];
 
 </pre>
 
+#### Product Code list
+
+A developer can select which Ordnance Survey products to use by passing the product codes as and array of strings. There are three pre-configured map stacks available.
+
+NOTE: Some OpenSpace Pro products require separate licenses, please check before use.
+
+<pre>
+
+//select the 250K and 50K products
+mapView.mapProductCodes = [NSArray arrayWithObjects:@"250KR", @"250K", @"50KR", @"50K", nil];
+
+</pre>
+
+<pre>
+
+//Class methods to return pre-configured map product codes
+
+//Default codes if not set
+[OSMapView defaultMapStackProductCodes] = @"SV",@"SVR",@"50K",@"50KR",@"250K",@"250KR",@"MS",@"MSR",@"OV2",@"OV1",@"OV0"
+
+// As above but including VMD
+[OSMapView completeFreeMapStackProductCodes] = @"SV",@"SVR",@"VMD",@"VMDR",@"50K",@"50KR",@"250K",@"250KR",@"MS",@"MSR",@"OV2",@"OV1",@"OV0"
+
+//OpenSpace Pro only
+[OSMapView zoomMapStackProductCodes] = @"CS10",@"CS09",@"CS08",@"CS07",@"CS06",@"CS05",@"CS04",@"CS03",@"CS02",@"CS01",@"CS00"
+
+</pre>
+
+##### Full list
+
+TODO: is this available on the OS website? If not, why not
+
+// Opendata products [OS OpenSpace Free and Pro]
+
+- "SV"   // Street view
+- "SVR"  // Street view resampled
+- "VMD"  // Vector Map District
+- "VMDR" // Vector Map District resampled
+- "50K"  // 1:50k
+- "50KR" // 1:50k resampled
+- "250K" // 1:250k
+- "250KR"// 1:250k resampled
+- "MS"   // 1:1M
+- "MSR"  // 1:1M resampled
+- "OV2"  // Overview 2
+- "OV1"  // Overview 1
+- "OV0"  // Overview 0
+
+// Pro products [OS OpenSpace Pro]
+
+- "VML"  // Vector Map Local
+- "VMLR" // Vector Map Local resampled
+- "25K"  // 1:25k
+- "25KR" // 1:25k resampled
+
+// Zoom stack products - enables consistently styled layers [OS OpenSpace Pro]
+
+- "CS00" // "zoomed out"
+- "CS01"
+- "CS02"
+- "CS03"
+- "CS04"
+- "CS05"
+- "CS06"
+- "CS07"
+- "CS08"
+- "CS09"
+- "CS10" // "zoomed in"
+
+// Other products [OS OpenSpace Pro]
+
+- "10K"    // 1:10k
+- "10KR"   // 1:10k resampled
+- "10KBW"  // 1:10k Black and White
+- "10KBWR" // 1:10k Black and White resampled
+- "CSG06"  // TODO ??
+- "CSG07"  // TODO
+- "CSG08"  // TODO
+- "CSG09"  // TODO
 
 License
 -------
 
-Some notes about license & use
+Some notes about license & use TODO
