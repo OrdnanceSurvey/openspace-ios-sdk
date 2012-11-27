@@ -7,18 +7,25 @@ Developers who wish to use the OpenSpace on-line services will need to register 
 
 This SDK is available as a static framework, please see the [Getting started](#getting-started) guide for instructions about downloading and importing into your own application or try a demo app.
 
+![ScreenShot](https://github.com/OrdnanceSurvey/ios-sdk-demo-locate-me/raw/master/screenshot.png "Screenshot of locate me demo app")
+
+
+![ScreenShot](https://github.com/OrdnanceSurvey/ios-sdk-demo-tilesources/raw/master/screenshot.png "Screenshot of tilesource demo app")
+
 #### Features
 
 Here are some of the features available
 
 - Native iOS framework incorporating OS mapping
-- OS OpenSpace Pro and free services - [layers available](#product-code-list)
-- Zoom and pan controls - incorporated gesture recogonisers to provide tap and pinch zoom control
+- OS OpenSpace Pro and free services
+- Select which products are displayed - see [products available](#product-code-list)
+- Zoom and pan controls - native touch gesture recogonisers provide tap, pinch zoom control and many more
 - Annotations - create and customise annotations
 - Overlays - create and style polylines and polygons
-- Offline tile storage - SEE TODO
-- Geocoder - Search 1:50k Gazetteer & TODO: postcode product? is it codepoint?
+- Offline tile storage - read [about offline tile packages](#offline-tile-packages)
+- Geocoder - Search 1:50K Gazetteer, OS Locator and Codepoint Open datasets
 - Uses OSGB36 National Grid map projection - ordnancesurvey-ios-sdk converts between WGS84 latitude/longitude and OSGB36 National Grid easting/northing
+- User location - provides an wrapper around standard Core Location API to easily display your user's location on the map and use the data
 
 
 Contents
@@ -26,8 +33,23 @@ Contents
 
 Within the ordnancesurvey-ios-sdk project we have:
 
-- /downloads - contains the ordnancesurvey-ios-sdk framework and documentation packages
-- There are several demo projects to get started with such as TODO
+1. /downloads - contains the ordnancesurvey-ios-sdk framework and Appledoc documentation packages
+
+
+
+###### Demo projects
+
+There are several demo projects as other github repos to get started
+
+* [OS Locate Me](https://github.com/OrdnanceSurvey/ios-sdk-demo-locate-me)
+* [OS Tilesource Demo](https://github.com/OrdnanceSurvey/ios-sdk-demo-tilesources)
+* [OS Mapkit conversion Demo](https://github.com/OrdnanceSurvey/ios-sdk-demo-mapkit-conversion)
+ 
+
+
+
+
+
 
 
 Getting started
@@ -44,7 +66,8 @@ Notes about downloading zip
 #### Import into Xcode project
 
 1. Drag the OSMap.framework into your project
-2. TODO
+2. Select if you wish to copy the framework into your project or reference the external location
+3. Ensure that the framework is added to relevant project targets
 
 #### Dependancies
 
@@ -56,9 +79,14 @@ Applications will need to link against OSMap.framework and its dependencies:
 * QuartzCore.framework
 * UIKit.framework
 
-#### Licence and Attribution
+#### Import OSMap.h
 
-need to include? TODO
+In the ViewController you wish to display, import the OSMap/OSMap.h file
+
+<pre>
+#import &lt;OSMap/OSMap.h>
+</pre>
+
 
 #### Converting Apple Mapkit
 
@@ -111,7 +139,7 @@ After completing the above steps to download and import the OSMap.framework, the
 - Create atleast one OSTileSource and add to OSMapView
 
 <pre>
-In your ViewController.m
+//In your ViewController.m
 
 //create OSTileSource, in this case OS OpenSpace web map source with API key and associated URL
 id<OSTileSource> webSource = [OSMapView webTileSourceWithAPIKey:@"API_KEY" refererUrl:@"YOUR_WEBPAGE_URL" openSpacePro:true/false];
@@ -196,12 +224,68 @@ TODO: is this available on the OS website? If not, why not
 - "10KR"   // 1:10k resampled
 - "10KBW"  // 1:10k Black and White
 - "10KBWR" // 1:10k Black and White resampled
-- "CSG06"  // TODO ??
-- "CSG07"  // TODO
-- "CSG08"  // TODO
-- "CSG09"  // TODO
+- "CSG06"  // Consistently styled 25K,50K
+- "CSG07"  // Consistently styled 25K,50K
+- "CSG08"  // Consistently styled 25K,50K
+- "CSG09"  // Consistently styled 25K,50K
+
+
+##### Offline tile packages
+
+This feature is not documented at present, TODO
+
+
+
 
 License
 -------
 
-Some notes about license & use TODO
+The Ordnance Survey iOS SDK is protected by © Crown copyright – Ordnance
+Survey 2012. It is subject to licensing terms granted by Ordnance Survey, the
+national mapping agency of Great Britain.
+
+The Ordnance Survey iOS SDK includes the Route-Me library. The Route-Me
+library is copyright (c) 2008-2012, Route-Me Contributors All rights reserved
+(subject to the BSD licence terms as follows):
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+* Redistributions of source code must retain the above copyright notice, this
+  list of conditions and the following disclaimer. * Redistributions in binary
+  form must reproduce the above copyright notice, this list of conditions and
+  the following disclaimer in the documentation and/or other materials provided
+  with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Route-Me depends on the Proj4 Library. [ http://trac.osgeo.org/proj/wiki/WikiStart ]
+Proj4 is copyright (c) 2000, Frank
+Warmerdam / Gerald Evenden Proj4 is subject to the MIT licence as follows:
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
