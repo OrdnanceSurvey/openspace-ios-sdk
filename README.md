@@ -1,13 +1,13 @@
 Description
 -------
 
-The ordnancesurvey-ios-sdk enables access to [Ordnance Survey](http://www.ordnancesurvey.co.uk/) services for iOS based devices. It provides access to a number of mapping layers and gazetteer lookups from the OS OpenSpace service and has a largely similar API to Apple's Mapkit, so that moving from Apple mapping to OS Openspace is simple [Converting](#converting-apple-mapkit).
+The ordnancesurvey-ios-sdk enables access to [Ordnance Survey](http://www.ordnancesurvey.co.uk/) services for iOS based devices. It provides access to a number of mapping layers and gazetteer lookups from the OS OpenSpace service and has a similar API to Apple's Mapkit, so that moving from Apple mapping to OS Openspace is simple, see [Converting](#converting-apple-mapkit).
 
 Developers who wish to use the OpenSpace on-line services will need to register and obtain an API Key for either the Ordnance Survey [OpenSpace](http://www.ordnancesurvey.co.uk/oswebsite/web-services/os-openspace/api/) or [OpenSpace Pro](http://www.ordnancesurvey.co.uk/oswebsite/web-services/os-openspace/pro/) services.
 
-This SDK is available as a static framework, please see the [Getting started](#getting-started) guide for instructions about downloading and importing into your own application or try a [demo app](#demo-app).
+This SDK is available as a static framework, see the [Getting started](#getting-started) guide for instructions about downloading and importing into your own application or try a [demo app](#demo-app) to get started quickly.
 
-![ScreenShot](https://github.com/OrdnanceSurvey/ios-sdk-demo-locate-me/raw/master/screenshot.png "Screenshot of locate me demo app") ![ScreenShot](https://github.com/OrdnanceSurvey/ios-sdk-demo-tilesources/raw/master/screenshot.png "Screenshot of tilesource demo app")
+![ScreenShot](https://github.com/OrdnanceSurvey/ios-sdk-demo-locate-me/raw/master/screenshot.png "Screenshot of locate me demo app") ![ScreenShot](https://github.com/OrdnanceSurvey/ios-sdk-demo-tilesources/raw/master/screenshot.png "Screenshot of tilesource demo app") ![ScreenShot](https://github.com/OrdnanceSurvey/ios-sdk-demo-overlay-finder/raw/master/screenshot.png "Screenshot of overlay-finder demo app")
 
 
 
@@ -16,16 +16,16 @@ This SDK is available as a static framework, please see the [Getting started](#g
 
 Here are some of the features available
 
-- Native iOS framework incorporating OS mapping
+- Native iOS framework to incorporate Ordnance Survey mapping
 - OS OpenSpace Pro and free services
 - Select which products are displayed - see [products available](#product-code-list)
-- Zoom and pan controls - native touch gesture recogonisers provide tap, pinch zoom control and many more
+- Zoom and pan controls - native touch gesture recogonisers provide tap, pinch zoom control, etc
 - Annotations - create and customise annotations
 - Overlays - create and style polylines and polygons
 - Offline tile storage - read [about offline tile packages](#offline-tile-packages)
 - Geocoder - Search 1:50K Gazetteer, OS Locator and Codepoint Open datasets
-- Uses OSGB36 National Grid map projection - ordnancesurvey-ios-sdk converts between WGS84 latitude/longitude and OSGB36 National Grid easting/northing
-- User location - provides an wrapper around standard Core Location API to easily display your user's location on the map and use the data
+- Uses OSGB36 National Grid map projection - ordnancesurvey-ios-sdk converts between WGS84 latitude/longitude and OSGB36 National Grid easting/northing. Most Classes handle geometry in either a CLLocationCoordinate2D or OSGridPoint
+- User location - ordnancesurvey-ios-sdk provides an wrapper around standard Core Location API to easily display your app's user location on the map and use the data
 
 
 Contents
@@ -33,7 +33,8 @@ Contents
 
 Within the ordnancesurvey-ios-sdk project we have:
 
-1. /downloads - contains the ordnancesurvey-ios-sdk framework and Appledoc documentation packages
+1. /TBC - contains the ordnancesurvey-ios-sdk framework and Appledoc documentation packages
+2. [Documentation](http://ordnancesurvey.github.com/ordnancesurvey-ios-sdk/) - The documentation for the latest version of ordnancesurvey-ios-sdk
 
 
 
@@ -42,8 +43,9 @@ Within the ordnancesurvey-ios-sdk project we have:
 There are several demo projects as other github repos to get started
 
 * [OS Locate Me](https://github.com/OrdnanceSurvey/ios-sdk-demo-locate-me)
-* [OS Tilesource Demo](https://github.com/OrdnanceSurvey/ios-sdk-demo-tilesources)
-* [OS Mapkit conversion Demo](https://github.com/OrdnanceSurvey/ios-sdk-demo-mapkit-conversion)
+* [OS Tilesource demo](https://github.com/OrdnanceSurvey/ios-sdk-demo-tilesources)
+* [OS Mapkit conversion demo](https://github.com/OrdnanceSurvey/ios-sdk-demo-mapkit-conversion)
+* [OS Overlay Finder demo](https://github.com/OrdnanceSurvey/ios-sdk-demo-overlay-finder)
  
 
 
@@ -55,11 +57,22 @@ Getting started
 
 #### API Key
 
-Developers who wish to use online services will need to register and obtain an API Key for one of the [OS OpenSpace services](http://www.ordnancesurvey.co.uk/oswebsite/web-services/os-openspace/) in order to access the mapping service.
+Developers who wish to use online services will need to register and obtain an API Key for one of the [OS OpenSpace services](http://www.ordnancesurvey.co.uk/oswebsite/web-services/os-openspace/) in order to access the mapping and geocoding services.
 
 #### Download framework package
 
-Head to the [downloads section](https://github.com/OrdnanceSurvey/ordnancesurvey-ios-sdk/downloads) of this project and download the latest OSMap zip package. Unzip the downloaded file to reveal the OSMap framework and to use it.
+Head to the TBC to download the latest OSMap zip package. Unzip the downloaded file to reveal the OSMap framework and then import into your project.
+
+###### Versions
+
+Ordnance Survey will only provide and offically support the latest version of the SDK. TODO: will we only support latest? best efforts on older?
+
+To get the version of SDK you are currently using;
+
+<pre>
+NSLog(@"Currently using SDK Version: %@",[OSMapView SDKVersion]);
+</pre>
+
 
 #### Import into Xcode project
 
@@ -91,7 +104,7 @@ In the ViewController you wish to display, import the OSMap/OSMap.h file
 After completing the above steps to download and import the OSMap.framework, the minimum required to display a map using the ordnancesurvey-ios-sdk is as follows:
 
 - Instatiate an OSMapView in a UIView
-- Create atleast one OSTileSource and add to OSMapView
+- Create atleast one OSTileSource and add to OSMapView instance
 
 <pre>
 //In your ViewController.m
@@ -100,13 +113,13 @@ After completing the above steps to download and import the OSMap.framework, the
 id<OSTileSource> webSource = [OSMapView webTileSourceWithAPIKey:@"API_KEY" refererUrl:@"YOUR_WEBPAGE_URL" openSpacePro:true/false];
 
 //add to OSMapView
-mapView.tileSources = [NSArray arrayWithObject:webSource];
+yourMapView.tileSources = [NSArray arrayWithObject:webSource];
 
 </pre>
 
 #### Product Code list
 
-A developer can select which Ordnance Survey products to use by passing the product codes as and array of strings. There are three pre-configured map stacks available.
+A developer can select which Ordnance Survey mapping products to use by  selecting on of three pre-configured map stacks or customising their app by passing the product codes as and array of strings.
 
 NOTE: Some OpenSpace Pro products require separate licenses, please check before use.
 
@@ -129,6 +142,9 @@ mapView.mapProductCodes = [NSArray arrayWithObjects:@"250KR", @"250K", @"50KR", 
 
 //OpenSpace Pro only
 [OSMapView zoomMapStackProductCodes] = @"CS10",@"CS09",@"CS08",@"CS07",@"CS06",@"CS05",@"CS04",@"CS03",@"CS02",@"CS01",@"CS00"
+
+//Example usage
+mapView.mapProductCodes = [OSMapView completeFreeMapStackProductCodes];
 
 </pre>
 
@@ -175,6 +191,8 @@ TODO: is this available on the OS website? If not, why not
 
 // Other products [OS OpenSpace Pro]
 
+TODO: MJG to clarify if we can remove any of these
+
 - "10K"    // 1:10k
 - "10KR"   // 1:10k resampled
 - "10KBW"  // 1:10k Black and White
@@ -192,7 +210,7 @@ This feature is not documented at present, TODO
 
 #### Converting Apple Mapkit
 
-The ordnancesurvey-ios-sdk is intended to provide a "drop-in" replacement for MapKit and has a largely similar API enabling existing Mapkit based project to use OS mapping instead.
+The ordnancesurvey-ios-sdk is intended to provide a "drop-in" replacement for MapKit and has a similar API enabling existing Mapkit based project to be converted to use Ordnance Survey mapping instead.
 
 Many applications can be converted by simply changing the "MK" prefix to "OS" or by renaming symbols with the preprocessor:
 
@@ -232,6 +250,7 @@ Many applications can be converted by simply changing the "MK" prefix to "OS" or
 #define MKMapPoint OSMapPoint
 </pre>
 
+See the [OS Mapkit conversion demo](https://github.com/OrdnanceSurvey/ios-sdk-demo-mapkit-conversion) project for more details.
 
 
 
