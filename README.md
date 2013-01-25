@@ -5,7 +5,7 @@ The ordnancesurvey-ios-sdk enables access to [Ordnance Survey](http://www.ordnan
 
 Developers who wish to use the OpenSpace on-line services will need to register and obtain an API Key for either the Ordnance Survey [OpenSpace](http://www.ordnancesurvey.co.uk/oswebsite/web-services/os-openspace/api/) or [OpenSpace Pro](http://www.ordnancesurvey.co.uk/oswebsite/web-services/os-openspace/pro/) services.
 
-This SDK is available as a static framework, see the [Getting started](#getting-started) guide for instructions about downloading and importing into your own application or try a [demo app](#demo-app) to get started quickly.
+This SDK is available as a static framework, see the [Getting started](#getting-started) guide for instructions about downloading and importing into your own application or try a [demo app](#demo-projects) to get started quickly.
 
 ![ScreenShot](https://github.com/OrdnanceSurvey/ios-sdk-demo-locate-me/raw/master/screenshot.png "Screenshot of locate me demo app") ![ScreenShot](https://github.com/OrdnanceSurvey/ios-sdk-demo-tilesources/raw/master/screenshot.png "Screenshot of tilesource demo app") ![ScreenShot](https://github.com/OrdnanceSurvey/ios-sdk-demo-overlay-finder/raw/master/screenshot.png "Screenshot of overlay-finder demo app")
 
@@ -24,7 +24,7 @@ Here are some of the features available
 - Overlays - create and style polylines and polygons
 - Offline tile storage - read [about offline tile packages](#offline-tile-packages)
 - Geocoder - Search 1:50K Gazetteer, OS Locator and Codepoint Open datasets
-- Uses OSGB36 National Grid map projection - ordnancesurvey-ios-sdk converts between WGS84 latitude/longitude and OSGB36 National Grid easting/northing. Most Classes handle geometry in either a CLLocationCoordinate2D or OSGridPoint
+- Uses [OSGB36 British National Grid](http://www.ordnancesurvey.co.uk/oswebsite/support/the-national-grid.html) map projection - ordnancesurvey-ios-sdk converts between WGS84 latitude/longitude and OSGB36 National Grid easting/northing. Most Classes handle geometry in either a CLLocationCoordinate2D or OSGridPoint
 - User location - ordnancesurvey-ios-sdk provides an wrapper around standard Core Location API to easily display your app's user location on the map and use the data
 
 
@@ -34,7 +34,7 @@ Contents
 Within the ordnancesurvey-ios-sdk project we have:
 
 1. /TBC - contains the ordnancesurvey-ios-sdk framework and Appledoc documentation packages
-2. [Documentation](http://ordnancesurvey.github.com/ordnancesurvey-ios-sdk/) - The documentation for the latest version of ordnancesurvey-ios-sdk
+2. [Documentation](http://ordnancesurvey.github.com/ordnancesurvey-ios-sdk/) - The documentation for the latest version of ordnancesurvey-ios-sdk in appledoc format
 
 
 
@@ -117,6 +117,8 @@ yourMapView.tileSources = [NSArray arrayWithObject:webSource];
 
 </pre>
 
+Note: OSMapView cannot be completely initialised from a NIB, it requires at least one OSTileSource
+
 #### Product Code list
 
 A developer can select which Ordnance Survey mapping products to use by  selecting on of three pre-configured map stacks or customising their app by passing the product codes as and array of strings.
@@ -148,9 +150,9 @@ mapView.mapProductCodes = [OSMapView completeFreeMapStackProductCodes];
 
 </pre>
 
-##### Full list
+##### Full Product list
 
-TODO: is this available on the OS website? If not, why not
+TODO: is this available on the OS website? 
 
 // Opendata products [OS OpenSpace Free and Pro]
 
@@ -197,6 +199,9 @@ TODO: MJG to clarify if we can remove any of these
 - "10KR"   // 1:10k resampled
 - "10KBW"  // 1:10k Black and White
 - "10KBWR" // 1:10k Black and White resampled
+
+//POSSIBLY REMOVE THESE
+
 - "CSG06"  // Consistently styled 25K,50K
 - "CSG07"  // Consistently styled 25K,50K
 - "CSG08"  // Consistently styled 25K,50K
@@ -205,7 +210,11 @@ TODO: MJG to clarify if we can remove any of these
 
 ##### Offline tile packages
 
-This feature is not documented at present, TODO
+The OSTiles format is uses the small, ubiquitous and lightweight [sqlite](http://www.sqlite.org/) database and overcomes filesystem storage problems to handle millions of images. 
+
+OSTiles packages are sets of map tiles, each package can store several layers, a layer being a rectangular bounding box for a given Ordnance Survey product and all the tile images to fill that bounding box. The packages are intended to transport presentational map tiles and can be used as a mechanism to allow mobile applications to display tiles offline, without the need to stream tiles from a webservice.
+
+Please refer to [OSTiles spec](ordnancesurvey-ios-sdk/tree/master/ostiles_spec.md) for more details.
 
 
 #### Converting Apple Mapkit
@@ -251,6 +260,23 @@ Many applications can be converted by simply changing the "MK" prefix to "OS" or
 </pre>
 
 See the [OS Mapkit conversion demo](https://github.com/OrdnanceSurvey/ios-sdk-demo-mapkit-conversion) project for more details.
+
+
+API
+-------
+
+In this section we will run through some of the important components in the SDK. For more details please see the [reference documentation](http://ordnancesurvey.github.com/ordnancesurvey-ios-sdk/)
+
+#### OS Map View (`OSMapView`)
+
+TODO
+
+
+
+Issues
+--------
+
+For any issues relating to developing with the SDK, obtaining API keys or service problems, please head over to the [OS Openspace forums](https://openspaceforums.ordnancesurvey.co.uk/openspaceforum//index.jspa) and we will investigate and get back to you.
 
 
 
