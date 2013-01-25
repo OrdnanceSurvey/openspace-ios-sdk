@@ -26,6 +26,7 @@ Here are some of the features available
 - Geocoder - Search 1:50K Gazetteer, OS Locator and Codepoint Open datasets
 - Uses [OSGB36 British National Grid](http://www.ordnancesurvey.co.uk/oswebsite/support/the-national-grid.html) map projection - ordnancesurvey-ios-sdk converts between WGS84 latitude/longitude and OSGB36 National Grid easting/northing. Most Classes handle geometry in either a CLLocationCoordinate2D or OSGridPoint
 - User location - ordnancesurvey-ios-sdk provides an wrapper around standard Core Location API to easily display your app's user location on the map and use the data
+- ARC support
 
 
 Contents
@@ -63,15 +64,6 @@ Developers who wish to use online services will need to register and obtain an A
 
 Head to the TBC to download the latest OSMap zip package. Unzip the downloaded file to reveal the OSMap framework and then import into your project.
 
-###### Versions
-
-Ordnance Survey will only provide and offically support the latest version of the SDK. TODO: will we only support latest? best efforts on older?
-
-To get the version of SDK you are currently using;
-
-<pre>
-NSLog(@"Currently using SDK Version: %@",[OSMapView SDKVersion]);
-</pre>
 
 
 #### Import into Xcode project
@@ -103,21 +95,25 @@ In the ViewController you wish to display, import the OSMap/OSMap.h file
 
 After completing the above steps to download and import the OSMap.framework, the minimum required to display a map using the ordnancesurvey-ios-sdk is as follows:
 
-- Instatiate an OSMapView in a UIView
-- Create atleast one OSTileSource and add to OSMapView instance
+- Instatiate an `OSMapView` in a `UIView`
+- Create atleast one tile source and add to `OSMapView` instance
 
 <pre>
 //In your ViewController.m
 
+/*
+ * Assuming there is an OSMapView instance, either created via a XIB or programmatically
+ */
+
 //create OSTileSource, in this case OS OpenSpace web map source with API key and associated URL
-id<OSTileSource> webSource = [OSMapView webTileSourceWithAPIKey:@"API_KEY" refererUrl:@"YOUR_WEBPAGE_URL" openSpacePro:true/false];
+id&lt;OSTileSource&gt; webSource = [OSMapView webTileSourceWithAPIKey:@"API_KEY" refererUrl:@"YOUR_WEBPAGE_URL" openSpacePro:true/false];
 
 //add to OSMapView
 yourMapView.tileSources = [NSArray arrayWithObject:webSource];
 
 </pre>
 
-Note: OSMapView cannot be completely initialised from a NIB, it requires at least one OSTileSource
+Note: `OSMapView` cannot be completely initialised from a Interface Builder (`.xib`) or Storyboard, it requires at least one tile source
 
 #### Product Code list
 
@@ -208,7 +204,7 @@ TODO: MJG to clarify if we can remove any of these
 - "CSG09"  // Consistently styled 25K,50K
 
 
-##### Offline tile packages
+#### Offline tile packages
 
 The OSTiles format is uses the small, ubiquitous and lightweight [sqlite](http://www.sqlite.org/) database and overcomes filesystem storage problems to handle millions of images. 
 
@@ -261,16 +257,65 @@ Many applications can be converted by simply changing the "MK" prefix to "OS" or
 
 See the [OS Mapkit conversion demo](https://github.com/OrdnanceSurvey/ios-sdk-demo-mapkit-conversion) project for more details.
 
+#### Versioning
+
+Ordnance Survey will only provide and offically support the latest version of the SDK. 
+TODO: will we only support latest? best efforts on older?
+
+To get the version of SDK you are currently using;
+
+<pre>
+NSLog(@"Currently using SDK Version: %@",[OSMapView SDKVersion]);
+</pre>
+
 
 API
 -------
 
 In this section we will run through some of the important components in the SDK. For more details please see the [reference documentation](http://ordnancesurvey.github.com/ordnancesurvey-ios-sdk/)
 
-#### OS Map View (`OSMapView`)
+#### OS Map View (`OSMapView` class)
 
-TODO
+The `OSMapView` class is the subclass of `UIView` that will provide the main interaction with the UI and the SDK.
 
+The `OSMapView` class must be configured with a tile source - see below. 
+
+#### Map View delegate (`OSMapViewDelegate` protocol)
+
+OSMapViewDelegate
+
+#### Tilesources (`OSTileSource` protocol)
+
+Tilesources  
+
+#### Annotations
+
+Annotations
+
+#### Overlays
+
+Overlays
+
+#### Geocoding (`OSGeocoder` class)
+
+OSGeocoder
+
+#### Geometry
+
+Conversion between `CLLocationCoordinate2D` and `OSGridPoint` is handled internally — applications should not perform unnecessary conversions. Coordinates should be stored in their source coordinate system in order to benefit from future accuracy improvements. 
+
+`OSGridPoint` - represents OSGB36 British National Grid easting/northing
+
+`CLLocationCoordinate2D` - represents WGS84 latitude/longitude
+
+
+Conversions can be performed via this SDK if required;
+
+<pre>
+OSGridPoint OSGridPointForCoordinate(CLLocationCoordinate2D coordinate);
+
+CLLocationCoordinate2D OSCoordinateForGridPoint(OSGridPoint gridPoint);
+</pre>
 
 
 Issues
