@@ -105,7 +105,7 @@ After completing the above steps to download and import the OSMap.framework, the
 //In your ViewController.m
 
 /*
- * Assuming there is an OSMapView instance, either created via a XIB or programmatically
+ * Assuming there is an OSMapView instance, either created via a .xib or programmatically
  */
 
 //create OSTileSource, in this case OS OpenSpace web map source with API key and associated URL
@@ -275,29 +275,174 @@ NSLog(@"Currently using SDK Version: %@",[OSMapView SDKVersion]);
 API
 -------
 
-In this section we will run through some of the important components in the SDK. For more details please see the [reference documentation](http://ordnancesurvey.github.com/ordnancesurvey-ios-sdk/)
+In this section we will run through some of the important components in the SDK. For more details please see the [reference documentation](http://ordnancesurvey.github.com/ordnancesurvey-ios-sdk/) or any [demo app](#demo-projects) for full application usage.
 
 #### OS Map View (`OSMapView` class)
 
-The `OSMapView` class is the subclass of `UIView` that will provide the main interaction with the UI and the SDK.
+The `OSMapView` class is the subclass of `UIView` that will provide the main interaction with the UI and the SDK, displaying maps and managing annotations and overlays.
 
-The `OSMapView` class must be configured with a tile source - see below. 
+
+The `OSMapView` class takes care of displaying map tiles on the screen, all UI gestures for panning and zooming. `OSMapView` implements a wrapper around iOS `CoreLocationManager` and `CLLocationManagerDelegate` to provide easy access to device location data, see User location below.
+
+**NOTE:**
+
+* The `OSMapView` class must be configured with a tile source - see Tilesources below.
+* `OSMapView` does not support drawing maps outside Great Britain.
+* `OSMapView` does not support being subclassed
+
 
 #### Map View delegate (`OSMapViewDelegate` protocol)
 
-OSMapViewDelegate
+The `OSMapView` class can have an optional delegate object to listen to events that occur on the map. For your class to respond to these events you must implement the `OSMapViewDelegate` protocol.
+
+<pre>
+#import "MapViewController.h"
+
+/*
+ * Example class definition
+ */
+@interface MapViewController () &lt;OSMapViewDelegate&gt;
+
+@end
+
+/../
+
+/*
+ * In the method where you set up the mapView instance, set its delegate to your view controller
+ */
+ mapView.delegate = self;
+ 
+ /../
+ 
+ /*
+  * Implement any of the delegate methods, such as:
+  */
+  #pragma mark OSMapViewDelegate methods
+  - (void)mapView:(OSMapView *)map regionDidChangeAnimated:(BOOL)animated
+  {
+  	//Do something
+  }
+  
+
+</pre>
+
+**NOTE:**
+
+* All delegate methods are optional, listen to any particular event
+* `OSMapViewDelegate` does not currently support the 'map loading' callbacks that MapKit does
+* See any of the [demo projects](#demo-projects) for working examples
+
 
 #### Tilesources (`OSTileSource` protocol)
 
-Tilesources  
+The `OSMapView` class requires atleast one online or offline tile source to render a map.
 
-#### Annotations
+<pre>
+/*
+ * In the method where you set up the mapView instance, create some tile sources
+ */
+ 
+ //For example if you had an .ostiles format file in the project bundle
+ id&lt;OSTileSource&gt; packageSource = [OSMapView localTileSourceWithFileURL:[[NSBundle mainBundle] URLForResource:@"myTilePackage.ostiles" withExtension:nil]];
 
-Annotations
+ 
+ //create web tile source with API details
+id&lt;OSTileSource&gt; webSource = [OSMapView webTileSourceWithAPIKey:kOSApiKey refererUrl:kOSApiKeyUrl openSpacePro:kOSIsPro];
 
-#### Overlays
 
-Overlays
+/*
+ * Tile sources are consulted in the order they appear in the array, so here we render the local source first, falling back to the web if necessary
+ */
+mapView.tileSources = [NSArray arrayWithObjects: packageSource, webSource, nil];
+
+</pre>
+
+Each `OSTileSource` added to `OSMapView` implements the `OSTileSource` protocol and implements the following methods.
+
+<pre>
+- (OSGridRect)boundsForProductCode:(NSString *)productCode
+
+- (bool)isLocal
+</pre>
+
+**NOTE:**
+
+* To configure product codes, see the [products available](#product-code-list) section.
+* See the [OS Tilesource](https://github.com/OrdnanceSurvey/ios-sdk-demo-tilesources) demo project for working examples
+
+#### Annotations (`OSAnnotation` protocol & `OSAnnotationView` class)
+
+Annotations identify single point locations on the map and as with MapKit there are two object involved with displaying an annotation based on annotation data and the view object.
+
+The `OSMapView` accepts an object that conforms to the `OSAnnotation` protocol and therefore must have atleast a `CLLocationCoordinate2D` coordinate property. The SDK includes the `OSBasicAnnotation` class that can be used with minimal configuration.
+
+<pre>
+CLLocationCoordinate2D coord = {52.205298,0.118146};
+    
+OSBasicAnnotation * annotation = [[OSBasicAnnotation alloc] initWithCoordinate:coord];
+annotation.title = @"Hello World!!";
+    
+[mapView addAnnotation:annotation];
+</pre>
+
+
+To differentiate between the data and view objects and cope with potentially large numbers of annotations, the presentation of the annotation is handled by a view object. When an annotation comes into view `OSMapView` asks its delegate to provide an annotation view, simply implement the method below and provide your own class by subclassing `OSAnnotationView` or use the built in `OSPinAnnotationView` as below.
+
+<pre>
+-(OSAnnotationView*)mapView:(OSMapView *)mapView viewForAnnotation:(id<OSAnnotation>)annotation
+{
+    // Use the default user location view.
+    if ([annotation isKindOfClass: [OSUserLocation class]])
+    {
+        return nil;
+    }
+    
+    /*
+     * Create a OSPinAnnotationView and configure, for more details about options, see reference documentation
+     */
+    OSPinAnnotationView *view = [[OSPinAnnotationView alloc] initWithAnnotation: annotation reuseIdentifier: nil];
+    view.animatesDrop = YES;
+    view.canShowCallout = YES;
+    view.draggable = NO;
+    view.pinColor = OSPinAnnotationColorRed;
+    return view;
+
+}
+</pre>
+
+View objects are designed to be reused and provide performance improvements during scrolling by avoiding the creation of new view objects. To do this, pass a `reuseIdentifier` and call `OSMapView` method `dequeueReusableAnnotationViewWithIdentifier:` to get a queued object.
+
+**NOTE**
+
+* See the [OS Mapkit conversion](https://github.com/OrdnanceSurvey/ios-sdk-demo-mapkit-conversion) demo project for working example
+
+#### Overlays (`OSOverlay` protocol)
+
+Overlays follow the same pattern as annotations, except that overlays are generally used to display more complex data and as such there are several implementations of shapes and the ability to implement your own.
+
+The `OSMapView` accepts an object that conforms to the `OSOverlay` protocol and again the SDK provides several existing implementations and their respective views.
+
+In this example we will add the respective components for a simple square, for more examples see the [OS Overlay Finder](https://github.com/OrdnanceSurvey/ios-sdk-demo-overlay-finder) demo project.
+
+<pre>
+
+OSGridPoint swCorner = {400000,400000};
+    
+//array of 4 corners
+OSGridPoint points[] = {{swCorner.easting,swCorner.northing},
+    {swCorner.easting + 1000,swCorner.northing},
+    {swCorner.easting + 1000,swCorner.northing + 1000},
+    {swCorner.easting,swCorner.northing + 1000}};
+    
+OSPolygon *square = [OSPolygon polygonWithGridPoints: points count: 4];
+    
+[mapView addOverlay: square];
+
+</pre>
+
+**NOTE**
+
+* See the [OS Overlay Finder](https://github.com/OrdnanceSurvey/ios-sdk-demo-overlay-finder) demo project for working examples
 
 #### Geocoding (`OSGeocoder` class)
 
@@ -305,20 +450,28 @@ OSGeocoder
 
 #### Geometry
 
-Conversion between `CLLocationCoordinate2D` and `OSGridPoint` is handled internally — applications should not perform unnecessary conversions. Coordinates should be stored in their source coordinate system in order to benefit from future accuracy improvements. 
+Conversion between `CLLocationCoordinate2D` and `OSGridPoint` is handled internally — applications should not perform unnecessary conversions. Coordinates should be stored in their source coordinate system in order to benefit from future accuracy improvements within the SDK. 
 
 `OSGridPoint` - represents OSGB36 British National Grid easting/northing
 
 `CLLocationCoordinate2D` - represents WGS84 latitude/longitude
 
 
-Conversions can be performed via this SDK if required;
+Conversions can be performed via this SDK if required using the functions below;
 
 <pre>
 OSGridPoint OSGridPointForCoordinate(CLLocationCoordinate2D coordinate);
 
 CLLocationCoordinate2D OSCoordinateForGridPoint(OSGridPoint gridPoint);
 </pre>
+
+#### User location (`OSUserLocation` class)
+
+OSUserLocation
+
+#### Scale virew
+
+Scale virew
 
 
 Issues
