@@ -521,6 +521,7 @@ You will now receive location updates, implement the required delegate methods t
 
 
 Sample UserLocationView:
+
 ![UserLocation-ScreenShot](https://github.com/OrdnanceSurvey/ordnancesurvey-ios-sdk/raw/master/userlocation-scr.png "Screenshot of user location annotation")
 
 
@@ -528,9 +529,10 @@ Sample UserLocationView:
 
 * See the [OS LocateMe](https://github.com/OrdnanceSurvey/ios-sdk-demo-locate-me) demo project for working example
 
-#### Scale virew
+#### Scale view
 
-Scale virew
+Notes about scale view TODO
+
 
 
 Issues
