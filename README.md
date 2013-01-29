@@ -22,7 +22,7 @@ Here are some of the features available
 - Zoom and pan controls - native touch gesture recogonisers provide tap, pinch zoom control, etc
 - Annotations - create and customise annotations
 - Overlays - create and style polylines and polygons
-- Offline tile storage - read [about offline tile packages](#offline-tile-packages)
+- Offline tile storage - read [about offline tile packages](#offline-databases)
 - Geocoder - Search 1:50K Gazetteer, OS Locator and Codepoint Open datasets
 - Uses [OSGB36 British National Grid](http://www.ordnancesurvey.co.uk/oswebsite/support/the-national-grid.html) map projection - ordnancesurvey-ios-sdk converts between WGS84 latitude/longitude and OSGB36 National Grid easting/northing. Most Classes handle geometry in either a CLLocationCoordinate2D or OSGridPoint
 - User location - ordnancesurvey-ios-sdk provides an wrapper around standard Core Location API to easily display your app's user location on the map and use the data
@@ -207,13 +207,20 @@ TODO: MJG to clarify if we can remove any of these
 - "CSG09"  // Consistently styled 25K,50K
 
 
-#### Offline tile packages
+#### Offline databases
+
+
+##### OSTile packages
 
 The OSTiles format is uses the small, ubiquitous and lightweight [sqlite](http://www.sqlite.org/) database and overcomes filesystem storage problems to handle millions of images. 
 
 OSTiles packages are sets of map tiles, each package can store several layers, a layer being a rectangular bounding box for a given Ordnance Survey product and all the tile images to fill that bounding box. The packages are intended to transport presentational map tiles and can be used as a mechanism to allow mobile applications to display tiles offline, without the need to stream tiles from a webservice.
 
 Please refer to [OSTiles spec](ordnancesurvey-ios-sdk/tree/master/ostiles_spec.md) for more details.
+
+##### Offline search database
+
+TBC how we dist this
 
 
 #### Converting Apple Mapkit
@@ -412,7 +419,7 @@ To differentiate between the data and view objects and cope with potentially lar
 
 View objects are designed to be reused and provide performance improvements during scrolling by avoiding the creation of new view objects. To do this, pass a `reuseIdentifier` and call `OSMapView` method `dequeueReusableAnnotationViewWithIdentifier:` to get a queued object.
 
-**NOTE**
+**NOTE:**
 
 * See the [OS Mapkit conversion](https://github.com/OrdnanceSurvey/ios-sdk-demo-mapkit-conversion) demo project for working example
 
@@ -429,24 +436,53 @@ In this example we will add the respective components for a simple square, for m
 OSGridPoint swCorner = {400000,400000};
     
 //array of 4 corners
-OSGridPoint points[] = {{swCorner.easting,swCorner.northing},
-    {swCorner.easting + 1000,swCorner.northing},
-    {swCorner.easting + 1000,swCorner.northing + 1000},
-    {swCorner.easting,swCorner.northing + 1000}};
-    
+OSGridPoint points[] = {{swCorner.easting, swCorner.northing},
+    {swCorner.easting + 1000, swCorner.northing},
+    {swCorner.easting + 1000, swCorner.northing + 1000},
+    {swCorner.easting, swCorner.northing + 1000}};
+
 OSPolygon *square = [OSPolygon polygonWithGridPoints: points count: 4];
     
 [mapView addOverlay: square];
 
 </pre>
 
-**NOTE**
+There are existing SDK classes for the following shapes, please see reference documentation for more details:
+
+* Polygon - with or without interior polygons
+* Polyline
+* Circle
+
+
+**NOTE:**
 
 * See the [OS Overlay Finder](https://github.com/OrdnanceSurvey/ios-sdk-demo-overlay-finder) demo project for working examples
 
 #### Geocoding (`OSGeocoder` class)
 
-OSGeocoder
+The `OSGeocoder` class provides offline search facility against the following datasets; 
+
+* [1:50 000 Scale Gazetteer](http://www.ordnancesurvey.co.uk/oswebsite/products/50k-gazetteer/index.html) - Place names
+* [Code-Point Open](http://www.ordnancesurvey.co.uk/oswebsite/products/code-point-open/index.html) - Post codes
+* [OS Locator](http://www.ordnancesurvey.co.uk/oswebsite/products/os-locator/index.html) - Road names
+* Grid Reference
+
+The product to search is determined by passing a `OSGeocodeType` to the `OSGeocoder` instance. The type `OSGeocodeTypeCombined` is Gazetteer, Postcode and GridReferences whilst `OSGeocodeTypeCombined2` also includes OS Locator.
+
+The search can be performed within an area by passing a `OSGridRect`, to search the entire country, specify either `OSGridRectNull` or `OSNationalGridBounds`.
+
+The number of results can be limited by specifying the `NSRange`.
+
+The geocoding request requries a completion handler block that is called when search complete, this will pass your block an `NSError *error` and an array of search results `NSArray *placemarks`, if any. This array contains the respective objects for the search; `OSRoad` or `OSPlacemark`. These can be presented via your own implementation from the completion handler.
+
+
+**NOTE:**
+
+* The `OSGeocoder` class requires an offline database - See [about offline databases](#offline-databases) 
+* See the [OS LocateMe](https://github.com/OrdnanceSurvey/ios-sdk-demo-locate-me) demo project for working example
+* There are currently no reverse geocoding facilities
+
+
 
 #### Geometry
 
@@ -467,7 +503,30 @@ CLLocationCoordinate2D OSCoordinateForGridPoint(OSGridPoint gridPoint);
 
 #### User location (`OSUserLocation` class)
 
-OSUserLocation
+The SDK provides a wrapper around standard Core Location API and so allows you to use the location data by conforming to the `OSMapViewDelegate` protocol and implementing the relevant delegate methods to receive updates.
+
+When enabled, a distinct annotation will be added to the map complete with estimated GPS accuracy display in the form of a circle around the annotation, a large circle represents a low accuracy and large margin of error in determining the device location.
+
+To start receiving updates, turn on user location:
+
+<pre>
+mapView.showsUserLocation = YES/NO;
+</pre>
+
+You will now receive location updates, implement the required delegate methods to perform actions on events as required.
+
+<pre>
+- (void)mapView:(OSMapView *)mapView didUpdateUserLocation:(OSUserLocation *)userLocation
+</pre>
+
+
+Sample UserLocationView:
+![UserLocation-ScreenShot](https://github.com/OrdnanceSurvey/ordnancesurvey-ios-sdk/raw/master/userlocation-scr.png "Screenshot of user location annotation")
+
+
+**NOTE:**
+
+* See the [OS LocateMe](https://github.com/OrdnanceSurvey/ios-sdk-demo-locate-me) demo project for working example
 
 #### Scale virew
 
