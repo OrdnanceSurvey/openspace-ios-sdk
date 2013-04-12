@@ -55,7 +55,7 @@ There are several demo projects as other github repos to get started
 Getting started
 -------
 
-#### API Key
+#### Register for an API Key
 
 Developers who wish to use the WMTS services will need to register an App Name in order to authenticate the API key in the following format:
 
@@ -66,9 +66,9 @@ Bundle Identifier: This is the reverse domain name specified in Xcode, this is g
 
 #### Registration Process
 
-If you do not own a re-use data licence you can sign up to [OS OpenSpace Pro] (https://www.ordnancesurvey.co.uk/oswebsite/web-services/os-openspace/pro/index.html) for a 90 day trial or a commercial re-use licence. 
+If you do not own a re-use data licence you can register for an API key to access [OS OpenSpace Pro] (https://www.ordnancesurvey.co.uk/oswebsite/web-services/os-openspace/pro/index.html) under a 90 day trial or a commercial re-use licence. 
 
-If you own a data licence, for example, you are a member of the PSMA, you can sign up to [OSOnDemand WMTS] (http://www.ordnancesurvey.co.uk/oswebsite/web-services/os-ondemand/pricing.html).
+If you own a data licence, for example, you are a member of the PSMA, you can register for an API key to access [OSOnDemand WMTS] (http://www.ordnancesurvey.co.uk/oswebsite/web-services/os-ondemand/pricing.html).
 
 #### Download framework package
 
