@@ -57,7 +57,7 @@ Getting started
 
 #### API Key
 
-Developers who wish to use online services will need to register and obtain an API Key for OS OpenSpace Pro services]
+Developers who wish to use online services will need to register and obtain an API Key for [OS OpenSpace Pro]
 (http://www.ordnancesurvey.co.uk/oswebsite/web-services/os-openspace/) in order to access the mapping and geocoding services.
 
 #### Download framework package
@@ -151,9 +151,7 @@ mapView.mapProductCodes = [OSMapView completeFreeMapStackProductCodes];
 
 ##### Full Product list
 
-TODO: is this available on the OS website? 
-
-// Opendata products [OS OpenSpace Free and Pro]
+// Opendata products [OS OpenSpace Pro]
 
 - "SV"   // Street view
 - "SVR"  // Street view resampled
@@ -191,21 +189,6 @@ TODO: is this available on the OS website?
 - "CS10" // "zoomed in"
 
 // Other products [OS OpenSpace Pro]
-
-TODO: MJG to clarify if we can remove any of these
-
-- "10K"    // 1:10k
-- "10KR"   // 1:10k resampled
-- "10KBW"  // 1:10k Black and White
-- "10KBWR" // 1:10k Black and White resampled
-
-//POSSIBLY REMOVE THESE
-
-- "CSG06"  // Consistently styled 25K,50K
-- "CSG07"  // Consistently styled 25K,50K
-- "CSG08"  // Consistently styled 25K,50K
-- "CSG09"  // Consistently styled 25K,50K
-
 
 #### Offline databases
 
@@ -269,8 +252,7 @@ See the [OS Mapkit conversion demo](https://github.com/OrdnanceSurvey/ios-sdk-de
 
 #### Versioning
 
-Ordnance Survey will only provide and offically support the latest version of the SDK. 
-TODO: will we only support latest? best efforts on older?
+Ordnance Survey will provide and offically support the latest version of the SDK. 
 
 To get the version of SDK you are currently using;
 
@@ -546,11 +528,11 @@ License
 -------
 
 The Ordnance Survey iOS SDK is protected by © Crown copyright – Ordnance
-Survey 2012. It is subject to licensing terms granted by Ordnance Survey, the
+Survey 2013. It is subject to licensing terms granted by Ordnance Survey, the
 national mapping agency of Great Britain.
 
 The Ordnance Survey iOS SDK includes the Route-Me library. The Route-Me
-library is copyright (c) 2008-2012, Route-Me Contributors All rights reserved
+library is copyright (c) 2008-2013, Route-Me Contributors All rights reserved
 (subject to the BSD licence terms as follows):
 
 Redistribution and use in source and binary forms, with or without
