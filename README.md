@@ -527,11 +527,11 @@ Notes about scale view TODO
 Issues
 --------
 
-For any issues relating to developing with the SDK, obtaining API keys or service problems, please email osopenspace@ordnancesurvey.co.uk 
+For any issues relating to developing with the SDK, obtaining API keys or service problems, please email osopenspacepro@ordnancesurvey.co.uk
 
 
 
-License
+Licence
 -------
 
 The Ordnance Survey iOS SDK is protected by © Crown copyright – Ordnance
