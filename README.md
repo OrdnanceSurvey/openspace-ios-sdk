@@ -23,7 +23,7 @@ Here are some of the features available
 - Geocoder - Search 1:50K Gazetteer, OS Locator and Codepoint Open datasets
 - Uses [OSGB36 British National Grid](http://www.ordnancesurvey.co.uk/oswebsite/support/the-national-grid.html) map projection - ordnancesurvey-ios-sdk converts between WGS84 latitude/longitude and OSGB36 National Grid easting/northing. Most Classes handle geometry in either a CLLocationCoordinate2D or OSGridPoint
 - User location - ordnancesurvey-ios-sdk provides a wrapper around the standard Core Location API to easily display your app's user location on the map and use the data
-- ARC support
+- Automatic Reference Counting support
 
 
 Contents
@@ -182,7 +182,7 @@ mapView.mapProductCodes = [OSMapView completeFreeMapStackProductCodes];
 - "50K" // 1:50k
 - "50KR" // 1:50k resampled
 
-// Zoom stack products - enables consistently styled layers [OS OpenSpace Pro]
+// Zoom stack products - enables consistently styled layers
 
 - "CS00" // "zoomed out"
 - "CS01"
@@ -527,7 +527,7 @@ Notes about scale view TODO
 Issues
 --------
 
-For any issues relating to developing with the SDK, obtaining API keys or service problems, please head over to the [OS Openspace forums](https://openspaceforums.ordnancesurvey.co.uk/openspaceforum//index.jspa) and we will investigate and get back to you.
+For any issues relating to developing with the SDK, obtaining API keys or service problems, please email osopenspace@ordnancesurvey.co.uk 
 
 
 
