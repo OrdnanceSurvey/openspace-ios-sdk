@@ -1,9 +1,9 @@
 Description
 -------
 
-The ordnancesurvey-ios-sdk enables access to [Ordnance Survey](http://www.ordnancesurvey.co.uk/) services for iOS based devices. It provides access to a number of mapping layers and gazetteer lookups from the OS OpenSpace service and has a similar API to Apple's Mapkit, so that moving from Apple mapping to OS Openspace is simple, see [Converting](#converting-apple-mapkit).
+The ordnancesurvey-ios-sdk enables access to [Ordnance Survey](http://www.ordnancesurvey.co.uk/) services for iOS based devices. It provides access to a number of mapping layers and gazetteer lookups from the OS OpenSpace Pro service and has a similar API to Apple's Mapkit, so that moving from Apple mapping to OS OpenSpace Pro is simple, see [Converting](#converting-apple-mapkit).
 
-Developers who wish to use the OpenSpace on-line services will need to register and obtain an API Key for either the Ordnance Survey [OpenSpace](http://www.ordnancesurvey.co.uk/oswebsite/web-services/os-openspace/api/) or [OpenSpace Pro](http://www.ordnancesurvey.co.uk/oswebsite/web-services/os-openspace/pro/) services.
+Developers who wish to use the OpenSpace Pro on-line services will need to register and obtain an API Key for either the Ordnance Survey [OpenSpace](http://www.ordnancesurvey.co.uk/oswebsite/web-services/os-openspace/api/) or [OpenSpace Pro](http://www.ordnancesurvey.co.uk/oswebsite/web-services/os-openspace/pro/) services.
 
 This SDK is available as a static framework, see the [Getting started](#getting-started) guide for instructions about downloading and importing into your own application or try a [demo app](#demo-projects) to get started quickly.
 
@@ -17,7 +17,6 @@ This SDK is available as a static framework, see the [Getting started](#getting-
 Here are some of the features available
 
 - Native iOS framework to incorporate Ordnance Survey mapping
-- OS OpenSpace Pro and free services
 - Select which products are displayed - see [products available](#product-code-list)
 - Zoom and pan controls - native touch gesture recogonisers provide tap, pinch zoom control, etc
 - Annotations - create and customise annotations
@@ -25,7 +24,7 @@ Here are some of the features available
 - Offline tile storage - read [about offline tile packages](#offline-databases)
 - Geocoder - Search 1:50K Gazetteer, OS Locator and Codepoint Open datasets
 - Uses [OSGB36 British National Grid](http://www.ordnancesurvey.co.uk/oswebsite/support/the-national-grid.html) map projection - ordnancesurvey-ios-sdk converts between WGS84 latitude/longitude and OSGB36 National Grid easting/northing. Most Classes handle geometry in either a CLLocationCoordinate2D or OSGridPoint
-- User location - ordnancesurvey-ios-sdk provides an wrapper around standard Core Location API to easily display your app's user location on the map and use the data
+- User location - ordnancesurvey-ios-sdk provides a wrapper around the standard Core Location API to easily display your app's user location on the map and use the data
 - ARC support
 
 
@@ -34,7 +33,7 @@ Contents
 
 Within the ordnancesurvey-ios-sdk project we have:
 
-1. /TBC - contains the ordnancesurvey-ios-sdk framework and Appledoc documentation packages
+1. The ordnancesurvey-ios-sdk framework and Appledoc documentation packages
 2. [Documentation](http://ordnancesurvey.github.com/ordnancesurvey-ios-sdk/) - The documentation for the latest version of ordnancesurvey-ios-sdk in appledoc format
 
 
@@ -58,7 +57,8 @@ Getting started
 
 #### API Key
 
-Developers who wish to use online services will need to register and obtain an API Key for one of the [OS OpenSpace services](http://www.ordnancesurvey.co.uk/oswebsite/web-services/os-openspace/) in order to access the mapping and geocoding services.
+Developers who wish to use online services will need to register and obtain an API Key for OS OpenSpace Pro services]
+(http://www.ordnancesurvey.co.uk/oswebsite/web-services/os-openspace/) in order to access the mapping and geocoding services.
 
 #### Download framework package
 
