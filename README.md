@@ -1,9 +1,7 @@
 Description
 -------
 
-The ordnancesurvey-ios-sdk enables access to [Ordnance Survey](http://www.ordnancesurvey.co.uk/) services for iOS based devices. It provides access to a number of mapping layers and gazetteer lookups from the OS OpenSpace Pro service and has a similar API to Apple's Mapkit, so that moving from Apple mapping to OS OpenSpace Pro is simple, see [Converting](#converting-apple-mapkit).
-
-Developers who wish to use the on-line services will need to register and obtain an API Key for [OpenSpace Pro](http://www.ordnancesurvey.co.uk/oswebsite/web-services/os-openspace/pro/) services.
+The ordnancesurvey-ios-sdk enables access to [Ordnance Survey](http://www.ordnancesurvey.co.uk/) Web Map Tile Services (WMTS) for iOS based devices. It provides access to a number of mapping layers and gazetteer lookups and has a similar API to Apple's Mapkit, so that moving from Apple mapping to Ordnance Survey mapping is simple, see [Converting](#converting-apple-mapkit).
 
 This SDK is available as a static framework, see the [Getting started](#getting-started) guide for instructions about downloading and importing into your own application or try a [demo app](#demo-projects) to get started quickly.
 
@@ -57,12 +55,23 @@ Getting started
 
 #### API Key
 
-Developers who wish to use online services will need to register and obtain an API Key for [OS OpenSpace Pro]
-(http://www.ordnancesurvey.co.uk/oswebsite/web-services/os-openspace/) in order to access the mapping and geocoding services.
+Developers who wish to use the WMTS services will need to register an App Name in order to authenticate the API key in the following format:
+
+APPLE_ID.BUNDLE_ID 
+12345678.com.example.find-a-postbox 
+
+Apple App ID: This is a numerical value that is unique for each iOS app and has to be created in Apple's iOS Provisioning portal.
+Bundle Identifier: This is the reverse domain name specified in Xcode, this is generated from the app name (how you name your project) and the company identifier specified. 
+
+#### Registration Process
+
+If you do not own a re-use data licence you can sign up to [OS OpenSpace Pro] (https://www.ordnancesurvey.co.uk/oswebsite/web-services/os-openspace/pro/index.html) for a 90 day trial or a commercial re-use licence. 
+
+If you own a data licence, for example, you are a member of the PSMA, you can sign up to [OSOnDemand WMTS] (http://www.ordnancesurvey.co.uk/oswebsite/web-services/os-ondemand/pricing.html).
 
 #### Download framework package
 
-Head to the TBC to download the latest OSMap zip package. Unzip the downloaded file to reveal the OSMap framework and then import into your project.
+Head to the ?TODO?  to download the latest OSMap zip package. Unzip the downloaded file to reveal the OSMap framework and then import into your project.
 
 
 
@@ -151,14 +160,12 @@ mapView.mapProductCodes = [OSMapView completeFreeMapStackProductCodes];
 
 ##### Full Product list
 
-// Opendata products [OS OpenSpace Pro]
+// OpenData products
 
 - "SV"   // Street view
 - "SVR"  // Street view resampled
 - "VMD"  // Vector Map District
 - "VMDR" // Vector Map District resampled
-- "50K"  // 1:50k
-- "50KR" // 1:50k resampled
 - "250K" // 1:250k
 - "250KR"// 1:250k resampled
 - "MS"   // 1:1M
@@ -167,12 +174,14 @@ mapView.mapProductCodes = [OSMapView completeFreeMapStackProductCodes];
 - "OV1"  // Overview 1
 - "OV0"  // Overview 0
 
-// Pro products [OS OpenSpace Pro]
+// Licenced products
 
 - "VML"  // Vector Map Local
 - "VMLR" // Vector Map Local resampled
 - "25K"  // 1:25k
 - "25KR" // 1:25k resampled
+- "50K" // 1:50k
+- "50KR" // 1:50k resampled
 
 // Zoom stack products - enables consistently styled layers [OS OpenSpace Pro]
 
@@ -188,7 +197,6 @@ mapView.mapProductCodes = [OSMapView completeFreeMapStackProductCodes];
 - "CS09"
 - "CS10" // "zoomed in"
 
-// Other products [OS OpenSpace Pro]
 
 #### Offline databases
 
