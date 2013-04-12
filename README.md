@@ -12,7 +12,7 @@ View available mapping layers [here] (http://www.ordnancesurvey.co.uk/oswebsite/
 
 
 
-#### Features
+#### Features and benefits
 
 Here are some of the features available
 
@@ -26,6 +26,14 @@ Here are some of the features available
 - Uses [OSGB36 British National Grid](http://www.ordnancesurvey.co.uk/oswebsite/support/the-national-grid.html) map projection - ordnancesurvey-ios-sdk converts between WGS84 latitude/longitude and OSGB36 National Grid easting/northing. Most Classes handle geometry in either a CLLocationCoordinate2D or OSGridPoint
 - User location - ordnancesurvey-ios-sdk provides a wrapper around the standard Core Location API to easily display your app's user location on the map and use the data
 - Automatic Reference Counting support
+- Street level mapping features detailed buildings property boundaries and accurate road network.
+- World famous countryside and National park mapping featuring accurate tracks, paths and fields.
+
+
+Here are some of the benefits
+
+- Ordnance Survey mapping is the most accurate mapping of GB so you will have confidence when it comes to location.
+- Mapping is updated frequently, so real life features that regularly appear or disappear from the ground, are soon reflected in the mapping.
 
 
 Contents
