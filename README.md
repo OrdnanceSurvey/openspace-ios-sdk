@@ -1,4 +1,4 @@
-Feed your apps with OS maps
+Summary
 -------
 
 The ordnancesurvey-ios-sdk enables access to [Ordnance Survey](http://www.ordnancesurvey.co.uk/) Web Map Tile Services (WMTS) for iOS based devices. It provides access to a number of mapping layers and gazetteer lookups and has a similar API to Apple's Mapkit, so that moving from Apple mapping to Ordnance Survey mapping is simple, see [Converting](#converting-apple-mapkit).
