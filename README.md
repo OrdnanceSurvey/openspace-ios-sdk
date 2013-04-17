@@ -528,12 +528,6 @@ Sample UserLocationView:
 
 * See the [OS LocateMe](https://github.com/OrdnanceSurvey/ios-sdk-demo-locate-me) demo project for working example
 
-#### Scale view
-
-Notes about scale view TODO
-
-
-
 Issues
 --------
 
