@@ -21,10 +21,10 @@ Here are some of the features available
 - Annotations - create and customise annotations
 - Overlays - create and style polylines and polygons
 - Offline tile storage - read [about offline tile packages](#offline-databases)
-- Geocoder - Search 1:50K Gazetteer, OS Locator and Codepoint Open datasets
+- Geocoder - Search 1:50K Gazetteer, OS Locator and Codepoint Open datasets available either online or offline
 - Uses [OSGB36 British National Grid](http://www.ordnancesurvey.co.uk/oswebsite/support/the-national-grid.html) map projection - ordnancesurvey-ios-sdk converts between WGS84 latitude/longitude and OSGB36 National Grid easting/northing. Most Classes handle geometry in either a CLLocationCoordinate2D or OSGridPoint
 - User location - ordnancesurvey-ios-sdk provides a wrapper around the standard Core Location API to easily display your app's user location on the map and use the data
-- Automatic Reference Counting support
+- ARC (Automatic Reference Counting) support
 - Street level mapping features detailed buildings property boundaries and accurate road network.
 - World famous countryside and National park mapping featuring accurate tracks, paths and fields.
 
@@ -38,23 +38,27 @@ Here are some of the benefits
 Contents
 -------
 
-Within the ordnancesurvey-ios-sdk project we have:
+The ordnancesurvey-ios-sdk itself comprises of a couple of items:
 
-1. The ordnancesurvey-ios-sdk framework and Appledoc documentation packages
+1. The ordnancesurvey-ios-sdk framework is downloaded from [www.ordnancesurvey.co.uk](https://www.ordnancesurvey.co.uk/oswebsite/web-services/os-openspace/pro/ios-sdk.html) 
 2. [Documentation](http://ordnancesurvey.github.com/ordnancesurvey-ios-sdk/) - The documentation for the latest version of ordnancesurvey-ios-sdk in appledoc format
+
+There are several extensions available:
+
+1.  OSTile [offline tile packages](#OSTile-packages)
+2.  Offline [POI database](#POI-database)
 
 
 
 ###### Demo projects
 
-There are several demo projects as other github repos to get started
+To demonstrate features and usage some projects as other github repos to get started:
 
 * [OS Locate Me](https://github.com/OrdnanceSurvey/ios-sdk-demo-locate-me)
 * [OS Tilesource demo](https://github.com/OrdnanceSurvey/ios-sdk-demo-tilesources)
 * [OS Mapkit conversion demo](https://github.com/OrdnanceSurvey/ios-sdk-demo-mapkit-conversion)
 * [OS Overlay Finder demo](https://github.com/OrdnanceSurvey/ios-sdk-demo-overlay-finder)
  
-
 
 
 
@@ -98,13 +102,14 @@ Applications will need to link against OSMap.framework and its dependencies:
 * CoreLocation.framework
 * QuartzCore.framework
 * UIKit.framework
+* SystemConfiguration.framework
 
 ![Frameworks-ScreenShot](https://github.com/OrdnanceSurvey/ordnancesurvey-ios-sdk/raw/master/frameworks-scr.png "Screenshot of frameworks required in xcode")
 
 
 #### Import OSMap.h
 
-In the ViewController you wish to display, import the OSMap/OSMap.h file
+In the ViewController you wish to display your map, import the OSMap/OSMap.h file
 
 <pre>
 #import &lt;OSMap/OSMap.h>
@@ -126,7 +131,7 @@ After completing the above steps to download and import the OSMap.framework, the
  */
 
 //create OSTileSource, in this case OS OpenSpace web map source with API key and associated URL
-id&lt;OSTileSource&gt; webSource = [OSMapView webTileSourceWithAPIKey:@"API_KEY" refererUrl:@"YOUR_WEBPAGE_URL" openSpacePro:true/false];
+id&lt;OSTileSource&gt; webSource = [OSMapView webTileSourceWithAPIKey:@"API_KEY" openSpacePro:true/false];
 
 //add to OSMapView
 yourMapView.tileSources = [NSArray arrayWithObject:webSource];
@@ -152,7 +157,7 @@ mapView.mapProductCodes = [NSArray arrayWithObjects:@"250KR", @"250K", @"50KR", 
 
 //Class methods to return pre-configured map product codes
 
-//Default codes if not set
+//Default codes if no others set
 [OSMapView defaultMapStackProductCodes] = @"SV",@"SVR",@"50K",@"50KR",@"250K",@"250KR",@"MS",@"MSR",@"OV2",@"OV1",@"OV0"
 
 // As above but including VMD
@@ -188,7 +193,7 @@ mapView.mapProductCodes = [OSMapView completeFreeMapStackProductCodes];
 - "VMLR" // Vector Map Local resampled
 - "25K"  // 1:25k
 - "25KR" // 1:25k resampled
-- "50K" // 1:50k
+- "50K"  // 1:50k
 - "50KR" // 1:50k resampled
 
 // Zoom stack products - enables consistently styled layers
@@ -208,6 +213,7 @@ mapView.mapProductCodes = [OSMapView completeFreeMapStackProductCodes];
 
 #### Offline databases
 
+These offline databases are extensions to the ordnancesurvey-ios-sdk and can replace online access or suplement it, they can help your application overcome network coverage issues and function wherever the user is located. 
 
 ##### OSTile packages
 
@@ -215,11 +221,13 @@ The OSTiles format is uses the small, ubiquitous and lightweight [sqlite](http:/
 
 OSTiles packages are sets of map tiles, each package can store several layers, a layer being a rectangular bounding box for a given Ordnance Survey product and all the tile images to fill that bounding box. The packages are intended to transport presentational map tiles and can be used as a mechanism to allow mobile applications to display tiles offline, without the need to stream tiles from a webservice.
 
-Please refer to [OSTiles spec](ordnancesurvey-ios-sdk/tree/master/ostiles_spec.md) for more details.
+Please refer to [OSTiles spec](ordnancesurvey-ios-sdk/tree/master/ostiles_spec.md) for more details and how to create these packages.
 
 ##### POI database
 
-TBC how we dist this
+The points of interest database is created from OpenData products, it optimised for size and is packaged in the [sqlite](http://www.sqlite.org/) format as the OSTiles except with the custom file extension `.ospoi`.
+
+This database can be downloaded from [www.ordnancesurvey.co.uk](https://www.ordnancesurvey.co.uk/oswebsite/web-services/os-openspace/pro/ios-sdk.html).
 
 
 #### Converting Apple Mapkit
@@ -273,7 +281,7 @@ Ordnance Survey will provide and offically support the latest version of the SDK
 To get the version of SDK you are currently using;
 
 <pre>
-NSLog(@"Currently using SDK Version: %@",[OSMapView SDKVersion]);
+NSLog(@"You are currently using SDK Version: %@", [OSMapView SDKVersion]);
 </pre>
 
 
@@ -294,6 +302,10 @@ The `OSMapView` class takes care of displaying map tiles on the screen, all UI g
 * The `OSMapView` class must be configured with a tile source - see Tilesources below.
 * `OSMapView` does not support drawing maps outside Great Britain.
 * `OSMapView` does not support being subclassed
+
+**DEMO**
+
+See any of the [demo projects](#demo-projects) for working examples
 
 
 #### Map View delegate (`OSMapViewDelegate` protocol)
@@ -333,9 +345,12 @@ The `OSMapView` class can have an optional delegate object to listen to events t
 
 **NOTE:**
 
-* All delegate methods are optional, listen to any particular event
+* All delegate methods are optional, listen for any singular event
 * `OSMapViewDelegate` does not currently support the 'map loading' callbacks that MapKit does
-* See any of the [demo projects](#demo-projects) for working examples
+
+**DEMO**
+
+See any of the [demo projects](#demo-projects) for working examples
 
 
 #### Tilesources (`OSTileSource` protocol)
@@ -373,6 +388,9 @@ Each `OSTileSource` added to `OSMapView` implements the `OSTileSource` protocol 
 **NOTE:**
 
 * To configure product codes, see the [products available](#product-code-list) section.
+
+**DEMO**
+
 * See the [OS Tilesource](https://github.com/OrdnanceSurvey/ios-sdk-demo-tilesources) demo project for working examples
 
 #### Annotations (`OSAnnotation` protocol & `OSAnnotationView` class)
@@ -417,7 +435,7 @@ To differentiate between the data and view objects and cope with potentially lar
 
 View objects are designed to be reused and provide performance improvements during scrolling by avoiding the creation of new view objects. To do this, pass a `reuseIdentifier` and call `OSMapView` method `dequeueReusableAnnotationViewWithIdentifier:` to get a queued object.
 
-**NOTE:**
+**DEMO**
 
 * See the [OS Mapkit conversion](https://github.com/OrdnanceSurvey/ios-sdk-demo-mapkit-conversion) demo project for working example
 
@@ -452,7 +470,7 @@ There are existing SDK classes for the following shapes, please see reference do
 * Circle
 
 
-**NOTE:**
+**DEMO**
 
 * See the [OS Overlay Finder](https://github.com/OrdnanceSurvey/ios-sdk-demo-overlay-finder) demo project for working examples
 
@@ -477,14 +495,17 @@ The geocoding request requries a completion handler block that is called when se
 **NOTE:**
 
 * The `OSGeocoder` class requires an offline database - See [about offline databases](#offline-databases) 
-* See the [OS LocateMe](https://github.com/OrdnanceSurvey/ios-sdk-demo-locate-me) demo project for working example
 * There are currently no reverse geocoding facilities
+
+**DEMO**
+
+* See the [OS LocateMe](https://github.com/OrdnanceSurvey/ios-sdk-demo-locate-me) demo project for working example
 
 
 
 #### Geometry
 
-Conversion between `CLLocationCoordinate2D` and `OSGridPoint` is handled internally — applications should not perform unnecessary conversions. Coordinates should be stored in their source coordinate system in order to benefit from future accuracy improvements within the SDK. 
+Conversion between `CLLocationCoordinate2D` and `OSGridPoint` are handled internally — applications should not perform unnecessary conversions. Coordinates should be stored in their source coordinate system in order to benefit from future accuracy improvements within the SDK. 
 
 `OSGridPoint` - represents OSGB36 British National Grid easting/northing
 
@@ -525,11 +546,15 @@ Sample UserLocationView:
 
 **NOTE:**
 
+* It is still up to the developer to turn off GPS access in certain situations, eg running background modes, low memory
+
+**DEMO**
+
 * See the [OS LocateMe](https://github.com/OrdnanceSurvey/ios-sdk-demo-locate-me) demo project for working example
 
 #### Scale view
 
-Notes about scale view TODO
+The SDK allows a developer to subclass the `OSMapScaleView` class and represent the current scale being displayed at that zoom level however is appropriate for their application. This view can be configured to display a scale calculated using the current `metresPerPixel`.
 
 
 
