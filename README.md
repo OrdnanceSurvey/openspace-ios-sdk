@@ -552,12 +552,6 @@ Sample UserLocationView:
 
 * See the [OS LocateMe](https://github.com/OrdnanceSurvey/ios-sdk-demo-locate-me) demo project for working example
 
-#### Scale view
-
-The SDK allows a developer to subclass the `OSMapScaleView` class and represent the current scale being displayed at that zoom level however is appropriate for their application. This view can be configured to display a scale calculated using the current `metresPerPixel`.
-
-
-
 Issues
 --------
 
