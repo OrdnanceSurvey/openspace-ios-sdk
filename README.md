@@ -8,8 +8,7 @@ This SDK is available as a static framework, see the [Getting started](#getting-
 View available mapping layers [here] (http://www.ordnancesurvey.co.uk/oswebsite/web-services/os-openspace/pro/products.html)
 
 ![LocateMe-ScreenShot](https://github.com/OrdnanceSurvey/ios-sdk-demo-locate-me/raw/master/screenshot.png "Screenshot of locate me demo app") ![TileSource-ScreenShot](https://github.com/OrdnanceSurvey/ios-sdk-demo-tilesources/raw/master/screenshot.png "Screenshot of tilesource demo app") 
-
-
+![VMD-ScreenShot](https://github.com/OrdnanceSurvey/ordnancesurvey-ios-sdk/raw/master/vmd-iphone-src.png "Screenshot of VMD on iphone")
 
 
 #### Features and benefits
@@ -218,7 +217,7 @@ OSTiles packages are sets of map tiles, each package can store several layers, a
 
 Please refer to [OSTiles spec](ordnancesurvey-ios-sdk/tree/master/ostiles_spec.md) for more details.
 
-##### Offline search database
+##### POI database
 
 TBC how we dist this
 
