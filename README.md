@@ -8,7 +8,7 @@ This SDK is available as a static framework, see the [Getting started](#getting-
 View available mapping layers [here] (http://www.ordnancesurvey.co.uk/oswebsite/web-services/os-openspace/pro/products.html)
 
 ![LocateMe-ScreenShot](https://github.com/OrdnanceSurvey/ios-sdk-demo-locate-me/raw/master/screenshot.png "Screenshot of locate me demo app") ![TileSource-ScreenShot](https://github.com/OrdnanceSurvey/ios-sdk-demo-tilesources/raw/master/screenshot.png "Screenshot of tilesource demo app") 
-![VMD-ScreenShot](https://github.com/OrdnanceSurvey/ordnancesurvey-ios-sdk/raw/master/vmd-iphone-src.png "Screenshot of VMD on iphone")
+![VMD-ScreenShot](https://github.com/OrdnanceSurvey/ordnancesurvey-ios-sdk/raw/master/vmd-iphone-scr.png "Screenshot of VMD on iphone")
 
 
 #### Features and benefits
@@ -45,8 +45,8 @@ The ordnancesurvey-ios-sdk itself comprises of a couple of items:
 
 There are several extensions available:
 
-1.  OSTile [offline tile packages](#OSTile-packages)
-2.  Offline [POI database](#POI-database)
+1.  OSTile offline [tile packages](#ostile-packages)
+2.  Offline [POI database](#poi-database)
 
 
 
@@ -83,7 +83,9 @@ If you own a data licence, for example, you are a member of the PSMA, you can re
 
 #### Download framework package
 
-Head to the ?TODO?  to download the latest OSMap zip package. Unzip the downloaded file to reveal the OSMap framework and then import into your project.
+Download the latest ordnancesurvey-ios-sdk static framework from [www.ordnancesurvey.co.uk](https://www.ordnancesurvey.co.uk/oswebsite/web-services/os-openspace/pro/ios-sdk.html)
+
+Unzip the downloaded file to reveal the OSMap framework and then import into your project.
 
 
 
@@ -111,9 +113,9 @@ Applications will need to link against OSMap.framework and its dependencies:
 
 In the ViewController you wish to display your map, import the OSMap/OSMap.h file
 
-<pre>
+```objective-c
 #import &lt;OSMap/OSMap.h>
-</pre>
+```
 
 
 #### Displaying a map
@@ -225,7 +227,7 @@ Please refer to [OSTiles spec](ordnancesurvey-ios-sdk/tree/master/ostiles_spec.m
 
 ##### POI database
 
-The points of interest database is created from OpenData products, it optimised for size and is packaged in the [sqlite](http://www.sqlite.org/) format as the OSTiles except with the custom file extension `.ospoi`.
+The points of interest database is created from [OpenData](https://www.ordnancesurveyite.co.uk/oswebsite/products/os-opendata.html) products, it optimised for size and is packaged in the [sqlite](http://www.sqlite.org/) format as the OSTiles except with the custom file extension `.ospoi`.
 
 This database can be downloaded from [www.ordnancesurvey.co.uk](https://www.ordnancesurvey.co.uk/oswebsite/web-services/os-openspace/pro/ios-sdk.html).
 
@@ -367,7 +369,7 @@ The `OSMapView` class requires atleast one online or offline tile source to rend
 
  
  //create web tile source with API details
-id&lt;OSTileSource&gt; webSource = [OSMapView webTileSourceWithAPIKey:kOSApiKey refererUrl:kOSApiKeyUrl openSpacePro:kOSIsPro];
+id&lt;OSTileSource&gt; webSource = [OSMapView webTileSourceWithAPIKey:kOSApiKey openSpacePro:kOSIsPro];
 
 
 /*
@@ -483,7 +485,15 @@ The `OSGeocoder` class provides offline search facility against the following da
 * [OS Locator](http://www.ordnancesurvey.co.uk/oswebsite/products/os-locator/index.html) - Road names
 * Grid Reference
 
+Along with online search facility against the following datasets; 
+
+* [1:50 000 Scale Gazetteer](http://www.ordnancesurvey.co.uk/oswebsite/products/50k-gazetteer/index.html) - Place names
+* [Code-Point Open](http://www.ordnancesurvey.co.uk/oswebsite/products/code-point-open/index.html) - Post codes
+
+
 The product to search is determined by passing a `OSGeocodeType` to the `OSGeocoder` instance. The type `OSGeocodeTypeCombined` is Gazetteer, Postcode and GridReferences whilst `OSGeocodeTypeCombined2` also includes OS Locator.
+
+The online variety of search types are specified by containing online such as `OSGeocodeTypeOnlineGazetteer` and `OSGeocodeTypeOnlinePostcode`.
 
 The search can be performed within an area by passing a `OSGridRect`, to search the entire country, specify either `OSGridRectNull` or `OSNationalGridBounds`.
 
@@ -494,7 +504,8 @@ The geocoding request requries a completion handler block that is called when se
 
 **NOTE:**
 
-* The `OSGeocoder` class requires an offline database - See [about offline databases](#offline-databases) 
+* The `OSGeocoder` class can work with an offline database - See [about offline databases](#offline-databases) 
+* The online access requires an API key configured
 * There are currently no reverse geocoding facilities
 
 **DEMO**
@@ -551,6 +562,12 @@ Sample UserLocationView:
 **DEMO**
 
 * See the [OS LocateMe](https://github.com/OrdnanceSurvey/ios-sdk-demo-locate-me) demo project for working example
+
+#### Scale view
+
+The SDK allows a developer to subclass the `OSMapScaleView` class and represent the current scale being displayed at that zoom level however is appropriate for their application. This view can be configured to display a scale calculated using the current `metresPerPixel`.
+
+
 
 Issues
 --------
