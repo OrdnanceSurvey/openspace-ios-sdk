@@ -17,7 +17,7 @@ The OSTiles format is based on [MBTiles 1.1](http://www.sqlite.org/) spec but fo
 
 **NOTE:** 
 * The file must have the extension `.ostiles` to be displayed by the SDK.* A tile package must implement the specification below to ensure compatibility with the SDK.* Tiles zoom_level, column and row `z,x,y` follow Tile Map Service in Transverse Mercator projection
-* The tile images must be in [OSGB36 British National Grid](http://www.ordnancesurvey.co.uk/oswebsite/support/the-national-grid.html)
+* The tile images must be in [OSGB36 British National Grid](http://www.ordnancesurvey.co.uk/oswebsite/support/the-national-grid.html).
 
 
 
@@ -38,7 +38,7 @@ The available product codes are defined [here](ordnancesurvey-ios-sdk/tree/maste
 
 ###### Schema
 
-<pre>
+```sql
 CREATE TABLE zoom_levels (
   zoom_level INTEGER PRIMARY KEY,
   product_code TEXT,
@@ -47,11 +47,11 @@ CREATE TABLE zoom_levels (
   bbox_y0 INTEGER,
   bbox_y1 INTEGER
 );
-</pre>
+```
 
 ###### Columns
 
-* `zoom_level`: This is an arbitary number used as reference to tiles.
+* `zoom_level`: This is an arbitary number used as reference to `tiles` table.
 * `product_code`: A string that references a SDK product code so that tile attributes can be assertained.
 * `bbox_x0`, `bbox_x1`, `bbox_y0`, `bbox_y1`: Minimum/maximum column/row covered by the zoom level.
 
@@ -67,7 +67,7 @@ The `tiles` table contains a row for each tile indexed by the zoom_level, column
 
 ###### Schema
 
-<pre>
+```sql
 CREATE TABLE tiles (
   zoom_level   INTEGER NOT NULL, -- REFERENCES zoom_levels(zoom_level)
   tile_column  INTEGER NOT NULL,
@@ -77,7 +77,7 @@ CREATE TABLE tiles (
   -- This also creates the corresponding index.
   PRIMARY KEY (zoom_level, tile_column, tile_row)
 );
-</pre>
+```
 
 
 ###### Columns
@@ -90,24 +90,35 @@ CREATE TABLE tiles (
 
 **NOTE:**
 
-* The tile image must be `png` or `jpg` format
+* The tile image must be `png` or `jpg` format.
 
 
 Population
 -------
 
-How to populate a DB
+This is a high level overview describing how to create OSTiles databases of map tile images. It requires a source raster map image sliced into smaller map tile images of predefined resolution and size and then inserted into the sqlite database using the schema described above.
 
-This is TBC - do we release a script to 'scrape' Openspace for tiles? Or point people in the direction of Opendata raster products and get them to cut and georefernce themselves?
+#### Data requirements
+
+Source data sould be raster map image data (possibly in TIFF format) for whichever product is required.  Ordnance Survey [Open datasets](https://www.ordnancesurveyite.co.uk/oswebsite/products/os-opendata.html) are available for free - otherwise it is possible to license other datasets.
+
+The specification for the tiles expected in an OSTiles database is available [here](http://www.ordnancesurvey.co.uk/oswebsite/support/web-services/configuring-os-ondemand-wmts.html) - note the resolution and tile size.
+
+#### Process
+
+* Convert source data to `png` or `jpg` if required.
+* Slice source data image into smaller 'tiles' at the appropriate resolution
+* Optimise images to minimise file size.
+* Create a row in the `zoom_levels` table referencing the correct `product_code` specify the bounding box covered by this package using this product.
+* For each sub tile, create a row in the `tiles` table with the correct column and row and then insert the raw image data for this sub tile.
 
 
 Change history
 -------
 
+This change history documents any changes to the OSTiles schema.
+
 ###### Version 1.0
 
 * Initial specification release
 
-License
--------
-What license is this released under??
