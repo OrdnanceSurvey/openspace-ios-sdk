@@ -114,7 +114,7 @@ Applications will need to link against OSMap.framework and its dependencies:
 In the ViewController you wish to display your map, import the OSMap/OSMap.h file
 
 ```objective-c
-#import &lt;OSMap/OSMap.h>
+#import <OSMap/OSMap.h>
 ```
 
 
@@ -125,7 +125,7 @@ After completing the above steps to download and import the OSMap.framework, the
 - Instatiate an `OSMapView` in a `UIView`
 - Create atleast one tile source and add to `OSMapView` instance
 
-<pre>
+```objective-c
 //In your ViewController.m
 
 /*
@@ -133,12 +133,12 @@ After completing the above steps to download and import the OSMap.framework, the
  */
 
 //create OSTileSource, in this case OS OpenSpace web map source with API key and associated URL
-id&lt;OSTileSource&gt; webSource = [OSMapView webTileSourceWithAPIKey:@"API_KEY" openSpacePro:true/false];
+id<OSTileSource> webSource = [OSMapView webTileSourceWithAPIKey:@"API_KEY" openSpacePro:true/false];
 
 //add to OSMapView
 yourMapView.tileSources = [NSArray arrayWithObject:webSource];
 
-</pre>
+```
 
 Note: `OSMapView` cannot be completely initialised from a Interface Builder (`.xib`) or Storyboard, it requires at least one tile source
 
@@ -148,14 +148,14 @@ A developer can select which Ordnance Survey mapping products to use by  selecti
 
 NOTE: Some OpenSpace Pro products require separate licenses, please check before use.
 
-<pre>
+```objective-c
 
 //select the 250K and 50K products
 mapView.mapProductCodes = [NSArray arrayWithObjects:@"250KR", @"250K", @"50KR", @"50K", nil];
 
-</pre>
+```
 
-<pre>
+```objective-c
 
 //Class methods to return pre-configured map product codes
 
@@ -171,7 +171,7 @@ mapView.mapProductCodes = [NSArray arrayWithObjects:@"250KR", @"250K", @"50KR", 
 //Example usage
 mapView.mapProductCodes = [OSMapView completeFreeMapStackProductCodes];
 
-</pre>
+```
 
 ##### Full Product list
 
@@ -238,7 +238,7 @@ The ordnancesurvey-ios-sdk is intended to provide a "drop-in" replacement for Ma
 
 Many applications can be converted by simply changing the "MK" prefix to "OS" or by renaming symbols with the preprocessor:
 
-<pre>
+```objective-c
 #import "OSMap/OSMap.h"
 
 #define MKAnnotation OSAnnotation
@@ -272,7 +272,7 @@ Many applications can be converted by simply changing the "MK" prefix to "OS" or
 
 #define MKMapRect OSMapRect
 #define MKMapPoint OSMapPoint
-</pre>
+```
 
 See the [OS Mapkit conversion demo](https://github.com/OrdnanceSurvey/ios-sdk-demo-mapkit-conversion) project for more details.
 
@@ -282,9 +282,9 @@ Ordnance Survey will provide and offically support the latest version of the SDK
 
 To get the version of SDK you are currently using;
 
-<pre>
+```objective-c
 NSLog(@"You are currently using SDK Version: %@", [OSMapView SDKVersion]);
-</pre>
+```
 
 
 API
@@ -314,13 +314,13 @@ See any of the [demo projects](#demo-projects) for working examples
 
 The `OSMapView` class can have an optional delegate object to listen to events that occur on the map. For your class to respond to these events you must implement the `OSMapViewDelegate` protocol.
 
-<pre>
+```objective-c
 #import "MapViewController.h"
 
 /*
  * Example class definition
  */
-@interface MapViewController () &lt;OSMapViewDelegate&gt;
+@interface MapViewController () <OSMapViewDelegate>
 
 @end
 
@@ -343,7 +343,7 @@ The `OSMapView` class can have an optional delegate object to listen to events t
   }
   
 
-</pre>
+```
 
 **NOTE:**
 
@@ -359,17 +359,17 @@ See any of the [demo projects](#demo-projects) for working examples
 
 The `OSMapView` class requires atleast one online or offline tile source to render a map.
 
-<pre>
+```objective-c
 /*
  * In the method where you set up the mapView instance, create some tile sources
  */
  
  //For example if you had an .ostiles format file in the project bundle
- id&lt;OSTileSource&gt; packageSource = [OSMapView localTileSourceWithFileURL:[[NSBundle mainBundle] URLForResource:@"myTilePackage.ostiles" withExtension:nil]];
+ id<OSTileSource> packageSource = [OSMapView localTileSourceWithFileURL:[[NSBundle mainBundle] URLForResource:@"myTilePackage.ostiles" withExtension:nil]];
 
  
  //create web tile source with API details
-id&lt;OSTileSource&gt; webSource = [OSMapView webTileSourceWithAPIKey:kOSApiKey openSpacePro:kOSIsPro];
+id<OSTileSource> webSource = [OSMapView webTileSourceWithAPIKey:kOSApiKey openSpacePro:kOSIsPro];
 
 
 /*
@@ -377,15 +377,14 @@ id&lt;OSTileSource&gt; webSource = [OSMapView webTileSourceWithAPIKey:kOSApiKey 
  */
 mapView.tileSources = [NSArray arrayWithObjects: packageSource, webSource, nil];
 
-</pre>
+```
 
-Each `OSTileSource` added to `OSMapView` implements the `OSTileSource` protocol and implements the following methods.
+Each `OSTileSource` added to `OSMapView` conforms to the `OSTileSource` protocol and implements the following methods.
 
-<pre>
+```objective-c
 - (OSGridRect)boundsForProductCode:(NSString *)productCode
 
-- (bool)isLocal
-</pre>
+```
 
 **NOTE:**
 
@@ -401,19 +400,19 @@ Annotations identify single point locations on the map and as with MapKit there 
 
 The `OSMapView` accepts an object that conforms to the `OSAnnotation` protocol and therefore must have atleast a `CLLocationCoordinate2D` coordinate property. The SDK includes the `OSBasicAnnotation` class that can be used with minimal configuration.
 
-<pre>
+```objective-c
 CLLocationCoordinate2D coord = {52.205298,0.118146};
     
 OSBasicAnnotation * annotation = [[OSBasicAnnotation alloc] initWithCoordinate:coord];
 annotation.title = @"Hello World!!";
     
 [mapView addAnnotation:annotation];
-</pre>
+```
 
 
 To differentiate between the data and view objects and cope with potentially large numbers of annotations, the presentation of the annotation is handled by a view object. When an annotation comes into view `OSMapView` asks its delegate to provide an annotation view, simply implement the method below and provide your own class by subclassing `OSAnnotationView` or use the built in `OSPinAnnotationView` as below.
 
-<pre>
+```objective-c
 -(OSAnnotationView*)mapView:(OSMapView *)mapView viewForAnnotation:(id<OSAnnotation>)annotation
 {
     // Use the default user location view.
@@ -433,7 +432,7 @@ To differentiate between the data and view objects and cope with potentially lar
     return view;
 
 }
-</pre>
+```
 
 View objects are designed to be reused and provide performance improvements during scrolling by avoiding the creation of new view objects. To do this, pass a `reuseIdentifier` and call `OSMapView` method `dequeueReusableAnnotationViewWithIdentifier:` to get a queued object.
 
@@ -449,7 +448,7 @@ The `OSMapView` accepts an object that conforms to the `OSOverlay` protocol and 
 
 In this example we will add the respective components for a simple square, for more examples see the [OS Overlay Finder](https://github.com/OrdnanceSurvey/ios-sdk-demo-overlay-finder) demo project.
 
-<pre>
+```objective-c
 
 OSGridPoint swCorner = {400000,400000};
     
@@ -463,7 +462,7 @@ OSPolygon *square = [OSPolygon polygonWithGridPoints: points count: 4];
     
 [mapView addOverlay: square];
 
-</pre>
+```
 
 There are existing SDK classes for the following shapes, please see reference documentation for more details:
 
@@ -525,11 +524,11 @@ Conversion between `CLLocationCoordinate2D` and `OSGridPoint` are handled intern
 
 Conversions can be performed via this SDK if required using the functions below;
 
-<pre>
+```objective-c
 OSGridPoint OSGridPointForCoordinate(CLLocationCoordinate2D coordinate);
 
 CLLocationCoordinate2D OSCoordinateForGridPoint(OSGridPoint gridPoint);
-</pre>
+```
 
 #### User location (`OSUserLocation` class)
 
@@ -539,15 +538,15 @@ When enabled, a distinct annotation will be added to the map complete with estim
 
 To start receiving updates, turn on user location:
 
-<pre>
+```objective-c
 mapView.showsUserLocation = YES/NO;
-</pre>
+```
 
 You will now receive location updates, implement the required delegate methods to perform actions on events as required.
 
-<pre>
+```objective-c
 - (void)mapView:(OSMapView *)mapView didUpdateUserLocation:(OSUserLocation *)userLocation
-</pre>
+```
 
 
 Sample UserLocationView:
