@@ -141,7 +141,7 @@ After completing the above steps to download and import the OSMap.framework, the
  */
 
 //create OSTileSource, in this case OS OpenSpace web map source with API key and associated URL
-id<OSTileSource> webSource = [OSMapView webTileSourceWithAPIKey:@"API_KEY" openSpacePro:true/false];
+id<OSTileSource> webSource = [OSMapView webTileSourceWithAPIKey:@"API_KEY" openSpacePro:YES/NO];
 
 //add to OSMapView
 yourMapView.tileSources = [NSArray arrayWithObject:webSource];
