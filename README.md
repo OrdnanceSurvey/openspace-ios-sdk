@@ -66,7 +66,7 @@ To demonstrate features and usage some projects as other github repos to get sta
 Getting started
 -------
 
-### Registration and Access
+### Registration and Access 
 
 In order to access and use the Service via the OpenSpace iOS-SDK, you must apply for an API key.
 You can apply for an API key by registering for a licence (a free 90 day trial licence or a commercial licence) from http://www.ordnancesurvey.co.uk/oswebsite/web-services/os-openspace/pro/free-trial.html or by contacting Newbusinessenquiries@ordnancesurvey.co.uk or calling 08456 05 05 05
@@ -83,13 +83,13 @@ Let us know the Bundle Identifier of the Xcode project in which you will be usin
 
 Example: 577097874
 
-This is a unique string generated when a user creates an iOS application placeholder in iTunes connect and can be used to identify an application and view the iTunes page. This is only created when there is an application in iTunes connect and as such we will ask for this 
+Let us know this unique string generated when you have created an iOS application placeholder in iTunes connect and can be used to identify an application and view the iTunes page. For enterprise apps, this is not required.  
 
 
 
-### Registration Process
+### Registration Process for PSMA customers
 
-If you own a data licence, for example, you are a member of the PSMA, you can register for an API key to access [OSOnDemand WMTS] (http://www.ordnancesurvey.co.uk/oswebsite/web-services/os-ondemand/pricing.html).
+If you own a data licence, for example, you are a member of the PSMA, you can register for a licence in order to obtain an API key to access the service.(http://www.ordnancesurvey.co.uk/oswebsite/web-services/os-ondemand/pricing.html).
 
 ### Download framework package
 
