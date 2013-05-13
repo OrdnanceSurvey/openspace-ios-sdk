@@ -66,26 +66,28 @@ To demonstrate features and usage some projects as other github repos to get sta
 Getting started
 -------
 
-### Register for an API Key
+### Registration and Access
 
-Developers who wish to use the online services will need to register for an API key in order to authenticate requests.
+In order to access and use the Service via the OpenSpace iOS-SDK, you must apply for an API key.
+You can apply for an API key by registering for a licence (a free 90 day trial licence or a commercial licence) from http://www.ordnancesurvey.co.uk/oswebsite/web-services/os-openspace/pro/free-trial.html or by contacting Newbusinessenquiries@ordnancesurvey.co.uk or calling 08456 05 05 05
 
-When registering for an API Key we need to know a couple of items:
+When registering for a licence we need to know a couple of items:
 
-* Bundle Identifier of the application using the API key
+* App ID (The Bundle ID) of the application that will use the API key.
 
-Let us know the Bundle Identifier of the Xcode project in which you will be using the API. This is available and configurable when creating an Xcode project or from project settings or `Info.plist`
+Example: uk.co.ordnancesurvey.demo.myDemoApp
 
+Let us know the Bundle Identifier of the Xcode project in which you will be using the API key. This is available and configurable when creating an Xcode project or from project settings or `Info.plist`
 
-* Apple App ID to be associated with this application
+* Apple ID to be associated with this application
 
-This ID is the unique Apple ID generated in iTunes Connect when creating a new iOS application for the Apple AppStore
+Example: 577097874
+
+This is a unique string generated when a user creates an iOS application placeholder in iTunes connect and can be used to identify an application and view the iTunes page. This is only created when there is an application in iTunes connect and as such we will ask for this 
 
 
 
 ### Registration Process
-
-If you do not own a re-use data licence you can register for an API key to access [OS OpenSpace Pro] (https://www.ordnancesurvey.co.uk/oswebsite/web-services/os-openspace/pro/index.html) under a 90 day trial or a commercial re-use licence. 
 
 If you own a data licence, for example, you are a member of the PSMA, you can register for an API key to access [OSOnDemand WMTS] (http://www.ordnancesurvey.co.uk/oswebsite/web-services/os-ondemand/pricing.html).
 
