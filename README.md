@@ -27,12 +27,8 @@ Here are some of the features available
 - ARC (Automatic Reference Counting) support
 - Street level mapping features detailed buildings property boundaries and accurate road network.
 - World famous countryside and National park mapping featuring accurate tracks, paths and fields.
+- Ordnance Survey mapping is the most detailed and accurate mapping of GB so you will have confidence when it comes to location.
 
-
-Here are some of the benefits
-
-- Ordnance Survey mapping is the most accurate mapping of GB so you will have confidence when it comes to location.
-- Mapping is updated frequently, so real life features that regularly appear or disappear from the ground, are soon reflected in the mapping.
 
 
 Contents
