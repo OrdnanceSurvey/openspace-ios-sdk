@@ -38,9 +38,9 @@ Here are some of the benefits
 Contents
 -------
 
-The ordnancesurvey-ios-sdk itself comprises of a couple of items:
+The openspace-ios-sdk itself comprises of a couple of items:
 
-1. The ordnancesurvey-ios-sdk framework is downloaded from [www.ordnancesurvey.co.uk](https://www.ordnancesurvey.co.uk/oswebsite/web-services/os-openspace/pro/ios-sdk.html) 
+1. The openspace-ios-sdk framework is downloaded from [www.ordnancesurvey.co.uk](https://www.ordnancesurvey.co.uk/oswebsite/web-services/os-openspace/pro/ios-sdk.html) 
 2. [Documentation](http://ordnancesurvey.github.com/ordnancesurvey-ios-sdk/) - The documentation for the latest version of ordnancesurvey-ios-sdk in appledoc format
 
 There are several extensions available:
