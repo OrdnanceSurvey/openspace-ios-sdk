@@ -69,6 +69,7 @@ Getting started
 ### Registration and Access 
 
 In order to access and use the Service via the OpenSpace iOS-SDK, you must apply for an API key.
+
 You can apply for an API key by registering for a licence (a free 90 day trial licence or a commercial licence) from http://www.ordnancesurvey.co.uk/oswebsite/web-services/os-openspace/pro/free-trial.html or by contacting Newbusinessenquiries@ordnancesurvey.co.uk or calling 08456 05 05 05
 
 When registering for a licence we need to know a couple of items:
@@ -93,7 +94,7 @@ If you own a data licence, for example, you are a member of the PSMA, you can re
 
 ### Download framework package
 
-Download the latest ordnancesurvey-ios-sdk static framework from [www.ordnancesurvey.co.uk](https://www.ordnancesurvey.co.uk/oswebsite/web-services/os-openspace/pro/ios-sdk.html)
+Download the latest openspace-ios-sdk static framework from [www.ordnancesurvey.co.uk](https://www.ordnancesurvey.co.uk/oswebsite/web-services/os-openspace/pro/ios-sdk.html)
 
 Unzip the downloaded file to reveal the OSMap framework and then import into your project.
 
@@ -130,10 +131,10 @@ In the ViewController you wish to display your map, import the OSMap/OSMap.h fil
 
 ### Displaying a map
 
-After completing the above steps to download and import the OSMap.framework, the minimum required to display a map using the ordnancesurvey-ios-sdk is as follows:
+After completing the above steps to download and import the OSMap.framework, the minimum required to display a map using the openspace-ios-sdk is as follows:
 
-- Instatiate an `OSMapView` in a `UIView`
-- Create atleast one tile source and add to `OSMapView` instance
+- Initiate an `OSMapView` in a `UIView`
+- Create at least one tile source and add to `OSMapView` instance
 
 ```objective-c
 //In your ViewController.m
@@ -185,7 +186,7 @@ mapView.mapProductCodes = [OSMapView completeFreeMapStackProductCodes];
 
 #### Full Product list
 
-// OpenData products
+// OpenSpace products
 
 - "SV"   // Street view
 - "SVR"  // Street view resampled
@@ -225,13 +226,13 @@ mapView.mapProductCodes = [OSMapView completeFreeMapStackProductCodes];
 
 ### Offline databases
 
-These offline databases are extensions to the ordnancesurvey-ios-sdk and can replace online access or suplement it, they can help your application overcome network coverage issues and function wherever the user is located. 
+These offline databases are extensions to the openspace-ios-sdk and can replace online access or supplement it, they can help your application overcome network coverage issues and function wherever the user is located. 
 
 ##### OSTile packages
 
 The OSTiles format is uses the small, ubiquitous and lightweight [sqlite](http://www.sqlite.org/) database and overcomes filesystem storage problems to handle millions of images. 
 
-OSTiles packages are sets of map tiles, each package can store several layers, a layer being a rectangular bounding box for a given Ordnance Survey product and all the tile images to fill that bounding box. The packages are intended to transport presentational map tiles and can be used as a mechanism to allow mobile applications to display tiles offline, without the need to stream tiles from a webservice.
+OSTiles packages are sets of map tiles, each package can store several layers, a layer being a rectangular bounding box for a given Ordnance Survey product and all the tile images to fill that bounding box. The packages are intended to transport presentational map tiles and can be used as a mechanism to allow mobile applications to display tiles offline, without the need to stream tiles from a web service.
 
 Please refer to [OSTiles spec](ordnancesurvey-ios-sdk/ostiles_spec.md) for more details and how to create these packages.
 
@@ -244,7 +245,7 @@ This database can be downloaded from [www.ordnancesurvey.co.uk](https://www.ordn
 
 ### Converting Apple Mapkit
 
-The ordnancesurvey-ios-sdk is intended to provide a "drop-in" replacement for MapKit and has a similar API enabling existing Mapkit based project to be converted to use Ordnance Survey mapping instead.
+The openspace-ios-sdk is intended to provide a "drop-in" replacement for MapKit and has a similar API enabling existing Mapkit based project to be converted to use Ordnance Survey mapping instead.
 
 Many applications can be converted by simply changing the "MK" prefix to "OS" or by renaming symbols with the preprocessor:
 
@@ -582,18 +583,16 @@ The SDK allows a developer to subclass the `OSMapScaleView` class and represent 
 Issues
 --------
 
-For any issues relating to developing with the SDK, obtaining API keys or service problems, please email osopenspacepro@ordnancesurvey.co.uk
+For any issues relating to developing with the SDK, obtaining API keys or service problems, please email osopenspace@ordnancesurvey.co.uk
 
 
 
 Licence
 -------
 
-The Ordnance Survey iOS SDK is protected by © Crown copyright – Ordnance
-Survey 2013. It is subject to licensing terms granted by Ordnance Survey, the
-national mapping agency of Great Britain.
+Ordnance Survey's OpenSpace iOS SDK is protected by © Crown copyright – Ordnance Survey 2013. It is subject to licensing terms granted by Ordnance Survey, the national mapping agency of Great Britain.
 
-The Ordnance Survey iOS SDK includes the Route-Me library. The Route-Me
+The OpenSpace iOS SDK includes the Route-Me library. The Route-Me
 library is copyright (c) 2008-2013, Route-Me Contributors All rights reserved
 (subject to the BSD licence terms as follows):
 
