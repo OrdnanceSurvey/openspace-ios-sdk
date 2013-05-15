@@ -61,28 +61,30 @@ Check out a demo project to get started:
 * [OS Mapkit conversion demo](https://github.com/OrdnanceSurvey/ios-sdk-demo-mapkit-conversion)
 * [OS Overlay Finder demo](https://github.com/OrdnanceSurvey/ios-sdk-demo-overlay-finder)
  
-
-
-
-
 Getting started
 -------
 
-### Registration and Access 
+### Registration and Access
 
-In order to access and use the Service via the OpenSpace iOS-SDK, you must apply for an API key.
+In order to access our web services you must apply for an API key, by registering for a licence:-
 
-You can apply for an API key by registering for a licence (a free 90 day trial licence or a commercial licence) from http://www.ordnancesurvey.co.uk/oswebsite/web-services/os-openspace/pro/free-trial.html or by contacting Newbusinessenquiries@ordnancesurvey.co.uk or calling 08456 05 05 05
+- A free 90 day trial licence (for internal trial and testing)
+- A free 90 day trial licence (for external trial and demonstrating)
+- A commercial licence 
 
-When registering for a licence we need to know a couple of items:
+see http://www.ordnancesurvey.co.uk/oswebsite/web-services/os-openspace/pro/free-trial.html or contact Newbusinessenquiries@ordnancesurvey.co.uk or calling 08456 05 05 05
 
-* App ID (The Bundle ID) of the application that will use the API key.
+###Authentication parameters
+
+When registering for an API key we'll need a couple of items:
+
+#App ID (The Bundle ID) of the application that will use the API key.
 
 Example: uk.co.ordnancesurvey.demo.myDemoApp
 
 Let us know the Bundle Identifier of the Xcode project in which you will be using the API key. This is available and configurable when creating an Xcode project or from project settings or `Info.plist`
 
-* Apple ID to be associated with this application
+#Apple ID to be associated with this application
 
 Example: 577097874
 
