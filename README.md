@@ -84,7 +84,7 @@ Example: uk.co.ordnancesurvey.demo.myDemoApp
 
 Let us know the Bundle Identifier of the Xcode project in which you will be using the API key. This is available and configurable when creating an Xcode project or from project settings or `Info.plist`
 
-######Apple ID to be associated with this application
+#####Apple ID to be associated with this application
 
 Example: 577097874
 
