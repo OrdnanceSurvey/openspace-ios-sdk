@@ -78,13 +78,13 @@ see http://www.ordnancesurvey.co.uk/oswebsite/web-services/os-openspace/pro/free
 
 When registering for an API key we'll need a couple of items:
 
-#App ID (The Bundle ID) of the application that will use the API key.
+#####App ID (The Bundle ID) of the application that will use the API key.
 
 Example: uk.co.ordnancesurvey.demo.myDemoApp
 
 Let us know the Bundle Identifier of the Xcode project in which you will be using the API key. This is available and configurable when creating an Xcode project or from project settings or `Info.plist`
 
-#Apple ID to be associated with this application
+######Apple ID to be associated with this application
 
 Example: 577097874
 
