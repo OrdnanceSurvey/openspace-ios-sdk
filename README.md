@@ -161,7 +161,7 @@ Note: `OSMapView` cannot be completely initialised from a Interface Builder (`.x
 
 A developer can select which Ordnance Survey mapping products to use by  selecting on of three pre-configured map stacks or customising their app by passing the product codes as and array of strings.
 
-NOTE: Some OpenSpace Pro products require separate licenses, please check before use.
+
 
 ```objective-c
 
@@ -190,7 +190,7 @@ mapView.mapProductCodes = [OSMapView completeFreeMapStackProductCodes];
 
 #### Full Product list
 
-// OpenSpace products
+// OpenData products
 
 - "SV"   // Street view
 - "SVR"  // Street view resampled
