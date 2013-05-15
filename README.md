@@ -43,7 +43,7 @@ Contents
 The openspace-ios-sdk itself comprises of a couple of items:
 
 1. The openspace-ios-sdk framework is downloaded from [www.ordnancesurvey.co.uk](https://www.ordnancesurvey.co.uk/oswebsite/web-services/os-openspace/pro/ios-sdk.html) 
-2. [Documentation](http://ordnancesurvey.github.com/ordnancesurvey-ios-sdk/) - The documentation for the latest version of ordnancesurvey-ios-sdk in appledoc format
+2. [Documentation](http://ordnancesurvey.github.com/ordnancesurvey-ios-sdk/) - The documentation for the latest version of openspace-ios-sdk in appledoc format
 
 There are several extensions available:
 
@@ -54,7 +54,7 @@ There are several extensions available:
 
 ###### Demo projects
 
-To demonstrate features and usage some projects as other github repos to get started:
+Check out a demo project to get started:
 
 * [OS Locate Me](https://github.com/OrdnanceSurvey/ios-sdk-demo-locate-me)
 * [OS Tilesource demo](https://github.com/OrdnanceSurvey/ios-sdk-demo-tilesources)
