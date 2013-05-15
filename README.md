@@ -23,7 +23,7 @@ Here are some of the features available
 - Offline tile storage - read [about offline tile packages](#offline-databases)
 - Geocoder - Search 1:50K Gazetteer, OS Locator and Codepoint Open datasets available either online or offline
 - Uses [OSGB36 British National Grid](http://www.ordnancesurvey.co.uk/oswebsite/support/the-national-grid.html) map projection - ordnancesurvey-ios-sdk converts between WGS84 latitude/longitude and OSGB36 National Grid easting/northing. Most Classes handle geometry in either a CLLocationCoordinate2D or OSGridPoint
-- User location - ordnancesurvey-ios-sdk provides a wrapper around the standard Core Location API to easily display your app's user location on the map and use the data
+- User location - openspace-ios-sdk provides a wrapper around the standard Core Location API to easily display your app's user location on the map and use the data
 - ARC (Automatic Reference Counting) support
 - Street level mapping features detailed buildings property boundaries and accurate road network.
 - World famous countryside and National park mapping featuring accurate tracks, paths and fields.
