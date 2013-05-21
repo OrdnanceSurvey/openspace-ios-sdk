@@ -66,7 +66,7 @@ Getting started
 
 ### Commercial Use Registration and Access
 
-In order to access the service for premium data you must apply for an API key, by registering for a trial or commercial licence:-
+In order to access OS OpenSpace Pro for premium data you must apply for an API key, by registering for a free trial or commercial licence:-
 
 - A free 90 day trial licence (for internal trial and testing)
 - A free 90 day trial licence (for external trial and demonstrating)
@@ -76,11 +76,9 @@ see http://www.ordnancesurvey.co.uk/oswebsite/web-services/os-openspace/pro/free
 
 ### OS OpenSpace Registration and Access
 
-In order to access the service you must apply for an API key, by registering for an OS OpenSpace Developer Agreement:-
+In order to access the service for public facing, non commercial applications with no financial gain you must apply for an API key, by signing up to an OS OpenSpace Developer Agreement:-
 
-####- NOTE: A free Daily Data Limits will apply. If you need more data, then you can sign up for a commercial licence.
-- For public facing, non commercial applications with no financial gain.
-
+#### NOTE: A free Daily Data Limit will apply. 
 
 see https://openspaceregister.ordnancesurvey.co.uk/osmapapi/register.do
 
@@ -99,8 +97,6 @@ Let us know the Bundle Identifier of the Xcode project in which you will be usin
 Example: 577097874
 
 Let us know this unique string generated when you have created an iOS application placeholder in iTunes connect and can be used to identify an application and view the iTunes page. For enterprise apps, this is not required.  
-
-
 
 ### Registration Process for PSMA customers
 
