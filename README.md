@@ -64,15 +64,25 @@ Check out a demo project to get started:
 Getting started
 -------
 
-### Registration and Access
+### Commercial Use Registration and Access
 
-In order to access our web services you must apply for an API key, by registering for a licence:-
+In order to access the service for premium data you must apply for an API key, by registering for a trial or commercial licence:-
 
 - A free 90 day trial licence (for internal trial and testing)
 - A free 90 day trial licence (for external trial and demonstrating)
-- A commercial licence 
+- A commercial re-use licence 
 
 see http://www.ordnancesurvey.co.uk/oswebsite/web-services/os-openspace/pro/free-trial.html or contact Newbusinessenquiries@ordnancesurvey.co.uk or calling 08456 05 05 05
+
+### OS OpenSpace Registration and Access
+
+In order to access the service you must apply for an API key, by registering for an OS OpenSpace Developer Agreement:-
+
+####- NOTE: A free Daily Data Limits will apply. If you need more data, then you can sign up for a commercial licence.
+- For public facing, non commercial applications with no financial gain.
+
+
+see https://openspaceregister.ordnancesurvey.co.uk/osmapapi/register.do
 
 ###Authentication parameters
 
