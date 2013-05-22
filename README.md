@@ -187,7 +187,7 @@ mapView.mapProductCodes = [NSArray arrayWithObjects:@"250KR", @"250K", @"50KR", 
 // As above but including VMD
 [OSMapView completeFreeMapStackProductCodes] = @"SV",@"SVR",@"VMD",@"VMDR",@"50K",@"50KR",@"250K",@"250KR",@"MS",@"MSR",@"OV2",@"OV1",@"OV0"
 
-//OpenSpace Pro only
+//Users with a commercial licence or PSMA licence only:
 [OSMapView zoomMapStackProductCodes] = @"CS10",@"CS09",@"CS08",@"CS07",@"CS06",@"CS05",@"CS04",@"CS03",@"CS02",@"CS01",@"CS00"
 
 //Example usage
@@ -197,10 +197,12 @@ mapView.mapProductCodes = [OSMapView completeFreeMapStackProductCodes];
 
 #### Full Product list
 
-// OpenData products
+// OS OpenSpace users can use these mapping products: NOTE: DAILY LIMITS APPLY
 
 - "SV"   // Street view
 - "SVR"  // Street view resampled
+- "50K"  // 1:50k
+- "50KR" // 1:50k resampled
 - "VMD"  // Vector Map District
 - "VMDR" // Vector Map District resampled
 - "250K" // 1:250k
@@ -211,7 +213,7 @@ mapView.mapProductCodes = [OSMapView completeFreeMapStackProductCodes];
 - "OV1"  // Overview 1
 - "OV0"  // Overview 0
 
-// Licenced products
+// Users with an appropriate commercial licence can also select to use these products:
 
 - "VML"  // Vector Map Local
 - "VMLR" // Vector Map Local resampled
@@ -220,7 +222,7 @@ mapView.mapProductCodes = [OSMapView completeFreeMapStackProductCodes];
 - "50K"  // 1:50k
 - "50KR" // 1:50k resampled
 
-// Zoom stack products - enables consistently styled layers
+// Users with an appropriate commercial licence can also select to use the Zoom stack products - enables consistently styled layers
 
 - "CS00" // "zoomed out"
 - "CS01"
