@@ -79,6 +79,7 @@ see http://www.ordnancesurvey.co.uk/oswebsite/web-services/os-openspace/pro/free
 In order to access the service for public facing, non commercial applications with no financial gain you must apply for an API key, by signing up to an OS OpenSpace Developer Agreement:-
 
 #### NOTE: A free Daily Data Limit will apply. 
+#### NOTE: For online access only.
 
 see https://openspaceregister.ordnancesurvey.co.uk/osmapapi/register.do
 
