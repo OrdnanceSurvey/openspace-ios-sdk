@@ -83,6 +83,10 @@ In order to access the service for public facing, non commercial applications wi
 
 see https://openspaceregister.ordnancesurvey.co.uk/osmapapi/register.do
 
+### Registration Process for [PSMA]  (http://www.ordnancesurvey.co.uk/oswebsite/public-sector/mapping-agreement/index.htmlcustomers) customers 
+
+If you own a data licence, for example, you are a member of the PSMA, you can register for a licence in order to obtain an API key to access the service.(http://www.ordnancesurvey.co.uk/oswebsite/web-services/os-ondemand/pricing.html).
+
 ###Authentication parameters
 
 When registering for an API key we'll need a couple of items:
@@ -99,9 +103,7 @@ Example: 577097874
 
 Let us know this unique string generated when you have created an iOS application placeholder in iTunes connect and can be used to identify an application and view the iTunes page. For enterprise apps, this is not required.  
 
-### Registration Process for PSMA customers
 
-If you own a data licence, for example, you are a member of the PSMA, you can register for a licence in order to obtain an API key to access the service.(http://www.ordnancesurvey.co.uk/oswebsite/web-services/os-ondemand/pricing.html).
 
 ### Download framework package
 
@@ -168,6 +170,7 @@ Note: `OSMapView` cannot be completely initialised from a Interface Builder (`.x
 
 A developer can select which Ordnance Survey mapping products to use by  selecting on of three pre-configured map stacks or customising their app by passing the product codes as and array of strings.
 
+NOTE: Certain products and the Zoom map stack require a commercial licence.
 
 
 ```objective-c
