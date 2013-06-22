@@ -8,15 +8,22 @@ Description
 
 The OSTiles format is uses the small, ubiquitous and lightweight [sqlite](http://www.sqlite.org/) database and overcomes filesystem storage problems to handle millions of images. 
 
-OSTiles packages are sets of map tiles, each package can store several layers, a layer being a rectangular bounding box for a given Ordnance Survey product and all the tile images to fill that bounding box. The packages are intended to transport presentational map tiles and can be used as a mechanism to allow mobile applications to display tiles offline, without the need to stream tiles from a webservice.
+OSTiles packages are sets of map tiles, each package can store several layers, a layer being a rectangular bounding box for a given Ordnance Survey product and all the tile images to fill that bounding box. The packages are intended to transport presentational map tiles and can be used as a mechanism to allow mobile applications to display tiles offline, without the need to stream tiles from a web service.
 
 The OSTiles format is based on [MBTiles 1.1](http://www.sqlite.org/) spec but for the following remarks:
 
 * Does not use metadata table.
-* Does not use power-of-2 zoom levels.* Tile size and resolution are determined by the product code.
-
-**NOTE:** 
-* The file must have the extension `.ostiles` to be displayed by the SDK.* A tile package must implement the specification below to ensure compatibility with the SDK.* Tiles zoom_level, column and row `z,x,y` follow Tile Map Service in Transverse Mercator projection
+* Does not use power-of-2 zoom levels.
+* Tile size and resolution are determined externally by the product code.
+
+
+
+
+**NOTE:** 
+
+* The file must have the extension `.ostiles` to be displayed by the SDK.
+* A tile package must implement the specification below to ensure compatibility with the SDK.
+* Tiles zoom_level, column and row `z,x,y` follow Tile Map Service in Transverse Mercator projection
 * The tile images must be in [OSGB36 British National Grid](http://www.ordnancesurvey.co.uk/oswebsite/support/the-national-grid.html).
 
 
