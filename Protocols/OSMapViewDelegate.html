@@ -1,0 +1,652 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>OSMapViewDelegate Protocol Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.0.5 (build 789)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">OSMap </a></h1>
+				<a id="developerHome" href="../index.html">Ordnance Survey</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">OSMapViewDelegate Protocol Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/mapView:annotationView:calloutAccessoryControlTapped:">&nbsp;&nbsp;&nbsp;&nbsp;- mapView:annotationView:calloutAccessoryControlTapped:</option>
+	
+	<option value="//api/name/mapView:annotationView:didChangeDragState:fromOldState:">&nbsp;&nbsp;&nbsp;&nbsp;- mapView:annotationView:didChangeDragState:fromOldState:</option>
+	
+	<option value="//api/name/mapView:didAddAnnotationViews:">&nbsp;&nbsp;&nbsp;&nbsp;- mapView:didAddAnnotationViews:</option>
+	
+	<option value="//api/name/mapView:didAddOverlayViews:">&nbsp;&nbsp;&nbsp;&nbsp;- mapView:didAddOverlayViews:</option>
+	
+	<option value="//api/name/mapView:didChangeUserTrackingMode:animated:">&nbsp;&nbsp;&nbsp;&nbsp;- mapView:didChangeUserTrackingMode:animated:</option>
+	
+	<option value="//api/name/mapView:didDeselectAnnotationView:">&nbsp;&nbsp;&nbsp;&nbsp;- mapView:didDeselectAnnotationView:</option>
+	
+	<option value="//api/name/mapView:didFailToLocateUserWithError:">&nbsp;&nbsp;&nbsp;&nbsp;- mapView:didFailToLocateUserWithError:</option>
+	
+	<option value="//api/name/mapView:didSelectAnnotationView:">&nbsp;&nbsp;&nbsp;&nbsp;- mapView:didSelectAnnotationView:</option>
+	
+	<option value="//api/name/mapView:didUpdateUserLocation:">&nbsp;&nbsp;&nbsp;&nbsp;- mapView:didUpdateUserLocation:</option>
+	
+	<option value="//api/name/mapView:regionChangeAnimated:">&nbsp;&nbsp;&nbsp;&nbsp;- mapView:regionChangeAnimated:</option>
+	
+	<option value="//api/name/mapView:regionDidChangeAnimated:">&nbsp;&nbsp;&nbsp;&nbsp;- mapView:regionDidChangeAnimated:</option>
+	
+	<option value="//api/name/mapView:regionWillChangeAnimated:">&nbsp;&nbsp;&nbsp;&nbsp;- mapView:regionWillChangeAnimated:</option>
+	
+	<option value="//api/name/mapView:viewForAnnotation:">&nbsp;&nbsp;&nbsp;&nbsp;- mapView:viewForAnnotation:</option>
+	
+	<option value="//api/name/mapView:viewForOverlay:">&nbsp;&nbsp;&nbsp;&nbsp;- mapView:viewForOverlay:</option>
+	
+	<option value="//api/name/mapViewDidStopLocatingUser:">&nbsp;&nbsp;&nbsp;&nbsp;- mapViewDidStopLocatingUser:</option>
+	
+	<option value="//api/name/mapViewWillStartLocatingUser:">&nbsp;&nbsp;&nbsp;&nbsp;- mapViewWillStartLocatingUser:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/mapView:annotationView:calloutAccessoryControlTapped:">mapView:annotationView:calloutAccessoryControlTapped:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/mapView:annotationView:didChangeDragState:fromOldState:">mapView:annotationView:didChangeDragState:fromOldState:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/mapView:didAddAnnotationViews:">mapView:didAddAnnotationViews:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/mapView:didAddOverlayViews:">mapView:didAddOverlayViews:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/mapView:didChangeUserTrackingMode:animated:">mapView:didChangeUserTrackingMode:animated:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/mapView:didDeselectAnnotationView:">mapView:didDeselectAnnotationView:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/mapView:didFailToLocateUserWithError:">mapView:didFailToLocateUserWithError:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/mapView:didSelectAnnotationView:">mapView:didSelectAnnotationView:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/mapView:didUpdateUserLocation:">mapView:didUpdateUserLocation:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/mapView:regionChangeAnimated:">mapView:regionChangeAnimated:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/mapView:regionDidChangeAnimated:">mapView:regionDidChangeAnimated:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/mapView:regionWillChangeAnimated:">mapView:regionWillChangeAnimated:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/mapView:viewForAnnotation:">mapView:viewForAnnotation:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/mapView:viewForOverlay:">mapView:viewForOverlay:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/mapViewDidStopLocatingUser:">mapViewDidStopLocatingUser:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/mapViewWillStartLocatingUser:">mapViewWillStartLocatingUser:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="OSMapViewDelegate Protocol Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">OSMapViewDelegate Protocol Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Conforms to</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">OSMapView.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p><a href="OSMapViewDelegate.html"><code>OSMapViewDelegate</code></a> does not currently support &ldquo;map loading&rdquo; callbacks:</p>
+
+<pre><code>- (void)mapViewWillStartLoadingMap:(OSMapView *)mapView;
+- (void)mapViewDidFinishLoadingMap:(OSMapView *)mapView;
+- (void)mapViewDidFailLoadingMap:(OSMapView *)mapView withError:(NSError *)error;
+</code></pre>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/mapView:viewForAnnotation:">&ndash;&nbsp;mapView:viewForAnnotation:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/mapView:didAddAnnotationViews:">&ndash;&nbsp;mapView:didAddAnnotationViews:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/mapView:annotationView:calloutAccessoryControlTapped:">&ndash;&nbsp;mapView:annotationView:calloutAccessoryControlTapped:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/mapView:didSelectAnnotationView:">&ndash;&nbsp;mapView:didSelectAnnotationView:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/mapView:didDeselectAnnotationView:">&ndash;&nbsp;mapView:didDeselectAnnotationView:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/mapView:annotationView:didChangeDragState:fromOldState:">&ndash;&nbsp;mapView:annotationView:didChangeDragState:fromOldState:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/mapView:viewForOverlay:">&ndash;&nbsp;mapView:viewForOverlay:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/mapView:didAddOverlayViews:">&ndash;&nbsp;mapView:didAddOverlayViews:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/mapView:regionWillChangeAnimated:">&ndash;&nbsp;mapView:regionWillChangeAnimated:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/mapView:regionChangeAnimated:">&ndash;&nbsp;mapView:regionChangeAnimated:</a></code>
+		<span class="tooltip"><p>Notification of intermediate changes to position/scale. This function is called before annotations/overlays</p>
+
+<pre><code>are updated, to allow the application to make any necessary changes.
+
+IMPORTANT this function is called often, in the main thread. The application should ensure that it has an 
+efficient implementation. Any computationally expensive work should be done in a separate thread.
+</code></pre></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/mapView:regionDidChangeAnimated:">&ndash;&nbsp;mapView:regionDidChangeAnimated:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/mapViewWillStartLocatingUser:">&ndash;&nbsp;mapViewWillStartLocatingUser:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/mapViewDidStopLocatingUser:">&ndash;&nbsp;mapViewDidStopLocatingUser:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/mapView:didUpdateUserLocation:">&ndash;&nbsp;mapView:didUpdateUserLocation:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/mapView:didFailToLocateUserWithError:">&ndash;&nbsp;mapView:didFailToLocateUserWithError:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/mapView:didChangeUserTrackingMode:animated:">&ndash;&nbsp;mapView:didChangeUserTrackingMode:animated:</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/mapView:annotationView:calloutAccessoryControlTapped:" title="mapView:annotationView:calloutAccessoryControlTapped:"></a>
+	<h3 class="subsubtitle method-title">mapView:annotationView:calloutAccessoryControlTapped:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)mapView:(OSMapView *)<em>mapView</em> annotationView:(OSAnnotationView *)<em>view</em> calloutAccessoryControlTapped:(UIControl *)<em>control</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/mapView:annotationView:didChangeDragState:fromOldState:" title="mapView:annotationView:didChangeDragState:fromOldState:"></a>
+	<h3 class="subsubtitle method-title">mapView:annotationView:didChangeDragState:fromOldState:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)mapView:(OSMapView *)<em>mapView</em> annotationView:(OSAnnotationView *)<em>annotationView</em> didChangeDragState:(OSAnnotationViewDragState)<em>newState</em> fromOldState:(OSAnnotationViewDragState)<em>oldState</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/mapView:didAddAnnotationViews:" title="mapView:didAddAnnotationViews:"></a>
+	<h3 class="subsubtitle method-title">mapView:didAddAnnotationViews:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)mapView:(OSMapView *)<em>mapView</em> didAddAnnotationViews:(NSArray *)<em>views</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/mapView:didAddOverlayViews:" title="mapView:didAddOverlayViews:"></a>
+	<h3 class="subsubtitle method-title">mapView:didAddOverlayViews:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)mapView:(OSMapView *)<em>mapView</em> didAddOverlayViews:(NSArray *)<em>views</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/mapView:didChangeUserTrackingMode:animated:" title="mapView:didChangeUserTrackingMode:animated:"></a>
+	<h3 class="subsubtitle method-title">mapView:didChangeUserTrackingMode:animated:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)mapView:(OSMapView *)<em>mapView</em> didChangeUserTrackingMode:(OSUserTrackingMode)<em>mode</em> animated:(BOOL)<em>animated</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/mapView:didDeselectAnnotationView:" title="mapView:didDeselectAnnotationView:"></a>
+	<h3 class="subsubtitle method-title">mapView:didDeselectAnnotationView:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)mapView:(OSMapView *)<em>mapView</em> didDeselectAnnotationView:(OSAnnotationView *)<em>view</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/mapView:didFailToLocateUserWithError:" title="mapView:didFailToLocateUserWithError:"></a>
+	<h3 class="subsubtitle method-title">mapView:didFailToLocateUserWithError:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)mapView:(OSMapView *)<em>mapView</em> didFailToLocateUserWithError:(NSError *)<em>error</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/mapView:didSelectAnnotationView:" title="mapView:didSelectAnnotationView:"></a>
+	<h3 class="subsubtitle method-title">mapView:didSelectAnnotationView:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)mapView:(OSMapView *)<em>mapView</em> didSelectAnnotationView:(OSAnnotationView *)<em>view</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/mapView:didUpdateUserLocation:" title="mapView:didUpdateUserLocation:"></a>
+	<h3 class="subsubtitle method-title">mapView:didUpdateUserLocation:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)mapView:(OSMapView *)<em>mapView</em> didUpdateUserLocation:(OSUserLocation *)<em>userLocation</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/mapView:regionChangeAnimated:" title="mapView:regionChangeAnimated:"></a>
+	<h3 class="subsubtitle method-title">mapView:regionChangeAnimated:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Notification of intermediate changes to position/scale. This function is called before annotations/overlays</p>
+
+<pre><code>are updated, to allow the application to make any necessary changes.
+
+IMPORTANT this function is called often, in the main thread. The application should ensure that it has an 
+efficient implementation. Any computationally expensive work should be done in a separate thread.
+</code></pre>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)mapView:(OSMapView *)<em>map</em> regionChangeAnimated:(BOOL)<em>animated</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">OSMapView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/mapView:regionDidChangeAnimated:" title="mapView:regionDidChangeAnimated:"></a>
+	<h3 class="subsubtitle method-title">mapView:regionDidChangeAnimated:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)mapView:(OSMapView *)<em>map</em> regionDidChangeAnimated:(BOOL)<em>animated</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/mapView:regionWillChangeAnimated:" title="mapView:regionWillChangeAnimated:"></a>
+	<h3 class="subsubtitle method-title">mapView:regionWillChangeAnimated:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)mapView:(OSMapView *)<em>map</em> regionWillChangeAnimated:(BOOL)<em>animated</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/mapView:viewForAnnotation:" title="mapView:viewForAnnotation:"></a>
+	<h3 class="subsubtitle method-title">mapView:viewForAnnotation:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (OSAnnotationView *)mapView:(OSMapView *)<em>mapView</em> viewForAnnotation:(id&lt;OSAnnotation&gt;)<em>annotation</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/mapView:viewForOverlay:" title="mapView:viewForOverlay:"></a>
+	<h3 class="subsubtitle method-title">mapView:viewForOverlay:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (OSOverlayView *)mapView:(OSMapView *)<em>mapView</em> viewForOverlay:(id&lt;OSOverlay&gt;)<em>overlay</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/mapViewDidStopLocatingUser:" title="mapViewDidStopLocatingUser:"></a>
+	<h3 class="subsubtitle method-title">mapViewDidStopLocatingUser:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)mapViewDidStopLocatingUser:(OSMapView *)<em>mapView</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/mapViewWillStartLocatingUser:" title="mapViewWillStartLocatingUser:"></a>
+	<h3 class="subsubtitle method-title">mapViewWillStartLocatingUser:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)mapViewWillStartLocatingUser:(OSMapView *)<em>mapView</em></code></div>
+
+    
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 Ordnance Survey. All rights reserved. (Last updated: 2013-06-21)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

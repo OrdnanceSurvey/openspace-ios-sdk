@@ -1,0 +1,611 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>OSOverlayPathView Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.0.5 (build 789)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">OSMap </a></h1>
+				<a id="developerHome" href="../index.html">Ordnance Survey</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">OSOverlayPathView Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/fillColor">&nbsp;&nbsp;&nbsp;&nbsp;fillColor</option>
+	
+	<option value="//api/name/lineCap">&nbsp;&nbsp;&nbsp;&nbsp;lineCap</option>
+	
+	<option value="//api/name/lineDashPattern">&nbsp;&nbsp;&nbsp;&nbsp;lineDashPattern</option>
+	
+	<option value="//api/name/lineDashPhase">&nbsp;&nbsp;&nbsp;&nbsp;lineDashPhase</option>
+	
+	<option value="//api/name/lineJoin">&nbsp;&nbsp;&nbsp;&nbsp;lineJoin</option>
+	
+	<option value="//api/name/lineWidth">&nbsp;&nbsp;&nbsp;&nbsp;lineWidth</option>
+	
+	<option value="//api/name/miterLimit">&nbsp;&nbsp;&nbsp;&nbsp;miterLimit</option>
+	
+	<option value="//api/name/path">&nbsp;&nbsp;&nbsp;&nbsp;path</option>
+	
+	<option value="//api/name/strokeColor">&nbsp;&nbsp;&nbsp;&nbsp;strokeColor</option>
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/addGridPoints:count:toPath:moveToFirstPoint:closeSubpath:">&nbsp;&nbsp;&nbsp;&nbsp;- addGridPoints:count:toPath:moveToFirstPoint:closeSubpath:</option>
+	
+	<option value="//api/name/applyFillPropertiesToContext:atZoomScale:">&nbsp;&nbsp;&nbsp;&nbsp;- applyFillPropertiesToContext:atZoomScale:</option>
+	
+	<option value="//api/name/applyStrokePropertiesToContext:atZoomScale:">&nbsp;&nbsp;&nbsp;&nbsp;- applyStrokePropertiesToContext:atZoomScale:</option>
+	
+	<option value="//api/name/createPath">&nbsp;&nbsp;&nbsp;&nbsp;- createPath</option>
+	
+	<option value="//api/name/fillPath:inContext:">&nbsp;&nbsp;&nbsp;&nbsp;- fillPath:inContext:</option>
+	
+	<option value="//api/name/invalidatePath">&nbsp;&nbsp;&nbsp;&nbsp;- invalidatePath</option>
+	
+	<option value="//api/name/strokePath:inContext:">&nbsp;&nbsp;&nbsp;&nbsp;- strokePath:inContext:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fillColor">fillColor</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/lineCap">lineCap</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/lineDashPattern">lineDashPattern</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/lineDashPhase">lineDashPhase</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/lineJoin">lineJoin</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/lineWidth">lineWidth</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/miterLimit">miterLimit</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/path">path</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/strokeColor">strokeColor</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addGridPoints:count:toPath:moveToFirstPoint:closeSubpath:">addGridPoints:count:toPath:moveToFirstPoint:closeSubpath:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/applyFillPropertiesToContext:atZoomScale:">applyFillPropertiesToContext:atZoomScale:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/applyStrokePropertiesToContext:atZoomScale:">applyStrokePropertiesToContext:atZoomScale:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/createPath">createPath</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fillPath:inContext:">fillPath:inContext:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/invalidatePath">invalidatePath</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/strokePath:inContext:">strokePath:inContext:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="OSOverlayPathView Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">OSOverlayPathView Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value"><a href="../Classes/OSOverlayView.html">OSOverlayView</a> : UIView</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">OSOverlayPathView.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/fillColor">&nbsp;&nbsp;fillColor</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/strokeColor">&nbsp;&nbsp;strokeColor</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/lineWidth">&nbsp;&nbsp;lineWidth</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/lineJoin">&nbsp;&nbsp;lineJoin</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/lineCap">&nbsp;&nbsp;lineCap</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/miterLimit">&nbsp;&nbsp;miterLimit</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/lineDashPhase">&nbsp;&nbsp;lineDashPhase</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/lineDashPattern">&nbsp;&nbsp;lineDashPattern</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/path">&nbsp;&nbsp;path</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/applyFillPropertiesToContext:atZoomScale:">&ndash;&nbsp;applyFillPropertiesToContext:atZoomScale:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/applyStrokePropertiesToContext:atZoomScale:">&ndash;&nbsp;applyStrokePropertiesToContext:atZoomScale:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/fillPath:inContext:">&ndash;&nbsp;fillPath:inContext:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/strokePath:inContext:">&ndash;&nbsp;strokePath:inContext:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/createPath">&ndash;&nbsp;createPath</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/invalidatePath">&ndash;&nbsp;invalidatePath</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addGridPoints:count:toPath:moveToFirstPoint:closeSubpath:">&ndash;&nbsp;addGridPoints:count:toPath:moveToFirstPoint:closeSubpath:</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/fillColor" title="fillColor"></a>
+	<h3 class="subsubtitle method-title">fillColor</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (atomic, strong) UIColor *fillColor</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/lineCap" title="lineCap"></a>
+	<h3 class="subsubtitle method-title">lineCap</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (atomic, assign) CGLineCap lineCap</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/lineDashPattern" title="lineDashPattern"></a>
+	<h3 class="subsubtitle method-title">lineDashPattern</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (atomic, copy) NSArray *lineDashPattern</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/lineDashPhase" title="lineDashPhase"></a>
+	<h3 class="subsubtitle method-title">lineDashPhase</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (atomic, assign) CGFloat lineDashPhase</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/lineJoin" title="lineJoin"></a>
+	<h3 class="subsubtitle method-title">lineJoin</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (atomic, assign) CGLineJoin lineJoin</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/lineWidth" title="lineWidth"></a>
+	<h3 class="subsubtitle method-title">lineWidth</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (atomic, assign) CGFloat lineWidth</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/miterLimit" title="miterLimit"></a>
+	<h3 class="subsubtitle method-title">miterLimit</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (atomic, assign) CGFloat miterLimit</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/path" title="path"></a>
+	<h3 class="subsubtitle method-title">path</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (atomic, copy) CGPathRef path</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/strokeColor" title="strokeColor"></a>
+	<h3 class="subsubtitle method-title">strokeColor</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (atomic, strong) UIColor *strokeColor</code></div>
+
+    
+</div>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/addGridPoints:count:toPath:moveToFirstPoint:closeSubpath:" title="addGridPoints:count:toPath:moveToFirstPoint:closeSubpath:"></a>
+	<h3 class="subsubtitle method-title">addGridPoints:count:toPath:moveToFirstPoint:closeSubpath:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)addGridPoints:(OSGridPoint const *)<em>points</em> count:(NSUInteger)<em>count</em> toPath:(CGMutablePathRef)<em>path</em> moveToFirstPoint:(bool)<em>moveToFirst</em> closeSubpath:(bool)<em>closeSubpath</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/applyFillPropertiesToContext:atZoomScale:" title="applyFillPropertiesToContext:atZoomScale:"></a>
+	<h3 class="subsubtitle method-title">applyFillPropertiesToContext:atZoomScale:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)applyFillPropertiesToContext:(CGContextRef)<em>context</em> atZoomScale:(float)<em>zoomScale</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/applyStrokePropertiesToContext:atZoomScale:" title="applyStrokePropertiesToContext:atZoomScale:"></a>
+	<h3 class="subsubtitle method-title">applyStrokePropertiesToContext:atZoomScale:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)applyStrokePropertiesToContext:(CGContextRef)<em>context</em> atZoomScale:(float)<em>zoomScale</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/createPath" title="createPath"></a>
+	<h3 class="subsubtitle method-title">createPath</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)createPath</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/fillPath:inContext:" title="fillPath:inContext:"></a>
+	<h3 class="subsubtitle method-title">fillPath:inContext:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)fillPath:(CGPathRef)<em>path</em> inContext:(CGContextRef)<em>context</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/invalidatePath" title="invalidatePath"></a>
+	<h3 class="subsubtitle method-title">invalidatePath</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)invalidatePath</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/strokePath:inContext:" title="strokePath:inContext:"></a>
+	<h3 class="subsubtitle method-title">strokePath:inContext:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)strokePath:(CGPathRef)<em>path</em> inContext:(CGContextRef)<em>context</em></code></div>
+
+    
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 Ordnance Survey. All rights reserved. (Last updated: 2013-06-21)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

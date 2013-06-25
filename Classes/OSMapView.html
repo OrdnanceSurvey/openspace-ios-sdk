@@ -1,0 +1,2063 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>OSMapView Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.0.5 (build 789)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">OSMap </a></h1>
+				<a id="developerHome" href="../index.html">Ordnance Survey</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">OSMapView Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/annotationVisibleRect">&nbsp;&nbsp;&nbsp;&nbsp;annotationVisibleRect</option>
+	
+	<option value="//api/name/annotations">&nbsp;&nbsp;&nbsp;&nbsp;annotations</option>
+	
+	<option value="//api/name/centerCoordinate">&nbsp;&nbsp;&nbsp;&nbsp;centerCoordinate</option>
+	
+	<option value="//api/name/delegate">&nbsp;&nbsp;&nbsp;&nbsp;delegate</option>
+	
+	<option value="//api/name/mapScaleView">&nbsp;&nbsp;&nbsp;&nbsp;mapScaleView</option>
+	
+	<option value="//api/name/metresPerPixel">&nbsp;&nbsp;&nbsp;&nbsp;metresPerPixel</option>
+	
+	<option value="//api/name/overlays">&nbsp;&nbsp;&nbsp;&nbsp;overlays</option>
+	
+	<option value="//api/name/region">&nbsp;&nbsp;&nbsp;&nbsp;region</option>
+	
+	<option value="//api/name/scrollEnabled">&nbsp;&nbsp;&nbsp;&nbsp;scrollEnabled</option>
+	
+	<option value="//api/name/selectedAnnotations">&nbsp;&nbsp;&nbsp;&nbsp;selectedAnnotations</option>
+	
+	<option value="//api/name/showsUserLocation">&nbsp;&nbsp;&nbsp;&nbsp;showsUserLocation</option>
+	
+	<option value="//api/name/tileSources">&nbsp;&nbsp;&nbsp;&nbsp;tileSources</option>
+	
+	<option value="//api/name/userLocation">&nbsp;&nbsp;&nbsp;&nbsp;userLocation</option>
+	
+	<option value="//api/name/userLocationVisible">&nbsp;&nbsp;&nbsp;&nbsp;userLocationVisible</option>
+	
+	<option value="//api/name/userTrackingMode">&nbsp;&nbsp;&nbsp;&nbsp;userTrackingMode</option>
+	
+	<option value="//api/name/visibleGridRect">&nbsp;&nbsp;&nbsp;&nbsp;visibleGridRect</option>
+	
+	<option value="//api/name/visibleMapRect">&nbsp;&nbsp;&nbsp;&nbsp;visibleMapRect</option>
+	
+	<option value="//api/name/zoomEnabled">&nbsp;&nbsp;&nbsp;&nbsp;zoomEnabled</option>
+	
+	
+	
+	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/SDKVersion">&nbsp;&nbsp;&nbsp;&nbsp;+ SDKVersion</option>
+	
+	<option value="//api/name/completeFreeMapStackProductCodes">&nbsp;&nbsp;&nbsp;&nbsp;+ completeFreeMapStackProductCodes</option>
+	
+	<option value="//api/name/defaultMapStackProductCodes">&nbsp;&nbsp;&nbsp;&nbsp;+ defaultMapStackProductCodes</option>
+	
+	<option value="//api/name/localTileSourceWithFileURL:">&nbsp;&nbsp;&nbsp;&nbsp;+ localTileSourceWithFileURL:</option>
+	
+	<option value="//api/name/localTileSourcesInDirectoryAtURL:">&nbsp;&nbsp;&nbsp;&nbsp;+ localTileSourcesInDirectoryAtURL:</option>
+	
+	<option value="//api/name/webTileSourceWithAPIKey:openSpacePro:">&nbsp;&nbsp;&nbsp;&nbsp;+ webTileSourceWithAPIKey:openSpacePro:</option>
+	
+	<option value="//api/name/zoomMapStackProductCodes">&nbsp;&nbsp;&nbsp;&nbsp;+ zoomMapStackProductCodes</option>
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/addAnnotation:">&nbsp;&nbsp;&nbsp;&nbsp;- addAnnotation:</option>
+	
+	<option value="//api/name/addAnnotations:">&nbsp;&nbsp;&nbsp;&nbsp;- addAnnotations:</option>
+	
+	<option value="//api/name/addOverlay:">&nbsp;&nbsp;&nbsp;&nbsp;- addOverlay:</option>
+	
+	<option value="//api/name/addOverlays:">&nbsp;&nbsp;&nbsp;&nbsp;- addOverlays:</option>
+	
+	<option value="//api/name/annotationsInGridRect:">&nbsp;&nbsp;&nbsp;&nbsp;- annotationsInGridRect:</option>
+	
+	<option value="//api/name/annotationsInMapRect:">&nbsp;&nbsp;&nbsp;&nbsp;- annotationsInMapRect:</option>
+	
+	<option value="//api/name/convertCoordinate:toPointToView:">&nbsp;&nbsp;&nbsp;&nbsp;- convertCoordinate:toPointToView:</option>
+	
+	<option value="//api/name/convertGridPoint:toPointToView:">&nbsp;&nbsp;&nbsp;&nbsp;- convertGridPoint:toPointToView:</option>
+	
+	<option value="//api/name/convertPoint:toGridPointFromView:">&nbsp;&nbsp;&nbsp;&nbsp;- convertPoint:toGridPointFromView:</option>
+	
+	<option value="//api/name/convertRegion:toRectToView:">&nbsp;&nbsp;&nbsp;&nbsp;- convertRegion:toRectToView:</option>
+	
+	<option value="//api/name/dequeueReusableAnnotationViewWithIdentifier:">&nbsp;&nbsp;&nbsp;&nbsp;- dequeueReusableAnnotationViewWithIdentifier:</option>
+	
+	<option value="//api/name/deselectAnnotation:animated:">&nbsp;&nbsp;&nbsp;&nbsp;- deselectAnnotation:animated:</option>
+	
+	<option value="//api/name/exchangeOverlayAtIndex:withOverlayAtIndex:">&nbsp;&nbsp;&nbsp;&nbsp;- exchangeOverlayAtIndex:withOverlayAtIndex:</option>
+	
+	<option value="//api/name/gridRectThatFits:">&nbsp;&nbsp;&nbsp;&nbsp;- gridRectThatFits:</option>
+	
+	<option value="//api/name/gridRectThatFits:edgePadding:">&nbsp;&nbsp;&nbsp;&nbsp;- gridRectThatFits:edgePadding:</option>
+	
+	<option value="//api/name/insertOverlay:aboveOverlay:">&nbsp;&nbsp;&nbsp;&nbsp;- insertOverlay:aboveOverlay:</option>
+	
+	<option value="//api/name/insertOverlay:atIndex:">&nbsp;&nbsp;&nbsp;&nbsp;- insertOverlay:atIndex:</option>
+	
+	<option value="//api/name/insertOverlay:belowOverlay:">&nbsp;&nbsp;&nbsp;&nbsp;- insertOverlay:belowOverlay:</option>
+	
+	<option value="//api/name/mapRectThatFits:">&nbsp;&nbsp;&nbsp;&nbsp;- mapRectThatFits:</option>
+	
+	<option value="//api/name/mapRectThatFits:edgePadding:">&nbsp;&nbsp;&nbsp;&nbsp;- mapRectThatFits:edgePadding:</option>
+	
+	<option value="//api/name/regionThatFits:">&nbsp;&nbsp;&nbsp;&nbsp;- regionThatFits:</option>
+	
+	<option value="//api/name/removeAnnotation:">&nbsp;&nbsp;&nbsp;&nbsp;- removeAnnotation:</option>
+	
+	<option value="//api/name/removeAnnotations:">&nbsp;&nbsp;&nbsp;&nbsp;- removeAnnotations:</option>
+	
+	<option value="//api/name/removeOverlay:">&nbsp;&nbsp;&nbsp;&nbsp;- removeOverlay:</option>
+	
+	<option value="//api/name/removeOverlays:">&nbsp;&nbsp;&nbsp;&nbsp;- removeOverlays:</option>
+	
+	<option value="//api/name/selectAnnotation:animated:">&nbsp;&nbsp;&nbsp;&nbsp;- selectAnnotation:animated:</option>
+	
+	<option value="//api/name/setCenterCoordinate:animated:">&nbsp;&nbsp;&nbsp;&nbsp;- setCenterCoordinate:animated:</option>
+	
+	<option value="//api/name/setMapProductCodes:">&nbsp;&nbsp;&nbsp;&nbsp;- setMapProductCodes:</option>
+	
+	<option value="//api/name/setRegion:animated:">&nbsp;&nbsp;&nbsp;&nbsp;- setRegion:animated:</option>
+	
+	<option value="//api/name/setUserTrackingMode:animated:">&nbsp;&nbsp;&nbsp;&nbsp;- setUserTrackingMode:animated:</option>
+	
+	<option value="//api/name/setVisibleGridRect:animated:">&nbsp;&nbsp;&nbsp;&nbsp;- setVisibleGridRect:animated:</option>
+	
+	<option value="//api/name/setVisibleGridRect:edgePadding:animated:">&nbsp;&nbsp;&nbsp;&nbsp;- setVisibleGridRect:edgePadding:animated:</option>
+	
+	<option value="//api/name/setVisibleMapRect:animated:">&nbsp;&nbsp;&nbsp;&nbsp;- setVisibleMapRect:animated:</option>
+	
+	<option value="//api/name/setVisibleMapRect:edgePadding:animated:">&nbsp;&nbsp;&nbsp;&nbsp;- setVisibleMapRect:edgePadding:animated:</option>
+	
+	<option value="//api/name/viewForAnnotation:">&nbsp;&nbsp;&nbsp;&nbsp;- viewForAnnotation:</option>
+	
+	<option value="//api/name/viewForOverlay:">&nbsp;&nbsp;&nbsp;&nbsp;- viewForOverlay:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Creating and using tile sources">Creating and using tile sources</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Map scale view that gets automatically resized as the zoom changes, but does not pan">Map scale view that gets automatically resized as the zoom changes, but does not pan</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Managing scrolling and zooming">Managing scrolling and zooming</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Current zoom level">Current zoom level</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_User location">User location</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Managing annotations">Managing annotations</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Managing overlays">Managing overlays</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Managing maps">Managing maps</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Converting between coordinate systems">Converting between coordinate systems</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Versioning">Versioning</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/annotationVisibleRect">annotationVisibleRect</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/annotations">annotations</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/centerCoordinate">centerCoordinate</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/delegate">delegate</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/mapScaleView">mapScaleView</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/metresPerPixel">metresPerPixel</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/overlays">overlays</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/region">region</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/scrollEnabled">scrollEnabled</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/selectedAnnotations">selectedAnnotations</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/showsUserLocation">showsUserLocation</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/tileSources">tileSources</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/userLocation">userLocation</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/userLocationVisible">userLocationVisible</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/userTrackingMode">userTrackingMode</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/visibleGridRect">visibleGridRect</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/visibleMapRect">visibleMapRect</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/zoomEnabled">zoomEnabled</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/SDKVersion">SDKVersion</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/completeFreeMapStackProductCodes">completeFreeMapStackProductCodes</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/defaultMapStackProductCodes">defaultMapStackProductCodes</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/localTileSourceWithFileURL:">localTileSourceWithFileURL:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/localTileSourcesInDirectoryAtURL:">localTileSourcesInDirectoryAtURL:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/webTileSourceWithAPIKey:openSpacePro:">webTileSourceWithAPIKey:openSpacePro:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/zoomMapStackProductCodes">zoomMapStackProductCodes</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addAnnotation:">addAnnotation:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addAnnotations:">addAnnotations:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addOverlay:">addOverlay:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addOverlays:">addOverlays:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/annotationsInGridRect:">annotationsInGridRect:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/annotationsInMapRect:">annotationsInMapRect:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/convertCoordinate:toPointToView:">convertCoordinate:toPointToView:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/convertGridPoint:toPointToView:">convertGridPoint:toPointToView:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/convertPoint:toGridPointFromView:">convertPoint:toGridPointFromView:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/convertRegion:toRectToView:">convertRegion:toRectToView:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/dequeueReusableAnnotationViewWithIdentifier:">dequeueReusableAnnotationViewWithIdentifier:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/deselectAnnotation:animated:">deselectAnnotation:animated:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/exchangeOverlayAtIndex:withOverlayAtIndex:">exchangeOverlayAtIndex:withOverlayAtIndex:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/gridRectThatFits:">gridRectThatFits:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/gridRectThatFits:edgePadding:">gridRectThatFits:edgePadding:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/insertOverlay:aboveOverlay:">insertOverlay:aboveOverlay:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/insertOverlay:atIndex:">insertOverlay:atIndex:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/insertOverlay:belowOverlay:">insertOverlay:belowOverlay:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/mapRectThatFits:">mapRectThatFits:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/mapRectThatFits:edgePadding:">mapRectThatFits:edgePadding:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/regionThatFits:">regionThatFits:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/removeAnnotation:">removeAnnotation:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/removeAnnotations:">removeAnnotations:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/removeOverlay:">removeOverlay:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/removeOverlays:">removeOverlays:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/selectAnnotation:animated:">selectAnnotation:animated:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setCenterCoordinate:animated:">setCenterCoordinate:animated:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setMapProductCodes:">setMapProductCodes:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setRegion:animated:">setRegion:animated:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setUserTrackingMode:animated:">setUserTrackingMode:animated:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setVisibleGridRect:animated:">setVisibleGridRect:animated:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setVisibleGridRect:edgePadding:animated:">setVisibleGridRect:edgePadding:animated:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setVisibleMapRect:animated:">setVisibleMapRect:animated:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setVisibleMapRect:edgePadding:animated:">setVisibleMapRect:edgePadding:animated:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/viewForAnnotation:">viewForAnnotation:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/viewForOverlay:">viewForOverlay:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="OSMapView Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">OSMapView Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">UIView</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">OSMapView.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p><code>OSMapView</code> provides an interface to Ordnance Survey OpenSpace maps, supporting the same mapping layers as the OpenSpace and OpenSpace Pro JavaScript APIs.</p>
+
+<p><code>OSMapView</code> is intended to provide a drop-in replacement for MapKit&rsquo;s <code>MKMapView</code> and has a largely similar API.
+The API is as close as can it can be, while maintaintaining differentation with the use of the OS prefix (instead of MK) for all classes.
+In general, therefore, OSMapView is adequately documented by the MapKit documentation which cannot be reproduced here for copyright reasons.
+There are a few main differences:</p>
+
+<ul>
+<li><code>OSMapView</code> uses the OSGB36 National Grid map projection.
+Applications which have assumed a Mercator projection may have to take the different projection into account.</li>
+<li><code>OSMapView</code> does not support drawing maps outside the UK.</li>
+<li><code>OSMapView</code> requires an API key and a tile source to be set before using the online data source.</li>
+<li><code>OSMapView</code> supports many more map configurations than can be easily expressed with a single <code>mapType</code> property.</li>
+<li><code>OSMapView</code> and <code>OSOverlayView</code> do not use power-of-2 zoom levels.</li>
+<li><code>OSMapView</code> cannot be completely initialised from a NIB.</li>
+<li><code>OSGridPoint</code> is in a specified coordinate system: it&rsquo;s is a National Grid reference in metres.</li>
+<li><a href="../Protocols/OSMapViewDelegate.html">OSMapViewDelegate</a> does not have map-loading callbacks.</li>
+</ul>
+
+
+<h3>Tile sources and API keys</h3>
+
+<p><code>OSMapView</code> requires either an OS OpenSpace API key or a file containing map tiles in &ldquo;OSTiles&rdquo; format.</p>
+
+<pre><code>idOSTileSource tileSource = [OSMapView webTileSourceWithAPIKey:YOUR_API_KEY refererUrl:YOUR_PAGE_URL openSpacePro:false];
+mapView.tileSources = [NSArray arrayWithObject:tileSource];
+</code></pre>
+
+<h3>Coordinate conversions</h3>
+
+<p><code>OSGridPoint</code> represents OSGB36 National Grid easting/northing
+(i.e. a &ldquo;numeric-only&rdquo; National Grid reference).</p>
+
+<p><code>CLLocationCoordinate2D</code> represents WGS84 latitude/longitude.</p>
+
+<p>OSGB36 latitude/longitude is not currently supported. ETRS89 is not explicitly supported, but is closely approximated by WGS84.</p>
+
+<p>Conversion between <code>CLLocationCoordinate2D</code> and <code>OSGridPoint</code> is largely handled internally —
+applications should not need to perform more conversions than with WGS84-based mapping APIs.</p>
+
+<p>However, applications should be aware of the limitations of these conversions:</p>
+
+<ul>
+<li>The conversion is approximate. It is usually correct to within 3m compared to OSTN02.</li>
+<li>WGS84 lines of latitude/longitude are not aligned with National Grid.
+A consequence is that <code>OSCoordinateRegion</code> and <code>OSGridRect</code> represent different shapes, and thus cannot be interconverted accurately.</li>
+<li>The conversions used are subject to change (in particular, accuracy may be improved).</li>
+</ul>
+
+
+<p>Applications should avoid unnecessary conversions. Coordinates should be stored in their source coordinate system in order to benefit from future accuracy improvements.</p>
+
+<h3>Subclassing notes</h3>
+
+<p><code>OSMapView</code> is not designed to be subclassed.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/delegate">&nbsp;&nbsp;delegate</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Creating and using tile sources" name="task_Creating and using tile sources"></a>
+						<h3 class="subsubtitle task-title">Creating and using tile sources</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/tileSources">&nbsp;&nbsp;tileSources</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/webTileSourceWithAPIKey:openSpacePro:">+&nbsp;webTileSourceWithAPIKey:openSpacePro:</a></code>
+		<span class="tooltip"><p>Creates a tile source which loads images off the OpenSpace or OpenSpace Pro tile servers.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/localTileSourceWithFileURL:">+&nbsp;localTileSourceWithFileURL:</a></code>
+		<span class="tooltip"><p>Creates a tile source which loads tiles from a local SQLite database.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/localTileSourcesInDirectoryAtURL:">+&nbsp;localTileSourcesInDirectoryAtURL:</a></code>
+		<span class="tooltip"><p>Calls <a href="#//api/name/localTileSourceWithFileURL:">localTileSourceWithFileURL:</a> on all files in a directory and returns an array of the non-nil results.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Map scale view that gets automatically resized as the zoom changes, but does not pan" name="task_Map scale view that gets automatically resized as the zoom changes, but does not pan"></a>
+						<h3 class="subsubtitle task-title">Map scale view that gets automatically resized as the zoom changes, but does not pan</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/mapScaleView">&nbsp;&nbsp;mapScaleView</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Managing scrolling and zooming" name="task_Managing scrolling and zooming"></a>
+						<h3 class="subsubtitle task-title">Managing scrolling and zooming</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/zoomEnabled">&nbsp;&nbsp;zoomEnabled</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/scrollEnabled">&nbsp;&nbsp;scrollEnabled</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/visibleGridRect">&nbsp;&nbsp;visibleGridRect</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/centerCoordinate">&nbsp;&nbsp;centerCoordinate</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/region">&nbsp;&nbsp;region</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setVisibleGridRect:animated:">&ndash;&nbsp;setVisibleGridRect:animated:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setVisibleGridRect:edgePadding:animated:">&ndash;&nbsp;setVisibleGridRect:edgePadding:animated:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setCenterCoordinate:animated:">&ndash;&nbsp;setCenterCoordinate:animated:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setRegion:animated:">&ndash;&nbsp;setRegion:animated:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/gridRectThatFits:">&ndash;&nbsp;gridRectThatFits:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/gridRectThatFits:edgePadding:">&ndash;&nbsp;gridRectThatFits:edgePadding:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/regionThatFits:">&ndash;&nbsp;regionThatFits:</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Current zoom level" name="task_Current zoom level"></a>
+						<h3 class="subsubtitle task-title">Current zoom level</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/metresPerPixel">&nbsp;&nbsp;metresPerPixel</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="User location" name="task_User location"></a>
+						<h3 class="subsubtitle task-title">User location</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/showsUserLocation">&nbsp;&nbsp;showsUserLocation</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/userTrackingMode">&nbsp;&nbsp;userTrackingMode</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/userLocation">&nbsp;&nbsp;userLocation</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/userLocationVisible">&nbsp;&nbsp;userLocationVisible</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setUserTrackingMode:animated:">&ndash;&nbsp;setUserTrackingMode:animated:</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Managing annotations" name="task_Managing annotations"></a>
+						<h3 class="subsubtitle task-title">Managing annotations</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/annotations">&nbsp;&nbsp;annotations</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/selectedAnnotations">&nbsp;&nbsp;selectedAnnotations</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/annotationVisibleRect">&nbsp;&nbsp;annotationVisibleRect</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addAnnotation:">&ndash;&nbsp;addAnnotation:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addAnnotations:">&ndash;&nbsp;addAnnotations:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/removeAnnotation:">&ndash;&nbsp;removeAnnotation:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/removeAnnotations:">&ndash;&nbsp;removeAnnotations:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/annotationsInGridRect:">&ndash;&nbsp;annotationsInGridRect:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/dequeueReusableAnnotationViewWithIdentifier:">&ndash;&nbsp;dequeueReusableAnnotationViewWithIdentifier:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/selectAnnotation:animated:">&ndash;&nbsp;selectAnnotation:animated:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/deselectAnnotation:animated:">&ndash;&nbsp;deselectAnnotation:animated:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/viewForAnnotation:">&ndash;&nbsp;viewForAnnotation:</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Managing overlays" name="task_Managing overlays"></a>
+						<h3 class="subsubtitle task-title">Managing overlays</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/overlays">&nbsp;&nbsp;overlays</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addOverlay:">&ndash;&nbsp;addOverlay:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addOverlays:">&ndash;&nbsp;addOverlays:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/removeOverlay:">&ndash;&nbsp;removeOverlay:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/removeOverlays:">&ndash;&nbsp;removeOverlays:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/insertOverlay:atIndex:">&ndash;&nbsp;insertOverlay:atIndex:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/exchangeOverlayAtIndex:withOverlayAtIndex:">&ndash;&nbsp;exchangeOverlayAtIndex:withOverlayAtIndex:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/insertOverlay:aboveOverlay:">&ndash;&nbsp;insertOverlay:aboveOverlay:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/insertOverlay:belowOverlay:">&ndash;&nbsp;insertOverlay:belowOverlay:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/viewForOverlay:">&ndash;&nbsp;viewForOverlay:</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Managing maps" name="task_Managing maps"></a>
+						<h3 class="subsubtitle task-title">Managing maps</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setMapProductCodes:">&ndash;&nbsp;setMapProductCodes:</a></code>
+		<span class="tooltip"><p>Sets the products to display by product code.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/defaultMapStackProductCodes">+&nbsp;defaultMapStackProductCodes</a></code>
+		<span class="tooltip"><ul>
+<li>The default OpenSpace map stack, taken from</li>
+<li><a href="http://www.ordnancesurvey.co.uk/oswebsite/support/web-services/about-os-openspace-layers-and-services.html">http://www.ordnancesurvey.co.uk/oswebsite/support/web-services/about-os-openspace-layers-and-services.html</a>
+*</li>
+<li>Does not include VectorMap District.</li>
+</ul>
+</span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/completeFreeMapStackProductCodes">+&nbsp;completeFreeMapStackProductCodes</a></code>
+		<span class="tooltip"><ul>
+<li>The complete OpenSpace (free) map stack, taken from</li>
+<li><a href="http://www.ordnancesurvey.co.uk/oswebsite/support/web-services/about-os-openspace-layers-and-services.html">http://www.ordnancesurvey.co.uk/oswebsite/support/web-services/about-os-openspace-layers-and-services.html</a>
+*</li>
+<li>Identical to +defaultFreeMapStack plus VectorMap District.</li>
+</ul>
+</span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/zoomMapStackProductCodes">+&nbsp;zoomMapStackProductCodes</a></code>
+		<span class="tooltip"><ul>
+<li>The OpenSpace Pro zoom map stack.</li>
+</ul>
+</span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Converting between coordinate systems" name="task_Converting between coordinate systems"></a>
+						<h3 class="subsubtitle task-title">Converting between coordinate systems</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/convertCoordinate:toPointToView:">&ndash;&nbsp;convertCoordinate:toPointToView:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/convertGridPoint:toPointToView:">&ndash;&nbsp;convertGridPoint:toPointToView:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/convertPoint:toGridPointFromView:">&ndash;&nbsp;convertPoint:toGridPointFromView:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/convertRegion:toRectToView:">&ndash;&nbsp;convertRegion:toRectToView:</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Versioning" name="task_Versioning"></a>
+						<h3 class="subsubtitle task-title">Versioning</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/SDKVersion">+&nbsp;SDKVersion</a></code>
+		<span class="tooltip"><p>Returns the current SDK version number as a string, e.g. &ldquo;1.0&rdquo;.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/visibleMapRect">&nbsp;&nbsp;visibleMapRect</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/annotationsInMapRect:">&ndash;&nbsp;annotationsInMapRect:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/mapRectThatFits:">&ndash;&nbsp;mapRectThatFits:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/mapRectThatFits:edgePadding:">&ndash;&nbsp;mapRectThatFits:edgePadding:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setVisibleMapRect:animated:">&ndash;&nbsp;setVisibleMapRect:animated:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setVisibleMapRect:edgePadding:animated:">&ndash;&nbsp;setVisibleMapRect:edgePadding:animated:</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/annotationVisibleRect" title="annotationVisibleRect"></a>
+	<h3 class="subsubtitle method-title">annotationVisibleRect</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) CGRect annotationVisibleRect</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/annotations" title="annotations"></a>
+	<h3 class="subsubtitle method-title">annotations</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSArray *annotations</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/centerCoordinate" title="centerCoordinate"></a>
+	<h3 class="subsubtitle method-title">centerCoordinate</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) CLLocationCoordinate2D centerCoordinate</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/delegate" title="delegate"></a>
+	<h3 class="subsubtitle method-title">delegate</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) id&lt;OSMapViewDelegate&gt; delegate</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/mapScaleView" title="mapScaleView"></a>
+	<h3 class="subsubtitle method-title">mapScaleView</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) OSMapScaleView *mapScaleView</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/metresPerPixel" title="metresPerPixel"></a>
+	<h3 class="subsubtitle method-title">metresPerPixel</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) float metresPerPixel</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/overlays" title="overlays"></a>
+	<h3 class="subsubtitle method-title">overlays</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy, readonly) NSArray *overlays</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/region" title="region"></a>
+	<h3 class="subsubtitle method-title">region</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) OSCoordinateRegion region</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/scrollEnabled" title="scrollEnabled"></a>
+	<h3 class="subsubtitle method-title">scrollEnabled</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL scrollEnabled</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/selectedAnnotations" title="selectedAnnotations"></a>
+	<h3 class="subsubtitle method-title">selectedAnnotations</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSArray *selectedAnnotations</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/showsUserLocation" title="showsUserLocation"></a>
+	<h3 class="subsubtitle method-title">showsUserLocation</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) bool showsUserLocation</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/tileSources" title="tileSources"></a>
+	<h3 class="subsubtitle method-title">tileSources</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSArray *tileSources</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/userLocation" title="userLocation"></a>
+	<h3 class="subsubtitle method-title">userLocation</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) OSUserLocation *userLocation</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/userLocationVisible" title="userLocationVisible"></a>
+	<h3 class="subsubtitle method-title">userLocationVisible</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly, getter=isUserLocationVisible) bool userLocationVisible</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/userTrackingMode" title="userTrackingMode"></a>
+	<h3 class="subsubtitle method-title">userTrackingMode</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) OSUserTrackingMode userTrackingMode</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/visibleGridRect" title="visibleGridRect"></a>
+	<h3 class="subsubtitle method-title">visibleGridRect</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) OSGridRect visibleGridRect</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/visibleMapRect" title="visibleMapRect"></a>
+	<h3 class="subsubtitle method-title">visibleMapRect</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic) OSMapRect visibleMapRect</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/zoomEnabled" title="zoomEnabled"></a>
+	<h3 class="subsubtitle method-title">zoomEnabled</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL zoomEnabled</code></div>
+
+    
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/SDKVersion" title="SDKVersion"></a>
+	<h3 class="subsubtitle method-title">SDKVersion</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the current SDK version number as a string, e.g. &ldquo;1.0&rdquo;.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (NSString *)SDKVersion</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">OSMapView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/completeFreeMapStackProductCodes" title="completeFreeMapStackProductCodes"></a>
+	<h3 class="subsubtitle method-title">completeFreeMapStackProductCodes</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<ul>
+<li>The complete OpenSpace (free) map stack, taken from</li>
+<li><a href="http://www.ordnancesurvey.co.uk/oswebsite/support/web-services/about-os-openspace-layers-and-services.html">http://www.ordnancesurvey.co.uk/oswebsite/support/web-services/about-os-openspace-layers-and-services.html</a>
+*</li>
+<li>Identical to +defaultFreeMapStack plus VectorMap District.</li>
+</ul>
+
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (NSArray *)completeFreeMapStackProductCodes</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">OSMapView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/defaultMapStackProductCodes" title="defaultMapStackProductCodes"></a>
+	<h3 class="subsubtitle method-title">defaultMapStackProductCodes</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<ul>
+<li>The default OpenSpace map stack, taken from</li>
+<li><a href="http://www.ordnancesurvey.co.uk/oswebsite/support/web-services/about-os-openspace-layers-and-services.html">http://www.ordnancesurvey.co.uk/oswebsite/support/web-services/about-os-openspace-layers-and-services.html</a>
+*</li>
+<li>Does not include VectorMap District.</li>
+</ul>
+
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (NSArray *)defaultMapStackProductCodes</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">OSMapView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/localTileSourceWithFileURL:" title="localTileSourceWithFileURL:"></a>
+	<h3 class="subsubtitle method-title">localTileSourceWithFileURL:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a tile source which loads tiles from a local SQLite database.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (id&lt;OSTileSource&gt;)localTileSourceWithFileURL:(NSURL *)<em>fileURL</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>fileURL</em></dt>
+			<dd><p>The URL of the file to load. Must be a file URL.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The tile source, or <code>nil</code> if an error occurs.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The file should be in the &ldquo;OSTiles&rdquo; format and have extension <code>.ostiles</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">OSMapView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/localTileSourcesInDirectoryAtURL:" title="localTileSourcesInDirectoryAtURL:"></a>
+	<h3 class="subsubtitle method-title">localTileSourcesInDirectoryAtURL:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Calls <a href="#//api/name/localTileSourceWithFileURL:">localTileSourceWithFileURL:</a> on all files in a directory and returns an array of the non-nil results.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (NSArray *)localTileSourcesInDirectoryAtURL:(NSURL *)<em>directoryURL</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">OSMapView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/webTileSourceWithAPIKey:openSpacePro:" title="webTileSourceWithAPIKey:openSpacePro:"></a>
+	<h3 class="subsubtitle method-title">webTileSourceWithAPIKey:openSpacePro:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a tile source which loads images off the OpenSpace or OpenSpace Pro tile servers.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (id&lt;OSTileSource&gt;)webTileSourceWithAPIKey:(NSString *)<em>apiKey</em> openSpacePro:(bool)<em>isPro</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>apiKey</em></dt>
+			<dd><p>Your OpenSpace or OpenSpace Pro API key</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>isPro</em></dt>
+			<dd><p><code>true</code> if the API key is an OpenSpace Pro API key, <code>false</code> otherwise.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">OSMapView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/zoomMapStackProductCodes" title="zoomMapStackProductCodes"></a>
+	<h3 class="subsubtitle method-title">zoomMapStackProductCodes</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<ul>
+<li>The OpenSpace Pro zoom map stack.</li>
+</ul>
+
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (NSArray *)zoomMapStackProductCodes</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">OSMapView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/addAnnotation:" title="addAnnotation:"></a>
+	<h3 class="subsubtitle method-title">addAnnotation:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)addAnnotation:(id&lt;OSAnnotation&gt;)<em>annotation</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/addAnnotations:" title="addAnnotations:"></a>
+	<h3 class="subsubtitle method-title">addAnnotations:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)addAnnotations:(NSArray *)<em>annotations</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/addOverlay:" title="addOverlay:"></a>
+	<h3 class="subsubtitle method-title">addOverlay:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)addOverlay:(id&lt;OSOverlay&gt;)<em>overlay</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/addOverlays:" title="addOverlays:"></a>
+	<h3 class="subsubtitle method-title">addOverlays:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)addOverlays:(NSArray *)<em>overlays</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/annotationsInGridRect:" title="annotationsInGridRect:"></a>
+	<h3 class="subsubtitle method-title">annotationsInGridRect:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (NSSet *)annotationsInGridRect:(OSGridRect)<em>gridRect</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/annotationsInMapRect:" title="annotationsInMapRect:"></a>
+	<h3 class="subsubtitle method-title">annotationsInMapRect:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (NSSet *)annotationsInMapRect:(OSMapRect)<em>mapRect</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/convertCoordinate:toPointToView:" title="convertCoordinate:toPointToView:"></a>
+	<h3 class="subsubtitle method-title">convertCoordinate:toPointToView:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (CGPoint)convertCoordinate:(CLLocationCoordinate2D)<em>coordinate</em> toPointToView:(UIView *)<em>view</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/convertGridPoint:toPointToView:" title="convertGridPoint:toPointToView:"></a>
+	<h3 class="subsubtitle method-title">convertGridPoint:toPointToView:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (CGPoint)convertGridPoint:(OSGridPoint)<em>gp</em> toPointToView:(UIView *)<em>view</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/convertPoint:toGridPointFromView:" title="convertPoint:toGridPointFromView:"></a>
+	<h3 class="subsubtitle method-title">convertPoint:toGridPointFromView:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (OSGridPoint)convertPoint:(CGPoint)<em>point</em> toGridPointFromView:(UIView *)<em>view</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/convertRegion:toRectToView:" title="convertRegion:toRectToView:"></a>
+	<h3 class="subsubtitle method-title">convertRegion:toRectToView:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (CGRect)convertRegion:(OSCoordinateRegion)<em>region</em> toRectToView:(UIView *)<em>view</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/dequeueReusableAnnotationViewWithIdentifier:" title="dequeueReusableAnnotationViewWithIdentifier:"></a>
+	<h3 class="subsubtitle method-title">dequeueReusableAnnotationViewWithIdentifier:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (OSAnnotationView *)dequeueReusableAnnotationViewWithIdentifier:(NSString *)<em>identifier</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/deselectAnnotation:animated:" title="deselectAnnotation:animated:"></a>
+	<h3 class="subsubtitle method-title">deselectAnnotation:animated:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)deselectAnnotation:(id&lt;OSAnnotation&gt;)<em>annotation</em> animated:(BOOL)<em>animated</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/exchangeOverlayAtIndex:withOverlayAtIndex:" title="exchangeOverlayAtIndex:withOverlayAtIndex:"></a>
+	<h3 class="subsubtitle method-title">exchangeOverlayAtIndex:withOverlayAtIndex:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)exchangeOverlayAtIndex:(NSUInteger)<em>index1</em> withOverlayAtIndex:(NSUInteger)<em>index2</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/gridRectThatFits:" title="gridRectThatFits:"></a>
+	<h3 class="subsubtitle method-title">gridRectThatFits:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (OSGridRect)gridRectThatFits:(OSGridRect)<em>gridRect</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/gridRectThatFits:edgePadding:" title="gridRectThatFits:edgePadding:"></a>
+	<h3 class="subsubtitle method-title">gridRectThatFits:edgePadding:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (OSGridRect)gridRectThatFits:(OSGridRect)<em>gridRect</em> edgePadding:(UIEdgeInsets)<em>insets</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/insertOverlay:aboveOverlay:" title="insertOverlay:aboveOverlay:"></a>
+	<h3 class="subsubtitle method-title">insertOverlay:aboveOverlay:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)insertOverlay:(id&lt;OSOverlay&gt;)<em>overlay</em> aboveOverlay:(id&lt;OSOverlay&gt;)<em>overlay2</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/insertOverlay:atIndex:" title="insertOverlay:atIndex:"></a>
+	<h3 class="subsubtitle method-title">insertOverlay:atIndex:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)insertOverlay:(id&lt;OSOverlay&gt;)<em>overlay</em> atIndex:(NSUInteger)<em>index</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/insertOverlay:belowOverlay:" title="insertOverlay:belowOverlay:"></a>
+	<h3 class="subsubtitle method-title">insertOverlay:belowOverlay:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)insertOverlay:(id&lt;OSOverlay&gt;)<em>overlay</em> belowOverlay:(id&lt;OSOverlay&gt;)<em>overlay2</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/mapRectThatFits:" title="mapRectThatFits:"></a>
+	<h3 class="subsubtitle method-title">mapRectThatFits:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (OSMapRect)mapRectThatFits:(OSMapRect)<em>mapRect</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/mapRectThatFits:edgePadding:" title="mapRectThatFits:edgePadding:"></a>
+	<h3 class="subsubtitle method-title">mapRectThatFits:edgePadding:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (OSMapRect)mapRectThatFits:(OSMapRect)<em>mapRect</em> edgePadding:(UIEdgeInsets)<em>insets</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/regionThatFits:" title="regionThatFits:"></a>
+	<h3 class="subsubtitle method-title">regionThatFits:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (OSCoordinateRegion)regionThatFits:(OSCoordinateRegion)<em>region</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/removeAnnotation:" title="removeAnnotation:"></a>
+	<h3 class="subsubtitle method-title">removeAnnotation:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)removeAnnotation:(id&lt;OSAnnotation&gt;)<em>annotation</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/removeAnnotations:" title="removeAnnotations:"></a>
+	<h3 class="subsubtitle method-title">removeAnnotations:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)removeAnnotations:(NSArray *)<em>annotations</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/removeOverlay:" title="removeOverlay:"></a>
+	<h3 class="subsubtitle method-title">removeOverlay:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)removeOverlay:(id&lt;OSOverlay&gt;)<em>overlay</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/removeOverlays:" title="removeOverlays:"></a>
+	<h3 class="subsubtitle method-title">removeOverlays:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)removeOverlays:(NSArray *)<em>overlays</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/selectAnnotation:animated:" title="selectAnnotation:animated:"></a>
+	<h3 class="subsubtitle method-title">selectAnnotation:animated:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)selectAnnotation:(id&lt;OSAnnotation&gt;)<em>annotation</em> animated:(BOOL)<em>animated</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setCenterCoordinate:animated:" title="setCenterCoordinate:animated:"></a>
+	<h3 class="subsubtitle method-title">setCenterCoordinate:animated:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)setCenterCoordinate:(CLLocationCoordinate2D)<em>coordinate</em> animated:(BOOL)<em>animated</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setMapProductCodes:" title="setMapProductCodes:"></a>
+	<h3 class="subsubtitle method-title">setMapProductCodes:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the products to display by product code.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setMapProductCodes:(NSArray *)<em>mapProductCodes</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>mapProductCodes</em></dt>
+			<dd><p>The array of product codes. Does not need to be sorted.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">OSMapView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setRegion:animated:" title="setRegion:animated:"></a>
+	<h3 class="subsubtitle method-title">setRegion:animated:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)setRegion:(OSCoordinateRegion)<em>region</em> animated:(BOOL)<em>animated</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setUserTrackingMode:animated:" title="setUserTrackingMode:animated:"></a>
+	<h3 class="subsubtitle method-title">setUserTrackingMode:animated:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)setUserTrackingMode:(OSUserTrackingMode)<em>userTrackingMode</em> animated:(BOOL)<em>animated</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setVisibleGridRect:animated:" title="setVisibleGridRect:animated:"></a>
+	<h3 class="subsubtitle method-title">setVisibleGridRect:animated:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)setVisibleGridRect:(OSGridRect)<em>visibleGridRect</em> animated:(BOOL)<em>animated</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setVisibleGridRect:edgePadding:animated:" title="setVisibleGridRect:edgePadding:animated:"></a>
+	<h3 class="subsubtitle method-title">setVisibleGridRect:edgePadding:animated:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)setVisibleGridRect:(OSGridRect)<em>visibleGridRect</em> edgePadding:(UIEdgeInsets)<em>insets</em> animated:(BOOL)<em>animated</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setVisibleMapRect:animated:" title="setVisibleMapRect:animated:"></a>
+	<h3 class="subsubtitle method-title">setVisibleMapRect:animated:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)setVisibleMapRect:(OSMapRect)<em>mapRect</em> animated:(BOOL)<em>animate</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setVisibleMapRect:edgePadding:animated:" title="setVisibleMapRect:edgePadding:animated:"></a>
+	<h3 class="subsubtitle method-title">setVisibleMapRect:edgePadding:animated:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)setVisibleMapRect:(OSMapRect)<em>mapRect</em> edgePadding:(UIEdgeInsets)<em>insets</em> animated:(BOOL)<em>animate</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/viewForAnnotation:" title="viewForAnnotation:"></a>
+	<h3 class="subsubtitle method-title">viewForAnnotation:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (OSAnnotationView *)viewForAnnotation:(id&lt;OSAnnotation&gt;)<em>annotation</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/viewForOverlay:" title="viewForOverlay:"></a>
+	<h3 class="subsubtitle method-title">viewForOverlay:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (OSOverlayView *)viewForOverlay:(id&lt;OSOverlay&gt;)<em>overlay</em></code></div>
+
+    
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 Ordnance Survey. All rights reserved. (Last updated: 2013-06-21)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,735 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>OSOverlayView Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.0.5 (build 789)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">OSMap </a></h1>
+				<a id="developerHome" href="../index.html">Ordnance Survey</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">OSOverlayView Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/overlay">&nbsp;&nbsp;&nbsp;&nbsp;overlay</option>
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/drawGridRect:zoomScale:inContext:">&nbsp;&nbsp;&nbsp;&nbsp;- drawGridRect:zoomScale:inContext:</option>
+	
+	<option value="//api/name/gridPointForPoint:">&nbsp;&nbsp;&nbsp;&nbsp;- gridPointForPoint:</option>
+	
+	<option value="//api/name/gridRectForRect:">&nbsp;&nbsp;&nbsp;&nbsp;- gridRectForRect:</option>
+	
+	<option value="//api/name/initWithOverlay:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithOverlay:</option>
+	
+	<option value="//api/name/mapPointForPoint:">&nbsp;&nbsp;&nbsp;&nbsp;- mapPointForPoint:</option>
+	
+	<option value="//api/name/mapRectForRect:">&nbsp;&nbsp;&nbsp;&nbsp;- mapRectForRect:</option>
+	
+	<option value="//api/name/pointForGridPoint:">&nbsp;&nbsp;&nbsp;&nbsp;- pointForGridPoint:</option>
+	
+	<option value="//api/name/pointForMapPoint:">&nbsp;&nbsp;&nbsp;&nbsp;- pointForMapPoint:</option>
+	
+	<option value="//api/name/rectForGridRect:">&nbsp;&nbsp;&nbsp;&nbsp;- rectForGridRect:</option>
+	
+	<option value="//api/name/rectForMapRect:">&nbsp;&nbsp;&nbsp;&nbsp;- rectForMapRect:</option>
+	
+	<option value="//api/name/setNeedsDisplayInGridRect:">&nbsp;&nbsp;&nbsp;&nbsp;- setNeedsDisplayInGridRect:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/overlay">overlay</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/drawGridRect:zoomScale:inContext:">drawGridRect:zoomScale:inContext:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/gridPointForPoint:">gridPointForPoint:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/gridRectForRect:">gridRectForRect:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithOverlay:">initWithOverlay:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/mapPointForPoint:">mapPointForPoint:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/mapRectForRect:">mapRectForRect:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/pointForGridPoint:">pointForGridPoint:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/pointForMapPoint:">pointForMapPoint:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/rectForGridRect:">rectForGridRect:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/rectForMapRect:">rectForMapRect:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setNeedsDisplayInGridRect:">setNeedsDisplayInGridRect:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="OSOverlayView Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">OSOverlayView Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">UIView</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">OSOverlayView.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p><code>OSOverlayView</code> provides the visual representation associated with an <a href="../Protocols/OSOverlay.html">OSOverlay</a>.</p>
+
+<p>Subclasses are expected to implement drawGridRect:zoomScale:inContext, but concrete implementations are provided for each of the provided concrete <a href="../Protocols/OSOverlay.html">OSOverlay</a> objects.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/overlay">&nbsp;&nbsp;overlay</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithOverlay:">&ndash;&nbsp;initWithOverlay:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/gridPointForPoint:">&ndash;&nbsp;gridPointForPoint:</a></code>
+		<span class="tooltip"><pre><code>Convert a point in the view's coordinate space into a map point
+</code></pre></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/gridRectForRect:">&ndash;&nbsp;gridRectForRect:</a></code>
+		<span class="tooltip"><p>Convert a rect in the view&rsquo;s coordinate space into a map rect</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/pointForGridPoint:">&ndash;&nbsp;pointForGridPoint:</a></code>
+		<span class="tooltip"><p>Convert a point on the map to a point in the view&rsquo;s coordinate space</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/rectForGridRect:">&ndash;&nbsp;rectForGridRect:</a></code>
+		<span class="tooltip"><p>Convert a rectangle on the map to a point in the view&rsquo;s coordinate space</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/drawGridRect:zoomScale:inContext:">&ndash;&nbsp;drawGridRect:zoomScale:inContext:</a></code>
+		<span class="tooltip"><p>area to render</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setNeedsDisplayInGridRect:">&ndash;&nbsp;setNeedsDisplayInGridRect:</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/mapPointForPoint:">&ndash;&nbsp;mapPointForPoint:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/mapRectForRect:">&ndash;&nbsp;mapRectForRect:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/pointForMapPoint:">&ndash;&nbsp;pointForMapPoint:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/rectForMapRect:">&ndash;&nbsp;rectForMapRect:</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/overlay" title="overlay"></a>
+	<h3 class="subsubtitle method-title">overlay</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) id&lt;OSOverlay&gt; overlay</code></div>
+
+    
+</div>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/drawGridRect:zoomScale:inContext:" title="drawGridRect:zoomScale:inContext:"></a>
+	<h3 class="subsubtitle method-title">drawGridRect:zoomScale:inContext:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>area to render</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)drawGridRect:(OSGridRect)<em>gridRect</em> zoomScale:(float)<em>zoomScale</em> inContext:(CGContextRef)<em>context</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>gridRect</em></dt>
+			<dd><p>area to render</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>zoomScale</em></dt>
+			<dd><p>measured in metres per pixel</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>content</em></dt>
+			<dd><p>to render in</p>
+
+<pre><code>The default implementation of this method does nothing. Subclasses should provide their own implementation, which should be thread-safe. Failure to only draw the area requested by gridRect and thereby render outside that rectangle may lead to performance problems.
+</code></pre></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">OSOverlayView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/gridPointForPoint:" title="gridPointForPoint:"></a>
+	<h3 class="subsubtitle method-title">gridPointForPoint:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<pre><code>Convert a point in the view's coordinate space into a map point
+</code></pre>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (OSGridPoint)gridPointForPoint:(CGPoint)<em>point</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>point</em></dt>
+			<dd><p>The point in the view&rsquo;s coordinate space to convert</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">OSOverlayView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/gridRectForRect:" title="gridRectForRect:"></a>
+	<h3 class="subsubtitle method-title">gridRectForRect:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Convert a rect in the view&rsquo;s coordinate space into a map rect</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (OSGridRect)gridRectForRect:(CGRect)<em>rect</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>rect</em></dt>
+			<dd><p>The rectangle in the view&rsquo;s coordinate space to convert</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">OSOverlayView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithOverlay:" title="initWithOverlay:"></a>
+	<h3 class="subsubtitle method-title">initWithOverlay:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (id)initWithOverlay:(id&lt;OSOverlay&gt;)<em>overlay</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/mapPointForPoint:" title="mapPointForPoint:"></a>
+	<h3 class="subsubtitle method-title">mapPointForPoint:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (OSMapPoint)mapPointForPoint:(CGPoint)<em>p</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/mapRectForRect:" title="mapRectForRect:"></a>
+	<h3 class="subsubtitle method-title">mapRectForRect:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (OSMapRect)mapRectForRect:(CGRect)<em>r</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/pointForGridPoint:" title="pointForGridPoint:"></a>
+	<h3 class="subsubtitle method-title">pointForGridPoint:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Convert a point on the map to a point in the view&rsquo;s coordinate space</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (CGPoint)pointForGridPoint:(OSGridPoint)<em>gridPoint</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>point</em></dt>
+			<dd><p>The point on the map to convert</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">OSOverlayView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/pointForMapPoint:" title="pointForMapPoint:"></a>
+	<h3 class="subsubtitle method-title">pointForMapPoint:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (CGPoint)pointForMapPoint:(OSMapPoint)<em>mapPoint</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/rectForGridRect:" title="rectForGridRect:"></a>
+	<h3 class="subsubtitle method-title">rectForGridRect:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Convert a rectangle on the map to a point in the view&rsquo;s coordinate space</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (CGRect)rectForGridRect:(OSGridRect)<em>gridRect</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>gridRect</em></dt>
+			<dd><p>The rectangle on the map to convert</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">OSOverlayView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/rectForMapRect:" title="rectForMapRect:"></a>
+	<h3 class="subsubtitle method-title">rectForMapRect:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (CGRect)rectForMapRect:(OSMapRect)<em>mapRect</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setNeedsDisplayInGridRect:" title="setNeedsDisplayInGridRect:"></a>
+	<h3 class="subsubtitle method-title">setNeedsDisplayInGridRect:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)setNeedsDisplayInGridRect:(OSGridRect)<em>gridRect</em></code></div>
+
+    
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 Ordnance Survey. All rights reserved. (Last updated: 2013-06-21)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>
