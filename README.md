@@ -21,7 +21,7 @@ Here are some of the features available
 - Annotations - create and customise annotations
 - Overlays - create and style polylines and polygons
 - Offline tile storage - read [about offline tile packages](#offline-databases)
-- Geocoder - Search 1:50K Gazetteer, OS Locator and Codepoint Open datasets available either online or offline
+- Places of interest geocoder - Search 1:50K Gazetteer, OS Locator and Codepoint Open datasets available either online or offline
 - Uses [OSGB36 British National Grid](http://www.ordnancesurvey.co.uk/oswebsite/support/the-national-grid.html) map projection - ordnancesurvey-ios-sdk converts between WGS84 latitude/longitude and OSGB36 National Grid easting/northing. Most Classes handle geometry in either a CLLocationCoordinate2D or OSGridPoint
 - User location - openspace-ios-sdk provides a wrapper around the standard Core Location API to easily display your app's user location on the map and use the data
 - ARC (Automatic Reference Counting) support
@@ -254,9 +254,9 @@ OSTiles packages are sets of map tiles, each package can store several layers, a
 
 Please refer to [OSTiles spec](https://github.com/OrdnanceSurvey/openspace-ios-sdk/blob/master/ostiles_spec.md) for more details and how to create these packages.
 
-#### Places of interest gazetteer database
+#### Places of interest geocoder database
 
-The places of interest database is created from [OpenData](https://www.ordnancesurveyite.co.uk/oswebsite/products/os-opendata.html) products; Code-Point Open (post codes), OS Locator (Roads) and 1:50 000 scale gazetteer (place names). It is optimised for size and is packaged in the [sqlite](http://www.sqlite.org/) format as the OSTiles except with the custom file extension `.ospoi`.
+The places of interest geocoder database is created from [OpenData](https://www.ordnancesurveyite.co.uk/oswebsite/products/os-opendata.html) products; Code-Point Open (post codes), OS Locator (Roads) and 1:50 000 scale gazetteer (place names). It is optimised for size and is packaged in the [sqlite](http://www.sqlite.org/) format as the OSTiles except with the custom file extension `.ospoi`.
 
 This database can be downloaded from [www.ordnancesurvey.co.uk](https://www.ordnancesurvey.co.uk/oswebsite/web-services/os-openspace/pro/ios-sdk.html).
 
