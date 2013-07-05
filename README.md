@@ -30,10 +30,11 @@ Here are some of the features available
 
 Here are some of the benefits
 
-- As easy to use as the Apple SDK
-- Most accurate and detailed mapping of GB, so you will have confidence when it comes to location.
-- Fast rendering
-- Online and offline capabilities
+- Fully supported by Ordnance Survey – ongoing SDK upgrades, active user forum.
+- Online capability – fast rendering of Ordnance Survey maps.
+- Offline maps and search capability – as used in OS MapFinder™.
+- Fast rendering and smooth panning - for great user experience.
+- Toolkit provided as open source.
 - Complements our service – another way to get our data.
 
 
