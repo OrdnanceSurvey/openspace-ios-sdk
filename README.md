@@ -48,7 +48,7 @@ The openspace-ios-sdk itself comprises of a couple of items:
 There are several extensions available:
 
 1.  OSTile offline [tile packages](#ostile-packages)
-2.  Offline [POI database](#poi-database)
+2.  Offline [Places of interest gazetteers database](#poi-database)
 
 
 
@@ -254,9 +254,9 @@ OSTiles packages are sets of map tiles, each package can store several layers, a
 
 Please refer to [OSTiles spec](https://github.com/OrdnanceSurvey/openspace-ios-sdk/blob/master/ostiles_spec.md) for more details and how to create these packages.
 
-#### POI database
+#### Places of interest gazetteer database
 
-The points of interest database is created from [OpenData](https://www.ordnancesurveyite.co.uk/oswebsite/products/os-opendata.html) products, it optimised for size and is packaged in the [sqlite](http://www.sqlite.org/) format as the OSTiles except with the custom file extension `.ospoi`.
+The places of interest database is created from [OpenData](https://www.ordnancesurveyite.co.uk/oswebsite/products/os-opendata.html) products; Code-Point Open (post codes), OS Locator (Roads) and 1:50 000 scale gazetteer (place names). It is optimised for size and is packaged in the [sqlite](http://www.sqlite.org/) format as the OSTiles except with the custom file extension `.ospoi`.
 
 This database can be downloaded from [www.ordnancesurvey.co.uk](https://www.ordnancesurvey.co.uk/oswebsite/web-services/os-openspace/pro/ios-sdk.html).
 
