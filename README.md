@@ -84,7 +84,7 @@ In order to access the service for public facing, non commercial applications wi
 
 see https://openspaceregister.ordnancesurvey.co.uk/osmapapi/register.do
 
-### For directly licenced customers including  [PSMA]  (http://www.ordnancesurvey.co.uk/oswebsite/public-sector/mapping-agreement/index.htmlcustomers) customers and E&I commercial customers. 
+### For directly licenced customers (for example OS OnDemand). 
 
 Register for an OS OnDemand licence in order to obtain an API key to access the service. (http://www.ordnancesurvey.co.uk/oswebsite/web-services/os-ondemand/pricing.html).
 
