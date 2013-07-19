@@ -84,9 +84,9 @@ In order to access the service for public facing, non commercial applications wi
 
 see https://openspaceregister.ordnancesurvey.co.uk/osmapapi/register.do
 
-### Registration Process for [PSMA]  (http://www.ordnancesurvey.co.uk/oswebsite/public-sector/mapping-agreement/index.htmlcustomers) customers 
+### For directly licenced customers including  [PSMA]  (http://www.ordnancesurvey.co.uk/oswebsite/public-sector/mapping-agreement/index.htmlcustomers) customers and E&I commercial customers. 
 
-If you own a data licence, for example, you are a member of the PSMA, you can register for a licence in order to obtain an API key to access the service.(http://www.ordnancesurvey.co.uk/oswebsite/web-services/os-ondemand/pricing.html).
+Register for an OS OnDemand licence in order to obtain an API key to access the service. (http://www.ordnancesurvey.co.uk/oswebsite/web-services/os-ondemand/pricing.html).
 
 ###Authentication parameters
 
