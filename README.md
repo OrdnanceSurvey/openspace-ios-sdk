@@ -219,7 +219,7 @@ mapView.mapProductCodes = [OSMapView completeFreeMapStackProductCodes];
 - "OV1"  // Overview 1
 - "OV0"  // Overview 0
 
-// Users with an appropriate commercial licence can also select to use these products:
+// Users with an appropriate commercial or direct licence can also select to use these products:
 
 - "VML"  // Vector Map Local
 - "VMLR" // Vector Map Local resampled
@@ -228,7 +228,7 @@ mapView.mapProductCodes = [OSMapView completeFreeMapStackProductCodes];
 - "50K"  // 1:50k
 - "50KR" // 1:50k resampled
 
-// Users with an appropriate commercial licence can also select to use the Zoom stack products - enables consistently styled layers
+// Users with an appropriate commercial or direct licence can also select to use the Zoom stack products - enables consistently styled layers
 
 - "CS00" // "zoomed out"
 - "CS01"
