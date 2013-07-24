@@ -43,7 +43,7 @@ Contents
 
 The openspace-ios-sdk itself comprises of a couple of items:
 
-1. The openspace-ios-sdk framework is downloaded from [www.ordnancesurvey.co.uk](https://www.ordnancesurvey.co.uk/oswebsite/web-services/os-openspace/pro/ios-sdk.html) 
+1. The openspace-ios-sdk framework is downloaded from [www.ordnancesurvey.co.uk](https://www.ordnancesurvey.co.uk/oswebsite/web-services/os-openspace/ios-sdk.html) 
 2. [Documentation](http://ordnancesurvey.github.io/openspace-ios-sdk/) - The documentation for the latest version of openspace-ios-sdk in appledoc format
 
 There are several extensions available:
