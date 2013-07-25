@@ -10,7 +10,7 @@ The OSTiles format is uses the small, ubiquitous and lightweight [sqlite](http:/
 
 OSTiles packages are sets of map tiles, each package can store several layers, a layer being a rectangular bounding box for a given Ordnance Survey product and all the tile images to fill that bounding box. The packages are intended to transport presentational map tiles and can be used as a mechanism to allow mobile applications to display tiles offline, without the need to stream tiles from a web service.
 
-The OSTiles format is based on [MBTiles 1.1](hhttp://www.mapbox.com/developers/mbtiles/) spec but for the following remarks:
+The OSTiles format is based on [MBTiles 1.1](http://www.mapbox.com/developers/mbtiles/) spec but for the following remarks:
 
 * Does not use metadata table.
 * Does not use power-of-2 zoom levels.
@@ -41,7 +41,7 @@ The schemas documented here for the OSTiles format are designed to be followed a
 
 The database is required to contain a table or view named `zoom_levels` implementing the schema below.
 
-The available product codes are defined [here](/OrdnanceSurvey/openspace-ios-sdk#product-codes).
+The available product codes are defined [here](https://github.com/OrdnanceSurvey/openspace-ios-sdk/blob/master/README.md#product-codes).
 
 ###### Schema
 
