@@ -320,7 +320,7 @@ NSLog(@"You are currently using SDK Version: %@", [OSMapView SDKVersion]);
 API
 -------
 
-In this section we will run through some of the important components in the SDK. For more details please see the [reference documentation](http://ordnancesurvey.github.com/ordnancesurvey-ios-sdk/) or any [demo app](#demo-projects) for full application usage.
+In this section we will run through some of the important components in the SDK. For more details please see the [reference documentation](http://ordnancesurvey.github.io/openspace-ios-sdk/) or any [demo app](#demo-projects) for full application usage.
 
 ### OS Map View (`OSMapView` class)
 
