@@ -49,7 +49,7 @@ The openspace-ios-sdk itself comprises of a couple of items:
 There are several extensions available:
 
 1.  OSTile offline [tile packages](#ostile-packages)
-2.  Offline [Places of interest gazetteers database](#poi-database)
+2.  Offline [Places of interest gazetteers database](#places-of-interest-geocoder-database)
 
 
 
@@ -259,7 +259,7 @@ Please refer to [OSTiles spec](https://github.com/OrdnanceSurvey/openspace-ios-s
 
 The places of interest geocoder database is created from [OpenData](https://www.ordnancesurveyite.co.uk/oswebsite/products/os-opendata.html) products; Code-Point Open (post codes), OS Locator (Roads) and 1:50 000 scale gazetteer (place names). It is optimised for size and is packaged in the [sqlite](http://www.sqlite.org/) format as the OSTiles except with the custom file extension `.ospoi`.
 
-This database can be downloaded from [www.ordnancesurvey.co.uk](https://www.ordnancesurvey.co.uk/oswebsite/web-services/os-openspace/pro/ios-sdk.html).
+Ordnance Survey will provide the tools to build this database shortly, until this is released please contact osopenspace@ordnancesurvey.co.uk if you require this feature.
 
 
 ### Converting Apple Mapkit
