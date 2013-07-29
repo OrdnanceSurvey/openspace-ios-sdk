@@ -73,7 +73,7 @@ In order to access OS OpenSpace Pro for premium data you must apply for an API k
 - A free 90 day trial licence (for external trial and demonstrating)
 - A commercial re-use licence 
 
-see http://www.ordnancesurvey.co.uk/oswebsite/web-services/os-openspace/pro/free-trial.html or contact Newbusinessenquiries@ordnancesurvey.co.uk or calling 08456 05 05 05
+see http://www.ordnancesurvey.co.uk/oswebsite/web-services/os-openspace/pro/free-trial.html or contact Newbusinessenquiries@ordnancesurvey.co.uk 
 
 ### OS OpenSpace Registration and Access
 
