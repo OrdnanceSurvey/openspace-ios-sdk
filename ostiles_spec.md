@@ -109,7 +109,7 @@ This is a high level overview describing how to create OSTiles databases of map 
 
 Source data sould be raster map image data (possibly in TIFF format) for whichever product is required.  Ordnance Survey [Open datasets](https://www.ordnancesurveyite.co.uk/oswebsite/products/os-opendata.html) are available for free - otherwise it is possible to license other datasets.
 
-The specification for the tiles expected in an OSTiles database is available [here](http://www.ordnancesurvey.co.uk/oswebsite/support/web-services/configuring-os-ondemand-wmts.html) - note the resolution and tile size.
+The specification for the tiles expected in an OSTiles database is available [here](http://www.ordnancesurvey.co.uk/business-and-government/help-and-support/web-services/os-ondemand/configuring-wmts.html) - note the resolution and tile size.
 
 #### Process
 
