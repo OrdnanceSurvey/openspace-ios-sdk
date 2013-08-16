@@ -34,7 +34,6 @@ Here are some of the benefits
 - Online capability – fast rendering of Ordnance Survey maps.
 - Offline maps and search capability – as used in OS MapFinder™.
 - Fast rendering and smooth panning - for great user experience.
-- Toolkit provided as open source.
 - Complements our service – another way to get our data.
 
 
