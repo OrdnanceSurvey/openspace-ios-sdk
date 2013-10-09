@@ -106,7 +106,7 @@ These offline databases are extensions to the openspace-ios-sdk and can replace 
 For more information please refer to specific documentation.
 
 1. OSTile offline [tile packages](https://github.com/OrdnanceSurvey/openspace-sdk-resources#ostile-packages)
-2. Offline [Places of interest gazetteers database](https://github.com/OrdnanceSurvey/openspace-sdk-resources#places-of-interest-geocoder-database)
+2. Offline [Places of interest gazetteer database](https://github.com/OrdnanceSurvey/openspace-sdk-resources#places-of-interest-geocoder-database)
 
 
 
@@ -521,7 +521,7 @@ The geocoding request requries a completion handler block that is called when se
 
 **NOTE:**
 
-* The `OSGeocoder` class can work with an offline database - See [about offline databases](#offline-databases) 
+* The `OSGeocoder` class can work with an offline database - See [offline places of interest gazetteer database](https://github.com/OrdnanceSurvey/openspace-sdk-resources#places-of-interest-geocoder-database) 
 * The online access requires an API key configured
 * There are currently no reverse geocoding facilities
 
