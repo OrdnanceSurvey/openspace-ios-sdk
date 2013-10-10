@@ -76,7 +76,7 @@ In order to access the service for public facing, non commercial applications wi
 #### NOTE: A free Daily Data Limit will apply. 
 #### NOTE: For online access only.
 
-see https://openspaceregister.ordnancesurvey.co.uk/osmapapi/register.do
+See [OS Website](https://openspaceregister.ordnancesurvey.co.uk/osmapapi/register.do) to register.
 
 ### For directly licenced customers (for example OS OnDemand). 
 
