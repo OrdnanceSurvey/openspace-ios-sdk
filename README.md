@@ -32,7 +32,7 @@ Here are some of the benefits
 
 - Fully supported by Ordnance Survey – ongoing SDK upgrades, active user forum.
 - Online capability – fast rendering of Ordnance Survey maps.
-- Offline maps and search capability – as used in OS MapFinder™.
+- Offline maps and search capability – as used in OS MapFinder&trade;.
 - Fast rendering and smooth panning - for great user experience.
 - Complements our service – another way to get our data.
 
@@ -180,6 +180,7 @@ NOTE: Certain products and the Zoom map stack require a commercial licence.
 
 
 ```objective-c
+
 //Customise the map stack
 
 //select the 250K and 50K products
@@ -188,6 +189,7 @@ mapView.mapProductCodes = [NSArray arrayWithObjects:@"250KR", @"250K", @"50KR", 
 ```
 
 ```objective-c
+
 //Use a pre-configured map stack
 
 //Class methods to return pre-configured map product codes
@@ -299,7 +301,9 @@ Ordnance Survey will provide and offically support the latest version of the SDK
 To return the version of SDK you are currently using as a string;
 
 ```objective-c
+
 NSLog(@"You are currently using SDK Version: %@", [OSMapView SDKVersion]);
+
 ```
 
 
@@ -544,9 +548,11 @@ Conversion between `CLLocationCoordinate2D` and `OSGridPoint` are handled intern
 Conversions can be performed via this SDK if required using the functions below;
 
 ```objective-c
+
 OSGridPoint OSGridPointForCoordinate(CLLocationCoordinate2D coordinate);
 
 CLLocationCoordinate2D OSCoordinateForGridPoint(OSGridPoint gridPoint);
+
 ```
 
 ### User location (`OSUserLocation` class)
@@ -555,7 +561,7 @@ The SDK provides a wrapper around standard Core Location API and so allows you t
 
 When enabled, a distinct annotation will be added to the map complete with estimated GPS accuracy display in the form of a circle around the annotation, a large circle represents a low accuracy and large margin of error in determining the device location.
 
-To start or stop receiving updates, change this propery:
+Change this property to start or stop receiving updates;
 
 ```objective-c
 mapView.showsUserLocation = YES/NO;
