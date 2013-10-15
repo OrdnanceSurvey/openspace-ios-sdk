@@ -32,7 +32,7 @@ Here are some of the benefits
 
 - Fully supported by Ordnance Survey – ongoing SDK upgrades, active user forum.
 - Online capability – fast rendering of Ordnance Survey maps.
-- Offline maps and search capability – as used in OS MapFinder&trade;.
+- Offline maps and search capability – as used in [OS MapFinder](https://itunes.apple.com/gb/app/os-mapfinder/id577097874)&trade;.
 - Fast rendering and smooth panning - for great user experience.
 - Complements our service – another way to get our data.
 
