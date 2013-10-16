@@ -174,7 +174,7 @@ Note: `OSMapView` cannot be completely initialised from a Interface Builder (`.x
 
 ### Product Codes
 
-A developer can select which Ordnance Survey mapping products to use by  selecting on of three pre-configured map stacks or customising their app by passing the product codes as and array of strings.
+A developer can select which Ordnance Survey mapping products to use by  selecting one of three pre-configured map stacks or customising their app by passing the product codes as and array of strings.
 
 NOTE: Certain products and the Zoom map stack require a commercial licence.
 
