@@ -598,6 +598,13 @@ Issues
 
 For any issues relating to developing with the SDK, obtaining API keys or service problems, please email osopenspace@ordnancesurvey.co.uk
 
+#### Incorrect OpenSpace API Key
+
+If the iOS SDK displays a series of blank tiles similar to the image below then it is likely that the API key linked with the Bundle Identifier of the application used do not match. Please contact OS OpenSpace support team or log into your OpenSpace account to verify the correct details.
+
+**Please also note that it can take up to 15 minutes for an API key to become ready for use.**
+
+![Blank-Tiles](https://github.com/OrdnanceSurvey/ordnancesurvey-ios-sdk/raw/master/blank-tiles.png "Screenshot of missing tiles when api key incorrect")
 
 
 Licence
